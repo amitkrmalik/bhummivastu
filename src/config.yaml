@@ -1,31 +1,37 @@
 site:
   name: AstroWind
-  site: 'https://astrowind.vercel.app'
+  site: 'https://www.bhummivastu.com'
   base: '/'
   trailingSlash: false
 
   googleSiteVerificationId: orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M
+  social:
+    facebook: 'https://www.facebook.com/BhummiVastu'
+    instagram: 'https://www.instagram.com/bhummivastu'
 
 # Default SEO metadata
 metadata:
   title:
     default: AstroWind
     template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+  description: "🏙️ Bhummi Vastu - Vastu consultancy and services in Bangalore. Serving all major locations within Bangalore including Indiranagar, Koramangala, Whitefield, Jayanagar, and more."
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: AstroWind
+    site_name: Bhummi Vastu Bangalore
     images:
       - url: '~/assets/images/default.png'
         width: 1200
         height: 628
     type: website
+    locale: en_IN
+    description: "Bhummi Vastu - Vastu consultancy and services in Bangalore. Serving Indiranagar, Koramangala, Whitefield, Jayanagar, and all Bangalore locations."
   twitter:
-    handle: '@arthelokyo'
-    site: '@arthelokyo'
+    handle: '@bhummivastu'
+    site: '@bhummivastu'
     cardType: summary_large_image
+    description: "Bhummi Vastu - Vastu consultancy and services in Bangalore."
 
 i18n:
   language: en
