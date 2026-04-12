@@ -1,0 +1,54 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Commercial Vastu Consultant in Bangalore | Vastu for Offices & Startups',
+  description:
+    'Boost productivity, client flow, and business growth with Commercial Vastu by Vastu Acharya Minu Malik. Trusted by offices and startups across Bangalore.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero -->
+  <HeroText
+    tagline="Commercial Vastu"
+    title="Vastu for Offices & Startups in Bangalore"
+    subtitle="Align your workspace with positive energy to attract clients, boost team performance, and accelerate business growth — all without major renovations."
+  />
+
+  <!--
+    TBD — CONTENT SECTION
+    Replace this placeholder with:
+    - What Commercial Vastu covers (reception placement, cabin directions, cash counter, main entrance)
+    - Typical process (floor plan review / site visit)
+    - Benefits: better client flow, reduced conflicts, growth mindset
+    - Case studies / before-after (TBD from consultant)
+    Suggested component: <Content /> from ~/components/widgets/Content.astro
+  -->
+  <section class="py-12 px-4 max-w-3xl mx-auto text-center text-muted">
+    <p class="text-lg italic">
+      📋 <strong>TBD:</strong> Detailed service description, process, and success stories coming soon.
+    </p>
+  </section>
+
+  <!--
+    TBD — STEPS / PROCESS (same 4-step flow as Residential, adapted for offices)
+    TBD — PRICING: Starting price TBD (confirm with consultant)
+  -->
+
+  <!-- CTA -->
+  <CallToAction
+    title="Ready to Power Up Your Business?"
+    subtitle="Let Vastu Acharya Minu Malik optimise your office or startup space for success. Book a consultation today."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Book Consultation',
+        href: '/contact',
+        icon: 'tabler:calendar-event',
+      },
+    ]}
+  />
+</Layout>

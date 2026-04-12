@@ -1,0 +1,59 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Astro-Vastu Premium Consultation in Bangalore | Vastu Acharya Minu Malik',
+  description:
+    'Experience the full power of Astro-Vastu — where the ancient science of space meets the wisdom of the stars. Premium personalised consultations by Vastu Acharya Minu Malik in Bangalore.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero -->
+  <HeroText
+    tagline="Astro-Vastu — Premium"
+    title="Where the Science of Space Meets the Power of Stars"
+    subtitle="Astro-Vastu is the most holistic approach to well-being — combining Vastu Shastra and Vedic Astrology to deliver uniquely personalised solutions for your home, business, and life journey."
+  />
+
+  <!--
+    TBD — CONTENT SECTION
+    Replace this placeholder with:
+    - What Astro-Vastu is and why it's more powerful than either discipline alone
+    - How your birth chart influences the ideal Vastu layout for your space
+    - Case studies showing measurable outcomes (TBD from consultant)
+    - Why this is the premium / flagship offering
+    Suggested component: <Content /> from ~/components/widgets/Content.astro
+  -->
+  <section class="py-12 px-4 max-w-3xl mx-auto text-center text-muted">
+    <p class="text-lg italic">
+      📋 <strong>TBD:</strong> Full explanation of the Astro-Vastu methodology, premium process, and landmark case studies coming soon.
+    </p>
+  </section>
+
+  <!--
+    TBD — STEPS / PROCESS
+    1. Deep-dive birth chart analysis
+    2. Site / floor plan assessment
+    3. Identifying planetary influences on your physical space
+    4. Bespoke Vastu + Astrological remedies report
+    5. Follow-up review session included
+    TBD — PRICING: Starting price TBD — this is the premium package, price accordingly
+  -->
+
+  <!-- CTA -->
+  <CallToAction
+    title="Experience the Most Powerful Combination"
+    subtitle="Book your exclusive Astro-Vastu consultation today and unlock results that change lives."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Book Premium Consultation',
+        href: '/contact',
+        icon: 'tabler:stars',
+      },
+    ]}
+  />
+</Layout>

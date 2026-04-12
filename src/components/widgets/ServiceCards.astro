@@ -1,0 +1,144 @@
+---
+import { Icon } from 'astro-icon/components';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import Headline from '~/components/ui/Headline.astro';
+
+interface ServiceCard {
+  icon: string;
+  title: string;
+  description: string;
+  price: string;      // e.g. "Starting from ₹5,000" — use "TBD" if unknown
+  href: string;
+  accent?: string;    // Tailwind text-colour class for the icon, e.g. "text-blue-600"
+}
+
+interface Props {
+  title?: string;
+  subtitle?: string;
+  tagline?: string;
+  id?: string;
+  isDark?: boolean;
+  classes?: Record<string, string>;
+  bg?: string;
+}
+
+const {
+  title = '',
+  subtitle = '',
+  tagline = '',
+  id,
+  isDark = false,
+  classes = {},
+  bg,
+} = Astro.props;
+
+const cards: ServiceCard[] = [
+  {
+    icon: 'tabler:home',
+    title: 'Non-Demolition Vastu for Homes & Flats',
+    description: 'Create a peaceful, prosperous home without breaking a single wall. Practical remedies tailored to your floor plan.',
+    price: 'TBD', // TODO: Confirm price with consultant
+    href: '/services/residential-vastu',
+    accent: 'text-blue-600',
+  },
+  {
+    icon: 'tabler:building-store',
+    title: 'Vastu for Offices & Startups',
+    description: 'Align your workspace to attract clients, boost team energy, and accelerate business growth.',
+    price: 'TBD', // TODO: Confirm price with consultant
+    href: '/services/commercial-vastu',
+    accent: 'text-green-600',
+  },
+  {
+    icon: 'tabler:building-factory',
+    title: 'Vastu for Factories & Warehouses',
+    description: 'Optimise layout for safety, workflow efficiency, and operational excellence in your industrial unit.',
+    price: 'TBD', // TODO: Confirm price with consultant
+    href: '/services/industrial-vastu',
+    accent: 'text-orange-600',
+  },
+  {
+    icon: 'tabler:device-laptop',
+    title: 'Astrology for IT Career & Business Growth',
+    description: 'Navigate career moves, business launches, and growth windows with planetary timing on your side.',
+    price: 'TBD', // TODO: Confirm price with consultant
+    href: '/services/it-career-astrology',
+    accent: 'text-indigo-600',
+  },
+  {
+    icon: 'tabler:heart',
+    title: 'Astrology for Personal Life & Relationships',
+    description: 'Find clarity on marriage, family harmony, and personal well-being through in-depth birth chart analysis.',
+    price: 'TBD', // TODO: Confirm price with consultant
+    href: '/services/personal-life-astrology',
+    accent: 'text-pink-600',
+  },
+  {
+    icon: 'tabler:stars',
+    title: 'Astro-Vastu — Premium',
+    description: 'The most holistic approach: your birth chart meets your physical space for life-changing, personalised results.',
+    price: 'TBD', // TODO: Confirm price with consultant (premium tier)
+    href: '/services/astro-vastu',
+    accent: 'text-amber-500',
+  },
+];
+---
+
+<WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-7xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
+  {(title || subtitle || tagline) && (
+    <Headline
+      title={title}
+      subtitle={subtitle}
+      tagline={tagline}
+      classes={{
+        container: 'max-w-xl sm:mx-auto lg:max-w-2xl',
+        title: 'text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading',
+        subtitle: 'max-w-3xl mx-auto sm:text-center text-xl text-muted dark:text-slate-400',
+      }}
+    />
+  )}
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+    {cards.map((card) => (
+      <a
+        href={card.href}
+        class="group flex flex-col bg-white dark:bg-slate-900 border border-gray-100 dark:border-slate-700 rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden"
+        aria-label={card.title}
+      >
+        {/* Card top accent bar */}
+        <div class="h-1 w-full bg-gradient-to-r from-accent to-blue-400"></div>
+
+        <div class="flex flex-col flex-1 p-6 gap-4">
+          {/* Icon */}
+          <div class={`w-12 h-12 rounded-xl bg-gray-50 dark:bg-slate-800 flex items-center justify-center ${card.accent ?? 'text-accent'}`}>
+            <Icon name={card.icon} class="w-7 h-7" />
+          </div>
+
+          {/* Title */}
+          <h3 class="text-lg font-bold text-gray-900 dark:text-white group-hover:text-accent transition-colors leading-snug">
+            {card.title}
+          </h3>
+
+          {/* Description */}
+          <p class="text-sm text-muted dark:text-slate-400 flex-1 leading-relaxed">
+            {card.description}
+          </p>
+
+          {/* Price + CTA row */}
+          <div class="flex items-center justify-between mt-2 pt-4 border-t border-gray-100 dark:border-slate-700">
+            <span class="text-sm font-semibold text-accent">
+              {card.price === 'TBD'
+                ? <span class="italic text-muted">Price on request</span>
+                : card.price
+              }
+            </span>
+            <span class="text-sm font-semibold text-accent group-hover:underline flex items-center gap-1">
+              View Details
+              <Icon name="tabler:arrow-right" class="w-4 h-4" />
+            </span>
+          </div>
+        </div>
+      </a>
+    ))}
+  </div>
+</WidgetWrapper>

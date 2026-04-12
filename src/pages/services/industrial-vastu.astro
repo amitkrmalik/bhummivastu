@@ -1,0 +1,54 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Industrial Vastu Consultant in Bangalore | Vastu for Factories & Warehouses',
+  description:
+    'Optimise your factory, warehouse, or industrial unit with Industrial Vastu by Vastu Acharya Minu Malik in Bangalore. Improve safety, productivity, and operational efficiency.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero -->
+  <HeroText
+    tagline="Industrial Vastu"
+    title="Vastu for Factories & Warehouses in Bangalore"
+    subtitle="A well-aligned industrial space reduces accidents, improves workflow, and drives operational excellence. Get expert Industrial Vastu guidance tailored to your site layout."
+  />
+
+  <!--
+    TBD — CONTENT SECTION
+    Replace this placeholder with:
+    - What Industrial Vastu covers (plot direction, machinery placement, storage zones, entry/exit gates)
+    - Typical process (site survey / layout review)
+    - Benefits: reduced incidents, better productivity, smoother supply chain
+    - Case studies (TBD from consultant)
+    Suggested component: <Content /> from ~/components/widgets/Content.astro
+  -->
+  <section class="py-12 px-4 max-w-3xl mx-auto text-center text-muted">
+    <p class="text-lg italic">
+      📋 <strong>TBD:</strong> Detailed service description, process, and case studies coming soon.
+    </p>
+  </section>
+
+  <!--
+    TBD — STEPS / PROCESS
+    TBD — PRICING: Starting price TBD (confirm with consultant)
+  -->
+
+  <!-- CTA -->
+  <CallToAction
+    title="Optimise Your Industrial Space"
+    subtitle="Connect with Vastu Acharya Minu Malik to assess your factory or warehouse and unlock its true potential."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Book Consultation',
+        href: '/contact',
+        icon: 'tabler:calendar-event',
+      },
+    ]}
+  />
+</Layout>

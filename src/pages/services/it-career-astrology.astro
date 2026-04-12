@@ -1,0 +1,58 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Astrology for IT Career & Business Growth in Bangalore | Vastu Acharya Minu Malik',
+  description:
+    'Navigate career transitions, business decisions, and growth opportunities with personalised Astrology guidance by Vastu Acharya Minu Malik — trusted by IT professionals and entrepreneurs in Bangalore.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero -->
+  <HeroText
+    tagline="Astrology — IT Career & Business"
+    title="Astrology for IT Careers & Business Growth in Bangalore"
+    subtitle="Whether you are choosing a new role, launching a startup, or planning your next business move — let the stars guide you with clarity and confidence."
+  />
+
+  <!--
+    TBD — CONTENT SECTION
+    Replace this placeholder with:
+    - How astrology applies to career timing (job changes, promotions, business launch muhurtas)
+    - What the consultation covers (birth chart analysis, planetary periods / dashas, remedies)
+    - Benefits: clarity, timing advantage, reduced risk
+    - Client testimonials specific to IT/business (TBD)
+    Suggested component: <Content /> from ~/components/widgets/Content.astro
+  -->
+  <section class="py-12 px-4 max-w-3xl mx-auto text-center text-muted">
+    <p class="text-lg italic">
+      📋 <strong>TBD:</strong> Detailed service description, process, and IT client success stories coming soon.
+    </p>
+  </section>
+
+  <!--
+    TBD — STEPS / PROCESS
+    1. Share your birth details
+    2. Receive a detailed birth chart analysis
+    3. Discuss career/business timeline and opportunities
+    4. Get practical remedies and Muhurta recommendations
+    TBD — PRICING: Starting price TBD (confirm with consultant)
+  -->
+
+  <!-- CTA -->
+  <CallToAction
+    title="Take Charge of Your Career & Business Future"
+    subtitle="Book a personalised astrology session with Vastu Acharya Minu Malik and make your next move with confidence."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Book Consultation',
+        href: '/contact',
+        icon: 'tabler:calendar-event',
+      },
+    ]}
+  />
+</Layout>

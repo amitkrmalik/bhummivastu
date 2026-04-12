@@ -1,0 +1,66 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Residential Vastu Consultant in Bangalore | Non-Demolition Vastu for Homes & Flats',
+  description:
+    'Vastu Acharya Minu Malik offers expert Residential Vastu consultancy for homes and flats in Bangalore. Practical, non-demolition solutions for harmony and prosperity.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero -->
+  <HeroText
+    tagline="Residential Vastu"
+    title="Non-Demolition Vastu for Homes & Flats in Bangalore"
+    subtitle="Create a home that nurtures peace, health, and prosperity — without breaking walls. Expert Vastu guidance tailored to your floor plan, lifestyle, and goals."
+  />
+
+  <!--
+    TBD — CONTENT SECTION
+    Replace this placeholder with a Content widget describing:
+    - What Residential Vastu involves
+    - The process (site visit / online consultation / floor plan review)
+    - Key benefits (improved health, relationships, financial flow)
+    - Before/After examples or case studies
+    Suggested component: <Content /> from ~/components/widgets/Content.astro
+  -->
+  <section class="py-12 px-4 max-w-3xl mx-auto text-center text-muted">
+    <p class="text-lg italic">
+      📋 <strong>TBD:</strong> Full service description, process steps, and real case studies coming soon.
+      Contact us to learn more in the meantime.
+    </p>
+  </section>
+
+  <!--
+    TBD — STEPS / PROCESS
+    Add a Steps widget explaining How It Works:
+    1. Fill in inquiry form
+    2. Schedule a site visit or online call
+    3. Receive personalised Vastu report
+    4. Implementation guidance & follow-up
+    Suggested component: <Steps /> from ~/components/widgets/Steps.astro
+  -->
+
+  <!--
+    TBD — PRICING
+    Starting price: TBD (confirm with consultant)
+    Suggested component: <Pricing /> or a simple note inside Content
+  -->
+
+  <!-- CTA -->
+  <CallToAction
+    title="Ready to Transform Your Home?"
+    subtitle="Book a consultation with Vastu Acharya Minu Malik and take the first step towards a harmonious living space."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Book Consultation',
+        href: '/contact',
+        icon: 'tabler:calendar-event',
+      },
+    ]}
+  />
+</Layout>

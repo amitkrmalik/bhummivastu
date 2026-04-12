@@ -1,0 +1,58 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Astrology for Personal Life & Relationships in Bangalore | Vastu Acharya Minu Malik',
+  description:
+    'Find clarity, heal relationships, and make life-changing decisions with personalised Astrology by Vastu Acharya Minu Malik in Bangalore. Marriage, family, and personal well-being consultations.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero -->
+  <HeroText
+    tagline="Astrology — Personal Life"
+    title="Astrology for Personal Life & Relationships in Bangalore"
+    subtitle="From marriage compatibility to family harmony and personal well-being — gain deep insight into your life's journey and the relationships that shape it."
+  />
+
+  <!--
+    TBD — CONTENT SECTION
+    Replace this placeholder with:
+    - Topics covered: marriage timing, compatibility, family disputes, health, personal growth
+    - Process: birth chart + partner chart (synastry), divisional charts, remedies
+    - Benefits: emotional clarity, better decisions, stronger bonds
+    - Testimonials specific to personal/relationship outcomes (TBD)
+    Suggested component: <Content /> from ~/components/widgets/Content.astro
+  -->
+  <section class="py-12 px-4 max-w-3xl mx-auto text-center text-muted">
+    <p class="text-lg italic">
+      📋 <strong>TBD:</strong> Detailed service description, process, and personal success stories coming soon.
+    </p>
+  </section>
+
+  <!--
+    TBD — STEPS / PROCESS
+    1. Share your birth details (and partner's if applicable)
+    2. In-depth birth chart reading
+    3. Discuss specific life questions / concerns
+    4. Practical remedies, gemstone guidance, and timing advice
+    TBD — PRICING: Starting price TBD (confirm with consultant)
+  -->
+
+  <!-- CTA -->
+  <CallToAction
+    title="Bring Clarity & Harmony to Your Life"
+    subtitle="Book a personal astrology session with Vastu Acharya Minu Malik and rediscover your path."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Book Consultation',
+        href: '/contact',
+        icon: 'tabler:calendar-event',
+      },
+    ]}
+  />
+</Layout>
