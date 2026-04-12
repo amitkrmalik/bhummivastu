@@ -3,6 +3,7 @@ import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
 import ServiceCards from '~/components/widgets/ServiceCards.astro';
+import Mission from '~/components/widgets/Mission.astro';
 import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
@@ -67,9 +68,13 @@ const metadata = {
     subtitle="From harmonising your home to unlocking your career's full potential — explore our services and find the right fit for you."
   />
 
-  <!-- Note Widget ******************* -->
+  <!-- Mission & Philosophy ******************* -->
 
+  <Mission id="mission" />
+
+  <!-- Note Widget (kept for optional use below) *****
   <Note title="Philosophy:" description="Simplicity, Best Practices and High Performance" />
+  **** -->
 
   <!-- Features Widget *************** -->
 

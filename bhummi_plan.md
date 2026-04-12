@@ -5,22 +5,47 @@ This plan details the transformation of the current landing page into an effecti
 
 ---
 
+## Deviation Review (as of April 12, 2026)
+
+### What is DONE ✅
+| Sprint | Status | Notes |
+|--------|--------|-------|
+| Sprint 1 — Hero Section | Partially done | Title, subtitle, CTAs updated. **Still missing: actual consultant photo, credentials/certifications.** Placeholder image `hero-image.png` in use. |
+| Sprint 2 — Navigation | Done | `navigation.ts` fully rebuilt with two-level dropdowns, Book Now CTA, and BhummiVastu footer. |
+| Sprint 3 — Service Cards | Done | `ServiceCards.astro` created, old 9-item grid replaced. All 6 cards link to stub pages. Prices are `TBD`. |
+| Sprint 6 (stub) — Service Pages | Stub only | All 6 pages under `src/pages/services/` created. Content, process steps, images, testimonials, and pricing are all TBD placeholders. |
+
+### What is NOT yet done ❌
+| Section | Current state in `index.astro` | Required state |
+|---------|-------------------------------|----------------|
+| Note / Mission Statement | Generic "Simplicity, Best Practices..." text | BhummiVastu mission statement |
+| Features widget | Generic AstroWind features list | Remove entirely (replaced by ServiceCards) |
+| Content blocks (×3) | Generic AstroWind lorem-ipsum content | Remove / replace with consultant bio + About section |
+| Steps widget | Generic "Download → Add content → Customize" | Replace with "How a consultation works" process steps |
+| Features2 widget | "Most used widgets" template content | Replace with Core Values/Principles |
+| BlogLatestPosts | Generic AstroWind blog intro | Replace with Vastu/Astrology blog intro (or remove if no blog yet) |
+| FAQs | Generic AstroWind FAQs | Replace with real Vastu & Astrology FAQs |
+| Stats | Generic download/star counts | Replace with real social proof stats (clients served, years experience, etc.) |
+| Testimonials | Not present at all | Add `Testimonials.astro` with real client quotes |
+| CallToAction | Links to GitHub / generic text | Replace with "Book a Consultation" CTA |
+| Contact page | Exists but untouched | Update with consultant's phone, email, address, WhatsApp link |
+| Footer | Now updated ✅ | Social links still `#` placeholders (TBD) |
+
+---
+
 ## Section Sprints & Requirements
 
-### Sprint 1: Consultant Introduction (Hero Section)
-- **Goal:** Present the consultant’s name, credentials, welcoming message, and photo prominently.
-- **Requirements:**
-  - Consultant’s full name and title [Vastu Acharya Minu Malik]
-  - Short, impactful welcome message [Transform your home, office, and life with authentic Vastu and Astrology consulting in Bangalore.]
-  - Credentials/certifications (TBD if not available)
-  - High-quality consultant photo (TBD if not available)
-  - Main call-to-action (e.g., Book Consultation)
-- **TBD:**
-  - [ ] Insert actual consultant photo (replace placeholder)
-  - [ ] Finalize credentials and welcome message
+### ⚠️ Sprint 1: Consultant Introduction (Hero Section) — PARTIAL
+- **Goal:** Present the consultant's name, credentials, welcoming message, and photo prominently.
+- **Done:** Title, subtitle copy, trust badges, and both CTAs implemented.
+- **Still needed:**
+  - **TBD: Consultant photo** — Replace `src/assets/images/hero-image.png` with a professional headshot or on-location photo of Vastu Acharya Minu Malik. Ideal size: 1024×576px or square 800×800px.
+  - **TBD: Credentials line** — Add a short credentials badge under the title, e.g. _"Certified Vastu Acharya · 15+ years experience · Bangalore"_
+  - **TBD: Tagline** — Consider adding a short sanskrit or brand tagline as the `tagline` prop on `Hero.astro` (e.g. _"यत्र नारी तत्र रमन्ते  · Where harmony lives"_)
 - **Implementation:**
-  - Update `Hero.astro` usage in `index.astro`
-  - Add/replace image in `src/assets/images/`
+  - Update `image` prop in Hero in `src/pages/index.astro`
+  - Add `tagline` prop to Hero once confirmed
+  - Add credentials inside the subtitle Fragment or as a new `<p>` after the title Fragment
 
 ---
 
@@ -86,100 +111,254 @@ This plan details the transformation of the current landing page into an effecti
 
 ---
 
-### Sprint 4: Mission Statement
-- **Goal:** Clearly state the consultant’s mission and philosophy.
-- **Requirements:**
-  - 1-2 sentence mission statement (TBD if not available)
-- **TBD:**
-  - [ ] Draft and insert mission statement
-- **Implementation:**
-  - Use `Note.astro` or a custom section in `index.astro`
+### ✅ Sprint 4: Mission Statement + "About the Consultant" Bio Section — MISSION DONE / BIO TBD
+- **Goal:** (a) Replace the generic Note widget with BhummiVastu's mission, and (b) add a dedicated About/Bio section that introduces the consultant personally — building trust and SEO authority.
+- **Section A — Mission Note:**
+  - Component: `Note.astro` (already in `index.astro`, just needs content update)
+  - Content needed:
+    - `title`: Short label e.g. _"Our Mission"_ or _"Philosophy"_
+    - `description`: 1–2 sentence mission statement
+    - **TBD example (confirm/replace):** _"To bring harmony, health, and prosperity to every home and business in Bangalore through authentic, science-backed Vastu and Vedic Astrology — without demolition and without disruption."_
+- **Section B — About the Consultant (Content widget):**
+  - Component: use `Content.astro` (already imported) with `isReversed` layout
+  - Place immediately after the Note / Mission
+  - Content needed:
+    - **Photo:** Professional photo of Vastu Acharya Minu Malik (TBD — can reuse hero image initially)
+    - **Heading:** _"Meet Vastu Acharya Minu Malik"_
+    - **Paragraphs (TBD — draft below, confirm with consultant):**
+      - Para 1: Background and journey into Vastu & Astrology
+      - Para 2: Qualifications, certifications, years of practice
+      - Para 3: Approach and what makes her consultations different
+    - **Bullet items for the Content widget:**
+      - `tabler:certificate` — Certified Vastu Acharya (TBD: certifying body)
+      - `tabler:calendar` — X+ years of practice (TBD: number)
+      - `tabler:map-pin` — Based in Bangalore, serving PAN India via online
+      - `tabler:users` — 100+ satisfied families and businesses
+  - **TBD:**
+    - [ ] Write 3-paragraph bio copy
+    - [ ] Confirm certifying body and years of experience
+    - [ ] Provide professional photo
+- **Implementation in `index.astro`:**
+  1. Update `<Note>` props: change `title` and `description`
+  2. Replace the first `<Content isReversed>` block (currently "AstroWind's Blueprint") with the About section
+  3. Remove the two remaining generic `<Content>` blocks that follow it
 
 ---
 
-### Sprint 5: Core Principles/Values
-- **Goal:** Communicate the core values or guiding principles.
-- **Requirements:**
-  - 3-6 core values (e.g., authenticity, client focus, confidentiality)
-  - Short description for each value (TBD if not available)
-- **TBD:**
-  - [ ] Gather and finalize list of values and descriptions
-- **Implementation:**
-  - Use `Features2.astro` or create `Values.astro` widget
+### Sprint 5: Core Principles/Values + "How a Consultation Works" Steps
+- **Goal:** (a) Replace the generic `Features2` block with BhummiVastu's core values, and (b) replace the generic Steps widget with a clear consultation process — reducing friction for first-time visitors.
+- **Section A — Core Values (`Features2.astro`):**
+  - Component: `Features2.astro` (already imported)
+  - Props: `tagline="Our Foundations"`, `title="What We Stand For"`
+  - **6 suggested values (confirm/edit with consultant):**
+    | Value | Icon | Short Description |
+    |-------|------|-----------------|
+    | Authenticity | `tabler:shield-check` | Ancient wisdom applied practically — no superstition, no gimmicks |
+    | Personalisation | `tabler:user-heart` | Every consultation is unique to your birth chart and floor plan |
+    | Non-Demolition First | `tabler:home-check` | Maximum results through placement, colours, and energy — not construction |
+    | Confidentiality | `tabler:lock` | Your personal and financial details stay strictly private |
+    | Measurable Results | `tabler:chart-line` | Clear guidance with follow-up to ensure visible, real-world change |
+    | Accessible Wisdom | `tabler:book-open` | Ancient knowledge made simple and actionable for modern families |
+  - **TBD:** [ ] Confirm value titles and descriptions with consultant
+- **Section B — How a Consultation Works (`Steps.astro`):**
+  - Component: `Steps.astro` (already imported)
+  - Replace generic "Download → Customize" steps with:
+    1. `tabler:message` — **Share Your Details** — Fill in a short inquiry form with your name, contact, service type, and any specific concerns.
+    2. `tabler:calendar-event` — **Schedule a Session** — Pick a convenient slot for an in-person site visit (Bangalore) or an online video call.
+    3. `tabler:chart-dots` — **Deep Analysis** — Vastu Acharya Minu Malik analyses your floor plan / birth chart and prepares a personalised report.
+    4. `tabler:file-text` — **Receive Your Report** — Get a detailed written report with actionable Vastu / Astrology recommendations and remedies.
+    5. `tabler:refresh` — **Follow-Up Support** — A complimentary follow-up call to track progress and answer questions.
+  - `title`: _"Your Journey to Harmony — 5 Simple Steps"_
+  - `image`: TBD — can use a warm consultation/office photo. Placeholder: Unsplash photo of a serene interior.
+  - **TBD:** [ ] Confirm process steps with consultant · [ ] Source or take a relevant photo
+- **Implementation in `index.astro`:**
+  1. Update `<Features2>` props with values content
+  2. Replace `<Steps>` props with the 5-step consultation process
+  3. Remove the second and third `<Content isAfterContent>` generic blocks
 
 ---
 
-### Sprint 6: Individual Service Detail Pages
-- **Goal:** Each service listed in the Service Cards grid gets its own dedicated page with full description, process, benefits, and a booking CTA.
-- **Per-page Requirements:**
-  - H1 heading with service name + location keyword (e.g., _"Residential Vastu Consultant in Bangalore"_)
-  - 3-5 paragraphs describing the service, approach, and benefits
-  - Process / How-It-Works steps (3-5 steps)
-  - Relevant images or illustrations (TBD)
-  - Social proof snippet (1-2 testimonials relevant to that service)
-  - "Book Consultation" CTA at top and bottom of page
-- **TBD:**
-  - [ ] Write content for each sub-page
-  - [ ] Source relevant images per service
-  - [ ] Confirm process steps with consultant
-- **Implementation:**
-  - Create pages under `src/pages/services/` using `PageLayout.astro`
-  - Use `Steps.astro` for process, `Content.astro` for description, `CallToAction.astro` at end
+### Sprint 6: Individual Service Detail Pages (Content Fill)
+- **Goal:** Fill the 6 stub pages under `src/pages/services/` with real content. Stubs already exist — this sprint is purely content and component wiring.
+- **Pages to complete:**
+  - `residential-vastu.astro` · `commercial-vastu.astro` · `industrial-vastu.astro`
+  - `it-career-astrology.astro` · `personal-life-astrology.astro` · `astro-vastu.astro`
+- **Per-page content checklist:**
+  - [ ] H1 with service + location keyword (already in HeroText — confirm final wording)
+  - [ ] `Content.astro` block: 3–5 paragraphs / description (TBD per service)
+  - [ ] `Steps.astro` block: 4-step process (adapt global process for service specifics)
+  - [ ] Key benefits list (3–5 bullet points) as items in Content widget
+  - [ ] Relevant image — in-situ photo or illustration (TBD; Unsplash placeholder acceptable for launch)
+  - [ ] 1–2 inline testimonials relevant to that service (TBD — can use a mini testimonial div or wait for Sprint 7)
+  - [ ] Pricing section: `starting from ₹X,XXX` once confirmed
+  - [ ] `CallToAction.astro` at bottom (already scaffolded in stubs)
+- **SEO requirements per page:**
+  - `title` tag: `[Service Name] in Bangalore | Vastu Acharya Minu Malik — BhummiVastu`
+  - `description`: 120–160 characters, includes service + Bangalore + consultant name
+  - Internal links: each page should link back to home and to at least one related service
+- **Additional keywords to target (weave into copy naturally):**
+  - Residential: _vastu shastra for home bangalore_, _flat vastu consultant_, _non demolition vastu_
+  - Commercial: _office vastu bangalore_, _startup vastu consultant_
+  - Industrial: _factory vastu_, _warehouse vastu consultant bangalore_
+  - IT Astrology: _astrology for software engineers bangalore_, _career astrology consultant_
+  - Personal: _marriage astrology bangalore_, _kundali matching bangalore_
+  - Astro-Vastu: _astro vastu consultant bangalore_, _vedic astrology vastu_
+- **TBD (per page):** content copy, images, testimonials, confirmed prices
+- **Implementation:** Edit each `src/pages/services/*.astro` replacing the TBD placeholder sections with `Content`, `Steps`, and inline testimonial fragments
 
 ---
 
-### Sprint 7: Testimonials
-- **Goal:** Build trust with real client feedback.
-- **Requirements:**
-  - 2-5 client testimonials (TBD if not available)
-  - Client names and (optional) photos (TBD if not available)
-- **TBD:**
-  - [ ] Collect and insert testimonials
-  - [ ] Add/replace client photos
-- **Implementation:**
-  - Use `Testimonials.astro` in `index.astro`
+### Sprint 7: Testimonials + Social Proof Stats
+- **Goal:** Build immediate trust with real client feedback and impressive numbers — this is the most conversion-critical section after the Hero.
+- **Section A — Testimonials (`Testimonials.astro`):**
+  - Place after Service Cards and before FAQs in `index.astro`
+  - Component props:
+    - `tagline="Client Stories"`
+    - `title="Real Results. Real Families. Real Businesses."`
+    - `subtitle="Trusted by 100+ clients across Bangalore and nearby regions."`
+  - Testimonial structure (per item):
+    ```
+    title: Short headline (e.g. "Life changed after Vastu correction")
+    testimonial: 2-4 sentence quote in first person
+    name: Client first name + last initial (e.g. "Priya R.")
+    job: Location or context (e.g. "Homeowner, Whitefield, Bangalore")
+    image: { src, alt } — optional; use a generic avatar as placeholder
+    ```
+  - **Need minimum 3 testimonials. Suggested categories:**
+    - 1 × Residential Vastu success story
+    - 1 × Business / office Vastu story
+    - 1 × Astrology (career or personal) story
+  - **TBD:**
+    - [ ] Collect 3–5 real testimonials from clients (written consent recommended)
+    - [ ] Obtain or create placeholder avatar images
+    - [ ] Confirm client names / anonymisation preference
+  - **Placeholder testimonials (replace before launch):**
+    ```
+    1. title: "Our new home feels completely different"
+       testimonial: "We were struggling with constant arguments and health issues in our flat. After Minu ji's Vastu consultation, she suggested simple changes — no demolition at all. Within three months, the atmosphere was calmer and my husband got a promotion. I highly recommend her to every family in Bangalore."
+       name: "Ananya S."
+       job: "Homeowner, Koramangala, Bangalore"
+
+    2. title: "My startup finally took off"
+       testimonial: "I had been running my office for two years with poor results. After a Commercial Vastu consultation, we rearranged our desks and entrance. The very next quarter we closed our biggest client ever. This experience completely changed my view on Vastu."
+       name: "Rahul M."
+       job: "Startup Founder, HSR Layout, Bangalore"
+
+    3. title: "Astrology gave me clarity on my career move"
+       testimonial: "I was confused about switching from my job to freelancing. Minu ji's astrology reading was so precise — she told me the exact window to make the transition. I trusted it, and it worked out beautifully. Best investment I made in my career."
+       name: "Divya K."
+       job: "IT Professional, Whitefield, Bangalore"
+    ```
+- **Section B — Stats (`Stats.astro`):**
+  - Place just after Testimonials
+  - Replace generic GitHub stats with real social proof:
+    ```
+    { title: 'Happy Clients', amount: '100+' }   // TBD: confirm actual number
+    { title: 'Years of Practice', amount: '15+' } // TBD: confirm
+    { title: 'Cities Served', amount: '20+' }     // TBD: confirm (Bangalore + nearby)
+    { title: 'Services Offered', amount: '6' }
+    ```
+  - **TBD:** [ ] Confirm actual numbers with consultant before publishing
 
 ---
 
 ### Sprint 8: FAQs
-- **Goal:** Address common questions and concerns.
-- **Requirements:**
-  - 5-8 frequently asked questions and answers (TBD if not available)
-- **TBD:**
-  - [ ] Draft and insert FAQ content
-- **Implementation:**
-  - Use `FAQs.astro` in `index.astro`
+- **Goal:** Answer the most common objections and questions — reduces bounce rate and improves SEO through long-tail keyword coverage.
+- **Component:** `FAQs.astro` (already in `index.astro` — just needs content replacement)
+- **Props:** `tagline="FAQs"`, `title="Frequently Asked Questions"`, `subtitle="Everything you need to know before booking a consultation."`
+- **Recommended questions (8 total — confirm/edit with consultant):**
+  1. **What is Vastu Shastra?** — Brief explanation: ancient Indian science of spatial arrangement; directional energies and five elements.
+  2. **Do I need to break walls or renovate for Vastu corrections?** — Key objection; answer: no, 90%+ of corrections are non-demolition (colours, placement, mirrors, plants, salt bowls).
+  3. **Is Vastu only for Hindus?** — Clarify it's a universal spatial science, not religion-specific.
+  4. **How is Astro-Vastu different from regular Vastu?** — Explains premium service; birth chart influences optimal space layout.
+  5. **Do you offer online consultations?** — Yes; floor plan / photos via WhatsApp or Google Meet; serving PAN India.
+  6. **How long does it take to see results?** — Typical timeline: 30–90 days for subtle energetic shifts; major changes faster.
+  7. **What information do I need to provide?** — For Vastu: floor plan, compass bearing, plot direction. For Astrology: exact birth date, time, and place.
+  8. **What is your consultation fee?** — Link to contact/pricing page; note pricing is on request for custom consultations.
+- **SEO note:** FAQ answers should be 2–4 sentences each, written naturally. Google may feature these in rich snippets.
+- **TBD:** [ ] Review and confirm all answers with consultant before publishing
+- **Implementation:** Replace all existing FAQ items array in `index.astro` `<FAQs>` widget
 
 ---
 
-### Sprint 9: Contact/Booking Section
-- **Goal:** Make it easy for visitors to reach out or book a consultation.
-- **Requirements:**
-  - Contact form fields (name, email, message, etc.)
-  - Booking CTA/button
-  - Contact details (phone, email, address) (TBD if not available)
+### Sprint 9: Contact/Booking Section + Final CTA
+- **Goal:** Make booking frictionless — the page must end with a clear, compelling action path.
+- **Section A — Final CTA Banner (`CallToAction.astro`):**
+  - Replace current generic "Get template" CTA at the bottom of `index.astro`
+  - Props:
+    - `title`: _"Ready to Transform Your Space and Life?"_
+    - `subtitle`: _"Join 100+ happy families and businesses across Bangalore. Book your personalised consultation today."_
+    - Action: `{ variant: 'primary', text: 'Book Consultation', href: '/contact', icon: 'tabler:calendar-event' }`
+  - Background: consider a subtle warm background (bg slot with amber/saffron tint) to stand out visually
+- **Section B — Contact Page (`src/pages/contact.astro`):**
+  - Currently an untouched template page — needs full update
+  - **Contact details needed (TBD):**
+    - [ ] Phone number (WhatsApp preferred — add `tabler:brand-whatsapp` icon link)
+    - [ ] Email address
+    - [ ] Physical address / area in Bangalore (for local SEO)
+    - [ ] Consultation hours (e.g. Mon–Sat, 10am–7pm)
+  - **Form fields required:**
+    - Full Name (required)
+    - Phone / WhatsApp number (required)
+    - Email address (optional)
+    - Service of interest: dropdown (`Residential Vastu` / `Commercial Vastu` / `Industrial Vastu` / `IT Career Astrology` / `Personal Astrology` / `Astro-Vastu Premium`)
+    - Preferred consultation mode: `In-Person (Bangalore)` / `Online`
+    - Message / specific concern (textarea)
+    - Submit button: _"Send My Inquiry"_
+  - **Form backend (TBD):** Choose one — Netlify Forms (free, built-in), Formspree, or a custom endpoint
+  - **WhatsApp Quick Button:** Add a floating WhatsApp button on all pages linking to `https://wa.me/<number>?text=Hi, I'd like to book a Vastu/Astrology consultation` (TBD: add number)
 - **TBD:**
-  - [ ] Confirm contact details
-- **Implementation:**
-  - Use `Contact.astro` and/or `CallToAction.astro` in `index.astro`
+  - [ ] Confirm all contact details with consultant
+  - [ ] Choose form submission backend (Netlify Forms recommended)
+  - [ ] Add WhatsApp number for quick-contact button
 
 ---
 
-### Sprint 10: Footer
-- **Goal:** Provide standard site info and navigation.
-- **Requirements:**
-  - Copyright
-  - Social links (TBD if not available)
-  - Navigation links
-- **TBD:**
-  - [ ] Add social links
-- **Implementation:**
-  - Use `Footer.astro` in `index.astro`
+### Sprint 10: Footer + Blog Setup
+- **Goal:** Finalise the footer with real links, and decide on blog strategy — blog content is one of the strongest local SEO levers for a consultant.
+- **Section A — Footer (already partially done in Sprint 2, needs TBD items):**
+  - **TBD:**
+    - [ ] Add Instagram URL (replace `#`)
+    - [ ] Add Facebook URL (replace `#`)
+    - [ ] Add YouTube URL if applicable (replace `#`)
+    - [ ] Confirm Google Business Profile and add link if applicable
+  - Footer structure is correct — no code changes needed beyond social links
+- **Section B — Blog (`BlogLatestPosts.astro`):**
+  - Currently shows generic AstroWind blog intro — update or remove
+  - **If blog is planned:** Update `BlogLatestPosts` with:
+    - `title`: _"Vastu & Astrology Insights"_
+    - `information`: _"Practical tips, seasonal guidance, and case studies to bring harmony to your home and clarity to your life."_
+    - **Suggested first blog post topics (TBD — write after launch):**
+      1. _"5 Non-Demolition Vastu Tips for Your Bangalore Flat"_ (targets high-volume local keyword)
+      2. _"What Your Main Door Direction Means — Vastu Guide for Homeowners"_
+      3. _"Astrology Muhurta: The Best Time to Start a New Business in 2026"_
+      4. _"How Astro-Vastu Helped a Koramangala Startup Triple Revenue"_ (case study)
+  - **If no blog for now:** Remove `<BlogLatestPosts>` from `index.astro` to avoid empty/template content
+  - **TBD:** [ ] Decide blog strategy · [ ] Write first 2 posts before launch for SEO traction
+
+---
+
+## Page Section Order (Final Design)
+The final `index.astro` page should follow this order:
+1. `Hero` — Consultant intro, photo, credentials, CTAs
+2. `ServiceCards` — 6 service cards with links ✅
+3. `Note` — Mission statement
+4. `Content (About)` — Consultant bio with photo
+5. `Steps` — How a consultation works (5 steps)
+6. `Features2` — Core values (6 values)
+7. `Testimonials` — 3–5 client stories
+8. `Stats` — Social proof numbers
+9. `FAQs` — 8 questions
+10. `BlogLatestPosts` — (optional; keep or remove)
+11. `CallToAction` — Final booking CTA
 
 ---
 
 ## General Notes
-- All TBD sections should be clearly marked in the code with comments for easy future updates.
+- All TBD sections are marked with comments in code for easy future updates.
 - Use placeholder images/text where real content is not yet available.
 - Ensure all sections are mobile-friendly and visually consistent.
 - Document any new components or widgets created for future agents.
+- **SEO priorities:** Every page should have a unique `<title>` and `<meta description>`. Use location keywords (Bangalore, Whitefield, Koramangala, HSR Layout) naturally in headings and body. Add `schema.org/LocalBusiness` structured data once content is finalised.
+- **WhatsApp CTA:** A floating WhatsApp button is a high-conversion element for Indian audiences — prioritise adding it in Sprint 9.
+- **Performance:** All images must use the existing `Image.astro` component for automatic optimisation. No raw `<img>` tags.
