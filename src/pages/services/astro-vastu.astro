@@ -1,12 +1,14 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
+import Content from '~/components/widgets/Content.astro';
+import Steps from '~/components/widgets/Steps.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
   title: 'Astro-Vastu Premium Consultation in Bangalore | Vastu Acharya Minu Malik',
   description:
-    'Experience the full power of Astro-Vastu — where the ancient science of space meets the wisdom of the stars. Premium personalised consultations by Vastu Acharya Minu Malik in Bangalore.',
+    'The most powerful Vastu consultation available. Astro-Vastu combines Vastu Shastra and Vedic Astrology in a unified personalised analysis by Vastu Acharya Minu Malik in Bangalore.',
 };
 ---
 
@@ -15,44 +17,106 @@ const metadata = {
   <HeroText
     tagline="Astro-Vastu — Premium"
     title="Where the Science of Space Meets the Power of Stars"
-    subtitle="Astro-Vastu is the most holistic approach to well-being — combining Vastu Shastra and Vedic Astrology to deliver uniquely personalised solutions for your home, business, and life journey."
+    subtitle="Astro-Vastu is the most holistic approach to well-being — combining Vastu Shastra and Vedic Astrology into a single, deeply personalised consultation that addresses your home, your life, and your cosmic blueprint together."
   />
 
-  <!--
-    TBD — CONTENT SECTION
-    Replace this placeholder with:
-    - What Astro-Vastu is and why it's more powerful than either discipline alone
-    - How your birth chart influences the ideal Vastu layout for your space
-    - Case studies showing measurable outcomes (TBD from consultant)
-    - Why this is the premium / flagship offering
-    Suggested component: <Content /> from ~/components/widgets/Content.astro
-  -->
-  <section class="py-12 px-4 max-w-3xl mx-auto text-center text-muted">
-    <p class="text-lg italic">
-      📋 <strong>TBD:</strong> Full explanation of the Astro-Vastu methodology, premium process, and landmark case studies coming soon.
-    </p>
-  </section>
+  <!-- What is Astro-Vastu -->
+  <Content
+    tagline="About This Service"
+    title="Two Ancient Sciences. One Unified Transformation."
+    content={`
+      <p>Astro-Vastu is the synthesis of two ancient Vedic sciences — <strong>Vastu Shastra</strong> (the science of space and directional energy) and <strong>Jyotish Astrology</strong> (the science of time, karma, and planetary influence). Where a standard Vastu consultation analyses your space against universal directional principles, Astro-Vastu goes significantly deeper: it cross-references the birth charts of the inhabitants with the Vastu layout of their space, revealing how your personal planetary energies interact with — and are either amplified or suppressed by — your physical environment.</p>
+      <p>Consider this: a person with a prominent Mars in their chart, living in a home where the South-East zone (the Fire/Agni corner) is blocked or misaligned, may experience persistent stress, health challenges, or relationship friction. Conversely, a homeowner with a strong and well-placed Jupiter can significantly amplify the blessings of the North-East (Ishanya) zone through targeted Vastu corrections. This level of personalisation is what makes Astro-Vastu uniquely powerful — and it is available only when both sciences are read together.</p>
+      <p>Vastu Acharya Minu Malik's Astro-Vastu Premium consultation is her most comprehensive offering. It combines a full Vastu survey of your space, a complete Jyotish birth chart reading, and a personalised integration report that maps your planetary energy blueprint onto your living or working environment — delivering an extraordinarily precise set of recommendations that address the root causes of life's challenges at multiple levels simultaneously. Available for homes, offices, and commercial spaces.</p>
+    `}
+    items={[
+      {
+        title: 'Full integration of Vastu Shastra and Vedic Astrology for maximum depth',
+        icon: 'tabler:stars',
+      },
+      {
+        title: 'Personalised Vastu corrections calibrated to your birth chart energy',
+        icon: 'tabler:home-check',
+      },
+      {
+        title: 'Addresses root causes — not just symptoms — of persistent life challenges',
+        icon: 'tabler:refresh',
+      },
+      {
+        title: 'Synergistic impact: space energy and personal planetary energy amplified together',
+        icon: 'tabler:trending-up',
+      },
+      {
+        title: 'Holistic remedies covering space alignment, timing, and planetary corrections',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Includes a priority implementation timeline with short and long-term actions',
+        icon: 'tabler:clock',
+      },
+    ]}
+    columns={2}
+    isReversed={true}
+    image={{
+      src: 'https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?w=800&q=80',
+      alt: 'Cosmic alignment and space harmony — Astro-Vastu Premium by BhummiVastu Bangalore',
+    }}
+  />
 
-  <!--
-    TBD — STEPS / PROCESS
-    1. Deep-dive birth chart analysis
-    2. Site / floor plan assessment
-    3. Identifying planetary influences on your physical space
-    4. Bespoke Vastu + Astrological remedies report
-    5. Follow-up review session included
-    TBD — PRICING: Starting price TBD — this is the premium package, price accordingly
-  -->
+  <!-- Process Steps -->
+  <Steps
+    title="The Astro-Vastu Premium Process — 5 Steps to Holistic Transformation"
+    tagline="Our Process"
+    items={[
+      {
+        title: 'Complete Birth Details & Space Information',
+        description:
+          'Share the birth date, exact time, and place of birth for all key inhabitants of the space. Also provide your floor plan, plot compass direction, and any specific life areas or challenges you would like to address in the consultation.',
+        icon: 'tabler:file-text',
+      },
+      {
+        title: 'Independent Vastu Analysis of Your Space',
+        description:
+          'Minu ji conducts a complete 16-zone Vastu assessment of your home or office — mapping all energy zones, identifying Vastu Doshas, and noting the enhancement potential in each zone. This analysis is done independently before the astrological overlay.',
+        icon: 'tabler:compass',
+      },
+      {
+        title: 'Jyotish Birth Chart Analysis',
+        description:
+          'In parallel, Minu ji analyses the natal chart of each key inhabitant — identifying their current planetary period (Dasha), key planetary strengths and weaknesses, and the specific houses governing health, wealth, relationships, and career.',
+        icon: 'tabler:binary-tree',
+      },
+      {
+        title: 'Astro-Vastu Integration — The Unique Synthesis',
+        description:
+          'This is the heart of the Premium consultation. Minu ji maps each resident\'s planetary energies onto the Vastu zones of the space — identifying where the two systems reinforce each other and where they conflict, resulting in a uniquely precise and personalised remediation plan.',
+        icon: 'tabler:chart-dots',
+      },
+      {
+        title: '90-Minute Consultation & Implementation Roadmap',
+        description:
+          'A comprehensive 90-minute session covering all findings — Vastu misalignments, astrological influences, and integrated corrections — followed by a written report with a phased implementation plan and an included follow-up review session.',
+        icon: 'tabler:circle-check',
+      },
+    ]}
+    classes={{ container: 'bg-amber-50/60 dark:bg-amber-900/10' }}
+  />
 
   <!-- CTA -->
   <CallToAction
     title="Experience the Most Powerful Combination"
-    subtitle="Book your exclusive Astro-Vastu consultation today and unlock results that change lives."
+    subtitle="Book your exclusive Astro-Vastu Premium consultation today — and access a level of personalised insight that changes lives."
     actions={[
       {
         variant: 'primary',
         text: 'Book Premium Consultation',
         href: '/contact',
         icon: 'tabler:stars',
+      },
+      {
+        variant: 'secondary',
+        text: 'Explore Other Services',
+        href: '/#services',
       },
     ]}
   />

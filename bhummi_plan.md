@@ -111,7 +111,14 @@ This plan details the transformation of the current landing page into an effecti
 
 ---
 
-### ✅ Sprint 4: Mission Statement + "About the Consultant" Bio Section — MISSION DONE / BIO TBD
+### ✅ Sprint 4: Mission Statement + "About the Consultant" Bio Section — COMPLETED
+- **Mission section:** `Mission.astro` created — Purusha Sūkta shloka, translation, and Vastu/Astrology bridge. Live in `index.astro`.
+- **About section:** `AboutConsultant.astro` created with SEO-optimised bio, credentials list, and dual CTAs. Live in `index.astro` after Mission.
+- **All generic AstroWind template blocks removed** from `index.astro` (Features, 3×Content, Steps, Features2, BlogLatestPosts, generic FAQs, generic Stats, generic CallToAction).
+- **TBD still needed:**
+  - [ ] Replace hero placeholder image with actual consultant professional photo (update `src` in `AboutConsultant.astro` and Hero)
+  - [ ] Confirm certifying body for "Certified Vastu Acharya" credential bullet
+  - [ ] Optionally add a name badge overlay on the photo (code already scaffolded, commented out)
 - **Goal:** (a) Replace the generic Note widget with BhummiVastu's mission, and (b) add a dedicated About/Bio section that introduces the consultant personally — building trust and SEO authority.
 - **Section A — Mission Note:**
   - Component: `Note.astro` (already in `index.astro`, just needs content update)
@@ -137,8 +144,7 @@ This plan details the transformation of the current landing page into an effecti
   - **TBD:**
     - [ ] Write 3-paragraph bio copy
     - [ ] Confirm certifying body and years of experience
-    - [ ] Provide professional photo
-- **Implementation in `index.astro`:**
+    - [ ] Provide professional photo  - **Note:** Sri Vidya references have been removed from copy and component. Advanced training is described generically as "traditional Vedic and spiritual disciplines".- **Implementation in `index.astro`:**
   1. Update `<Note>` props: change `title` and `description`
   2. Replace the first `<Content isReversed>` block (currently "AstroWind's Blueprint") with the About section
   3. Remove the two remaining generic `<Content>` blocks that follow it
@@ -146,20 +152,22 @@ This plan details the transformation of the current landing page into an effecti
 ---
 
 ### Sprint 5: Core Principles/Values + "How a Consultation Works" Steps
-- **Goal:** (a) Replace the generic `Features2` block with BhummiVastu's core values, and (b) replace the generic Steps widget with a clear consultation process — reducing friction for first-time visitors.
-- **Section A — Core Values (`Features2.astro`):**
-  - Component: `Features2.astro` (already imported)
-  - Props: `tagline="Our Foundations"`, `title="What We Stand For"`
-  - **6 suggested values (confirm/edit with consultant):**
-    | Value | Icon | Short Description |
-    |-------|------|-----------------|
-    | Authenticity | `tabler:shield-check` | Ancient wisdom applied practically — no superstition, no gimmicks |
-    | Personalisation | `tabler:user-heart` | Every consultation is unique to your birth chart and floor plan |
-    | Non-Demolition First | `tabler:home-check` | Maximum results through placement, colours, and energy — not construction |
-    | Confidentiality | `tabler:lock` | Your personal and financial details stay strictly private |
-    | Measurable Results | `tabler:chart-line` | Clear guidance with follow-up to ensure visible, real-world change |
-    | Accessible Wisdom | `tabler:book-open` | Ancient knowledge made simple and actionable for modern families |
-  - **TBD:** [ ] Confirm value titles and descriptions with consultant
+- **Goal:** (a) Replace the generic `Features2` block with BhummiVastu's core values ✅, and (b) replace the generic Steps widget with a clear consultation process — reducing friction for first-time visitors.
+
+#### ✅ Section A — Core Values (`Features2.astro`) — COMPLETED
+- **Confirmed values (implemented in `index.astro`):**
+
+  | Value | Icon | Value Statement |
+  |-------|------|----------------|
+  | Scientific Logic | `tabler:atom` | Solutions based on energy principles & spatial geometry — the "how" and "why" explained |
+  | Zero-Demolition Practicality | `tabler:home-check` | Non-disruptive corrections using colours, elements, and precise placements — no demolition |
+  | Ethical Integrity | `tabler:shield-check` | No fear-based selling; honest, transparent guidance — only what is necessary |
+  | Client-Centric Empathy | `tabler:heart-handshake` | Deeply personalised solutions tailored to career, health, and relationship goals |
+  | Empowerment Through Knowledge | `tabler:book-open` | Educate clients to maintain harmony independently — empowerment, not dependency |
+
+- **Old plan values superseded:** Authenticity → Ethical Integrity · Personalisation → Client-Centric Empathy · Non-Demolition First → Zero-Demolition Practicality · Accessible Wisdom → Empowerment Through Knowledge · Measurable Results → Scientific Logic · Confidentiality → absorbed into Ethical Integrity.
+- **Background:** Warm amber tint (`bg-amber-50/60`) for visual contrast with surrounding sections.
+- **TBD:** [ ] Confirm final value descriptions with consultant before launch
 - **Section B — How a Consultation Works (`Steps.astro`):**
   - Component: `Steps.astro` (already imported)
   - Replace generic "Download → Customize" steps with:
@@ -170,41 +178,51 @@ This plan details the transformation of the current landing page into an effecti
     5. `tabler:refresh` — **Follow-Up Support** — A complimentary follow-up call to track progress and answer questions.
   - `title`: _"Your Journey to Harmony — 5 Simple Steps"_
   - `image`: TBD — can use a warm consultation/office photo. Placeholder: Unsplash photo of a serene interior.
-  - **TBD:** [ ] Confirm process steps with consultant · [ ] Source or take a relevant photo
-- **Implementation in `index.astro`:**
-  1. Update `<Features2>` props with values content
-  2. Replace `<Steps>` props with the 5-step consultation process
-  3. Remove the second and third `<Content isAfterContent>` generic blocks
+  #### ✅ Section B — How a Consultation Works (`Steps.astro`) — COMPLETED
+- **Title:** _"Your Journey to Harmony — 5 Simple Steps"_
+- **5 steps implemented (confirmed icons, all validated against tabler icon set):**
+
+  | Step | Icon | Title | Key Content |
+  |------|------|-------|-------------|
+  | 1 | `tabler:message-share` | Discovery & Data Sharing | Floor plan + birth details → unique energy blueprint |
+  | 2 | `tabler:compass` | Technical Survey & Directional Mapping | Google Earth / on-site · identifies Vastu Doshas |
+  | 3 | `tabler:binary-tree` | 16-Zone Zonal Analysis | 16 directions · 45 energy fields · cross-ref with Dashas |
+  | 4 | `tabler:video` | Live Consultation & Written Report | PDF report + video/in-person explanation of zero-demolition remedies |
+  | 5 | `tabler:refresh` | Implementation & Follow-Up Support | Complimentary follow-up · tracks measurable shifts |
+
+- **Image:** Unsplash placeholder (consultant analysing floor plan). **TBD:** Replace with actual photo of Minu ji at work or reviewing a floor plan.
+- **SEO keywords woven in:** _16-Zone Zonal Analysis_, _Vastu Doshas_, _zero-demolition remedy_, _Astro-Vastu_, _Bangalore_, _directional mapping_, _non-demolition_
+- **Note:** `tabler:video-conf` does not exist in the icon set — replaced with `tabler:video` (validated).
+
+### ✅ Sprint 5: Core Principles/Values + "How a Consultation Works" Steps — COMPLETED
 
 ---
 
-### Sprint 6: Individual Service Detail Pages (Content Fill)
-- **Goal:** Fill the 6 stub pages under `src/pages/services/` with real content. Stubs already exist — this sprint is purely content and component wiring.
-- **Pages to complete:**
-  - `residential-vastu.astro` · `commercial-vastu.astro` · `industrial-vastu.astro`
-  - `it-career-astrology.astro` · `personal-life-astrology.astro` · `astro-vastu.astro`
-- **Per-page content checklist:**
-  - [ ] H1 with service + location keyword (already in HeroText — confirm final wording)
-  - [ ] `Content.astro` block: 3–5 paragraphs / description (TBD per service)
-  - [ ] `Steps.astro` block: 4-step process (adapt global process for service specifics)
-  - [ ] Key benefits list (3–5 bullet points) as items in Content widget
-  - [ ] Relevant image — in-situ photo or illustration (TBD; Unsplash placeholder acceptable for launch)
-  - [ ] 1–2 inline testimonials relevant to that service (TBD — can use a mini testimonial div or wait for Sprint 7)
-  - [ ] Pricing section: `starting from ₹X,XXX` once confirmed
-  - [ ] `CallToAction.astro` at bottom (already scaffolded in stubs)
-- **SEO requirements per page:**
-  - `title` tag: `[Service Name] in Bangalore | Vastu Acharya Minu Malik — BhummiVastu`
-  - `description`: 120–160 characters, includes service + Bangalore + consultant name
-  - Internal links: each page should link back to home and to at least one related service
-- **Additional keywords to target (weave into copy naturally):**
-  - Residential: _vastu shastra for home bangalore_, _flat vastu consultant_, _non demolition vastu_
-  - Commercial: _office vastu bangalore_, _startup vastu consultant_
-  - Industrial: _factory vastu_, _warehouse vastu consultant bangalore_
-  - IT Astrology: _astrology for software engineers bangalore_, _career astrology consultant_
-  - Personal: _marriage astrology bangalore_, _kundali matching bangalore_
-  - Astro-Vastu: _astro vastu consultant bangalore_, _vedic astrology vastu_
-- **TBD (per page):** content copy, images, testimonials, confirmed prices
-- **Implementation:** Edit each `src/pages/services/*.astro` replacing the TBD placeholder sections with `Content`, `Steps`, and inline testimonial fragments
+### ✅ Sprint 6: Individual Service Detail Pages (Content Fill) — COMPLETED
+- **Goal:** Fill the 6 stub pages under `src/pages/services/` with real content. ✅
+- **All 6 pages completed with:**
+  - `Content.astro` block: 3-paragraph description with SEO keywords woven in naturally
+  - `Steps.astro` block: 4–5 service-specific process steps (adapted from global process)
+  - 6 key benefits as `items[]` in the Content widget (all icons validated against tabler set)
+  - Unsplash placeholder images (TBD: replace with real photos)
+  - `CallToAction` with dual actions: "Book a Consultation" + "Explore Other Services" → `/#services`
+  - Internal link back to home services section on every page
+- **SEO implemented per page:**
+  - `title` tags: `[Service] in Bangalore | Vastu Acharya Minu Malik — BhummiVastu` pattern
+  - `description`: 120–160 chars, includes service keyword + Bangalore + consultant name
+  - Internal links to `/#services` on every page
+- **Keywords targeted (woven naturally into copy):**
+  - Residential: `vastu shastra for home bangalore`, `flat vastu consultant`, `non-demolition vastu`, `vastu doshas`, `16-zone`, `vastu corrections`
+  - Commercial: `office vastu bangalore`, `startup vastu consultant`, `commercial vastu`, `zero-demolition`
+  - Industrial: `factory vastu`, `warehouse vastu consultant bangalore`, `industrial vastu shastra`
+  - IT Astrology: `astrology for it professionals bangalore`, `career astrology`, `janma kundali`, `dasha`, `muhurta`
+  - Personal: `marriage astrology bangalore`, `kundali milan`, `personal life astrology`, `vedic astrology`, `navamsa`
+  - Astro-Vastu: `astro-vastu consultant bangalore`, `vedic astrology vastu`, `jyotish`, `integrated vastu astrology`
+- **TBD still needed:**
+  - [ ] Real photos — replace Unsplash placeholders with actual BhummiVastu photos
+  - [ ] Pricing — add "Starting from ₹X,XXX" once confirmed with consultant
+  - [ ] Real client testimonials — add inline testimonial quotes per service (Sprint 7)
+  - [ ] Schema markup — LocalBusiness + Service JSON-LD for SEO (future sprint)
 
 ---
 

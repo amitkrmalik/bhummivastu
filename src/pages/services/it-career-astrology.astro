@@ -1,12 +1,14 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
+import Content from '~/components/widgets/Content.astro';
+import Steps from '~/components/widgets/Steps.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
   title: 'Astrology for IT Career & Business Growth in Bangalore | Vastu Acharya Minu Malik',
   description:
-    'Navigate career transitions, business decisions, and growth opportunities with personalised Astrology guidance by Vastu Acharya Minu Malik — trusted by IT professionals and entrepreneurs in Bangalore.',
+    'Navigate career transitions, business launches, and growth decisions with personalised Vedic Astrology by Vastu Acharya Minu Malik — trusted by IT professionals and entrepreneurs in Bangalore.',
 };
 ---
 
@@ -15,43 +17,100 @@ const metadata = {
   <HeroText
     tagline="Astrology — IT Career & Business"
     title="Astrology for IT Careers & Business Growth in Bangalore"
-    subtitle="Whether you are choosing a new role, launching a startup, or planning your next business move — let the stars guide you with clarity and confidence."
+    subtitle="Whether you are weighing a job offer, planning a startup launch, or navigating a complex business decision — let Vedic Astrology bring you clarity on timing, risk, and opportunity."
   />
 
-  <!--
-    TBD — CONTENT SECTION
-    Replace this placeholder with:
-    - How astrology applies to career timing (job changes, promotions, business launch muhurtas)
-    - What the consultation covers (birth chart analysis, planetary periods / dashas, remedies)
-    - Benefits: clarity, timing advantage, reduced risk
-    - Client testimonials specific to IT/business (TBD)
-    Suggested component: <Content /> from ~/components/widgets/Content.astro
-  -->
-  <section class="py-12 px-4 max-w-3xl mx-auto text-center text-muted">
-    <p class="text-lg italic">
-      📋 <strong>TBD:</strong> Detailed service description, process, and IT client success stories coming soon.
-    </p>
-  </section>
+  <!-- What is IT Career Astrology -->
+  <Content
+    tagline="About This Service"
+    title="Cosmic Timing for Your Career & Business — A Vedic Perspective"
+    content={`
+      <p>The tech world moves fast — job switches, freelance transitions, startup launches, international opportunities, and high-stakes business decisions all carry timing-sensitive risks and rewards. Vedic Astrology offers a uniquely powerful framework for IT professionals and entrepreneurs: by analysing your <strong>Janma Kundali</strong> (birth chart) alongside the current planetary periods (Dashas) and transits, Vastu Acharya Minu Malik identifies the precise windows of opportunity and caution in your professional life.</p>
+      <p>This is not fatalism — it is <strong>informed strategy</strong>. Your birth chart reveals the underlying rhythms of your career and financial life: when planetary support is strong (ripe for negotiation, new ventures, or bold moves) and when caution and consolidation serve you better. Knowing the difference is a genuine competitive edge. Minu ji has helped IT engineers navigate promotions, startup founders identify ideal product launch windows, and small business owners decode persistent financial cycles — all through systematic Vedic astrological analysis.</p>
+      <p>The consultation covers career timing and job transitions, business launch Muhurtas (auspicious timing), partnership and co-founder compatibility, financial cycles, and strategic decision windows. Available online — consultations by video call for clients across India.</p>
+    `}
+    items={[
+      {
+        title: 'Identify the best months for job change, promotion, or negotiation',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Career-specific planetary analysis for IT, tech, and creative professionals',
+        icon: 'tabler:device-laptop',
+      },
+      {
+        title: 'Business timing: launch windows, investor meetings, expansion phases',
+        icon: 'tabler:trending-up',
+      },
+      {
+        title: 'Partnership compatibility for co-founders and business alliances',
+        icon: 'tabler:heart-handshake',
+      },
+      {
+        title: 'Guidance on navigating setbacks, delays, and career transitions',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Available online — video consultations for clients anywhere in India',
+        icon: 'tabler:globe',
+      },
+    ]}
+    columns={2}
+    isReversed={true}
+    image={{
+      src: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80',
+      alt: 'IT professional planning career — Astrology for IT Careers by BhummiVastu',
+    }}
+  />
 
-  <!--
-    TBD — STEPS / PROCESS
-    1. Share your birth details
-    2. Receive a detailed birth chart analysis
-    3. Discuss career/business timeline and opportunities
-    4. Get practical remedies and Muhurta recommendations
-    TBD — PRICING: Starting price TBD (confirm with consultant)
-  -->
+  <!-- Process Steps -->
+  <Steps
+    title="How an IT Career & Business Astrology Consultation Works"
+    tagline="Our Process"
+    items={[
+      {
+        title: 'Share Your Birth Details',
+        description:
+          'Provide your birth date, exact time of birth, and place of birth. These three data points are the only inputs needed to build your complete Janma Kundali. The more precise your birth time, the more accurate the analysis.',
+        icon: 'tabler:file-text',
+      },
+      {
+        title: 'Chart Preparation & Dasha Analysis',
+        description:
+          'Minu ji prepares your natal chart and identifies the current Mahadasha and Antardasha (planetary periods), key transits affecting your career, financial, and professional houses — with specific focus on the 2nd, 6th, 10th, and 11th houses for career and income.',
+        icon: 'tabler:binary-tree',
+      },
+      {
+        title: 'Live 60-Minute Consultation',
+        description:
+          'A structured video session covering your current planetary period, key career opportunities and caution windows in the next 12–18 months, specific guidance for your stated goals (job change, business launch, etc.), and practical planetary remedies.',
+        icon: 'tabler:video',
+      },
+      {
+        title: 'Written Report & Muhurta Recommendations',
+        description:
+          'Receive a written summary with specific auspicious time windows (Muhurtas) for major career decisions, a 12-month planetary forecast for your key areas, and practical remedies — mantras, lifestyle adjustments, and timing guidance.',
+        icon: 'tabler:circle-check',
+      },
+    ]}
+    classes={{ container: 'bg-slate-50 dark:bg-slate-800/30' }}
+  />
 
   <!-- CTA -->
   <CallToAction
     title="Take Charge of Your Career & Business Future"
-    subtitle="Book a personalised astrology session with Vastu Acharya Minu Malik and make your next move with confidence."
+    subtitle="Book a personalised astrology session with Vastu Acharya Minu Malik and make your next move with confidence and cosmic clarity."
     actions={[
       {
         variant: 'primary',
-        text: 'Book Consultation',
+        text: 'Book a Consultation',
         href: '/contact',
         icon: 'tabler:calendar-event',
+      },
+      {
+        variant: 'secondary',
+        text: 'Explore Other Services',
+        href: '/#services',
       },
     ]}
   />

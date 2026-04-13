@@ -1,5 +1,5 @@
 site:
-  name: AstroWind
+  name: BhummiVastu
   site: 'https://www.bhummivastu.com'
   base: '/'
   trailingSlash: false
@@ -12,8 +12,8 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
-    template: '%s — AstroWind'
+    default: BhummiVastu — Vastu & Astrology Consultant in Bangalore
+    template: '%s | BhummiVastu'
   description: "🏙️ Bhummi Vastu - Vastu consultancy and services in Bangalore. Serving all major locations within Bangalore including Indiranagar, Koramangala, Whitefield, Jayanagar, and more."
   robots:
     index: true

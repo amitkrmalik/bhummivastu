@@ -1,12 +1,14 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
+import Content from '~/components/widgets/Content.astro';
+import Steps from '~/components/widgets/Steps.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
   title: 'Industrial Vastu Consultant in Bangalore | Vastu for Factories & Warehouses',
   description:
-    'Optimise your factory, warehouse, or industrial unit with Industrial Vastu by Vastu Acharya Minu Malik in Bangalore. Improve safety, productivity, and operational efficiency.',
+    'Improve safety, productivity, and operational efficiency with Industrial Vastu by Vastu Acharya Minu Malik in Bangalore. Expert Vastu Shastra for factories, warehouses, and industrial units.',
 };
 ---
 
@@ -15,39 +17,99 @@ const metadata = {
   <HeroText
     tagline="Industrial Vastu"
     title="Vastu for Factories & Warehouses in Bangalore"
-    subtitle="A well-aligned industrial space reduces accidents, improves workflow, and drives operational excellence. Get expert Industrial Vastu guidance tailored to your site layout."
+    subtitle="A well-aligned industrial space reduces accidents, improves workflow efficiency, and drives operational excellence. Expert Industrial Vastu guidance tailored to your site layout and production goals."
   />
 
-  <!--
-    TBD — CONTENT SECTION
-    Replace this placeholder with:
-    - What Industrial Vastu covers (plot direction, machinery placement, storage zones, entry/exit gates)
-    - Typical process (site survey / layout review)
-    - Benefits: reduced incidents, better productivity, smoother supply chain
-    - Case studies (TBD from consultant)
-    Suggested component: <Content /> from ~/components/widgets/Content.astro
-  -->
-  <section class="py-12 px-4 max-w-3xl mx-auto text-center text-muted">
-    <p class="text-lg italic">
-      📋 <strong>TBD:</strong> Detailed service description, process, and case studies coming soon.
-    </p>
-  </section>
+  <!-- What is Industrial Vastu -->
+  <Content
+    tagline="About This Service"
+    title="Industrial Vastu — The Spatial Science of Operational Excellence"
+    content={`
+      <p>Every factory, warehouse, and industrial facility operates within an energy field that significantly influences safety, workflow, machinery performance, and overall productivity. Industrial Vastu Shastra applies the 16-zone directional mapping system to large-scale industrial plots, identifying energy imbalances that contribute to workplace accidents, supply chain inefficiencies, high employee turnover, and persistent operational losses.</p>
+      <p>Industrial Vastu is a spatial science grounded in directional principles. The orientation of the main gate, the placement of heavy machinery, the direction of storage and dispatch areas, the location of HR and management offices, and even the position of the water source all carry measurable energy implications for the facility as a whole. Minu ji brings deep expertise in Industrial Vastu, working with factory owners and logistics operators to identify and correct these imbalances through <strong>practical, cost-effective methods</strong> that do not require shutdowns or structural rebuilds.</p>
+      <p>Available for manufacturing plants, warehouses, logistics hubs, processing units, cold storage facilities, and construction sites. On-site industrial surveys are available within 200km of Bangalore; remote consultations via detailed site plan are available nationwide.</p>
+    `}
+    items={[
+      {
+        title: 'Reduced workplace accidents through optimised directional energy',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Improved supply chain flow and warehouse organisation',
+        icon: 'tabler:arrows-right',
+      },
+      {
+        title: 'Lower employee attrition and improved team cohesion',
+        icon: 'tabler:users',
+      },
+      {
+        title: 'Enhanced operational productivity and output capacity',
+        icon: 'tabler:trending-up',
+      },
+      {
+        title: 'Applicable to factories, warehouses, and large industrial plots',
+        icon: 'tabler:building-factory',
+      },
+      {
+        title: 'On-site surveys within 200km of Bangalore; nationwide online',
+        icon: 'tabler:map-pin',
+      },
+    ]}
+    columns={2}
+    image={{
+      src: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80',
+      alt: 'Industrial facility assessment — Industrial Vastu by BhummiVastu Bangalore',
+    }}
+  />
 
-  <!--
-    TBD — STEPS / PROCESS
-    TBD — PRICING: Starting price TBD (confirm with consultant)
-  -->
+  <!-- Process Steps -->
+  <Steps
+    title="How Industrial Vastu Works — 4 Steps to an Optimised Facility"
+    tagline="Our Process"
+    items={[
+      {
+        title: 'Site Profile & Remote Satellite Review',
+        description:
+          'Share the industrial plot location, layout plan, key operational pain points, and any recurring issues (accidents, delays, attrition). Minu ji conducts an initial remote assessment using satellite imagery and compass data.',
+        icon: 'tabler:file-text',
+      },
+      {
+        title: 'On-Site Directional Survey',
+        description:
+          'Minu ji conducts a detailed on-site survey with precision compass mapping of all 16 Vastu zones, assessing machinery positions, gate directions, storage areas, production zones, management offices, and water/fire sources.',
+        icon: 'tabler:compass',
+      },
+      {
+        title: 'Vastu Dosha Analysis & Safety-Energy Audit',
+        description:
+          'Cross-referencing the site plan with Vastu directional principles to identify zones that generate hazard risk, productivity loss, or financial drain — with clear explanations of the energy mechanism behind each finding.',
+        icon: 'tabler:binary-tree',
+      },
+      {
+        title: 'Phased Remediation Recommendations',
+        description:
+          'A practical, priority-ranked action plan — from immediate low-cost corrections (directional repositioning, elemental placements) to medium-term strategic adjustments. Includes a written report with implementation timeline.',
+        icon: 'tabler:circle-check',
+      },
+    ]}
+    classes={{ container: 'bg-slate-50 dark:bg-slate-800/30' }}
+  />
 
   <!-- CTA -->
   <CallToAction
     title="Optimise Your Industrial Space"
-    subtitle="Connect with Vastu Acharya Minu Malik to assess your factory or warehouse and unlock its true potential."
+    subtitle="Connect with Vastu Acharya Minu Malik to assess your factory or warehouse and unlock its true operational potential."
     actions={[
       {
         variant: 'primary',
-        text: 'Book Consultation',
+        text: 'Book a Consultation',
         href: '/contact',
         icon: 'tabler:calendar-event',
+      },
+      {
+        variant: 'secondary',
+        text: 'Explore Other Services',
+        href: '/#services',
       },
     ]}
   />

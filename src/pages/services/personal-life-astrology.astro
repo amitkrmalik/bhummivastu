@@ -1,12 +1,14 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
+import Content from '~/components/widgets/Content.astro';
+import Steps from '~/components/widgets/Steps.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
   title: 'Astrology for Personal Life & Relationships in Bangalore | Vastu Acharya Minu Malik',
   description:
-    'Find clarity, heal relationships, and make life-changing decisions with personalised Astrology by Vastu Acharya Minu Malik in Bangalore. Marriage, family, and personal well-being consultations.',
+    'Find clarity on marriage, relationships, family harmony, and personal well-being with personalised Vedic Astrology by Vastu Acharya Minu Malik in Bangalore. Kundali Milan and life guidance.',
 };
 ---
 
@@ -15,43 +17,99 @@ const metadata = {
   <HeroText
     tagline="Astrology — Personal Life"
     title="Astrology for Personal Life & Relationships in Bangalore"
-    subtitle="From marriage compatibility to family harmony and personal well-being — gain deep insight into your life's journey and the relationships that shape it."
+    subtitle="From marriage timing and Kundali Milan to family harmony and personal well-being — gain deep, compassionate insight into your life journey and the relationships that shape it."
   />
 
-  <!--
-    TBD — CONTENT SECTION
-    Replace this placeholder with:
-    - Topics covered: marriage timing, compatibility, family disputes, health, personal growth
-    - Process: birth chart + partner chart (synastry), divisional charts, remedies
-    - Benefits: emotional clarity, better decisions, stronger bonds
-    - Testimonials specific to personal/relationship outcomes (TBD)
-    Suggested component: <Content /> from ~/components/widgets/Content.astro
-  -->
-  <section class="py-12 px-4 max-w-3xl mx-auto text-center text-muted">
-    <p class="text-lg italic">
-      📋 <strong>TBD:</strong> Detailed service description, process, and personal success stories coming soon.
-    </p>
-  </section>
+  <!-- What is Personal Life Astrology -->
+  <Content
+    tagline="About This Service"
+    title="Your Life's Blueprint — Understanding the Patterns That Shape You"
+    content={`
+      <p>Life's most meaningful questions — when to marry, how to navigate a relationship challenge, what the chart reveals about family harmony, or how to deal with recurring health patterns — find illuminating answers in your Vedic birth chart. Vastu Acharya Minu Malik provides deeply empathetic, personalised Astrology consultations for personal life, relationships, and well-being.</p>
+      <p>A Vedic birth chart is a complete cosmic blueprint of your life's potential, patterns, and timing. The 7th house governs marriage and partnerships; the 2nd and 4th houses reflect family and domestic harmony; the 5th house guides matters of children and creativity; while the 6th, 8th, and 12th houses reveal health and karmic patterns. Minu ji analyses these houses — along with divisional charts (Navamsa for marriage, Ashtamsa for longevity) and current planetary transits — to give you a nuanced, honest, and compassionate reading of your personal life.</p>
+      <p>This service is ideal for individuals facing a crossroads in relationships, seeking guidance on marriage compatibility (<strong>Kundali Milan</strong>), navigating family disputes, supporting a child's development decisions, understanding recurring health challenges, or simply wanting clarity about the deeper patterns shaping their life. Available by video call — consultations for clients across India and abroad.</p>
+    `}
+    items={[
+      {
+        title: 'Marriage timing, compatibility, and Kundali Milan for lasting partnerships',
+        icon: 'tabler:heart',
+      },
+      {
+        title: 'Family harmony guidance and navigation of domestic challenges',
+        icon: 'tabler:home',
+      },
+      {
+        title: 'Insights on children, pregnancy timing, and parental relationships',
+        icon: 'tabler:baby-carriage',
+      },
+      {
+        title: 'Clarity on personal health patterns and their astrological roots',
+        icon: 'tabler:brain',
+      },
+      {
+        title: 'Practical remedies — gemstones, mantras, and lifestyle adjustments',
+        icon: 'tabler:leaf',
+      },
+      {
+        title: 'Available online — video consultations, pan-India and international',
+        icon: 'tabler:globe',
+      },
+    ]}
+    columns={2}
+    image={{
+      src: 'https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=800&q=80',
+      alt: 'Personal life guidance and relationship clarity — Astrology by BhummiVastu Bangalore',
+    }}
+  />
 
-  <!--
-    TBD — STEPS / PROCESS
-    1. Share your birth details (and partner's if applicable)
-    2. In-depth birth chart reading
-    3. Discuss specific life questions / concerns
-    4. Practical remedies, gemstone guidance, and timing advice
-    TBD — PRICING: Starting price TBD (confirm with consultant)
-  -->
+  <!-- Process Steps -->
+  <Steps
+    title="How a Personal Life Astrology Consultation Works"
+    tagline="Our Process"
+    items={[
+      {
+        title: 'Share Birth Details & Your Questions',
+        description:
+          'Provide your birth date, exact time of birth, and place of birth. For compatibility or Kundali Milan, share your partner\'s details too. Include the specific life areas or questions you would like the consultation to focus on.',
+        icon: 'tabler:file-text',
+      },
+      {
+        title: 'Comprehensive Chart Preparation',
+        description:
+          'Minu ji analyses your natal chart alongside relevant divisional charts — Navamsa (D-9) for marriage and relationships, Ashtamsa (D-8) for challenges and longevity, and other divisional charts specific to your concerns. For Kundali Milan, both charts are assessed together.',
+        icon: 'tabler:binary-tree',
+      },
+      {
+        title: 'Empathetic 60-Minute Consultation',
+        description:
+          'A compassionate, honest, and detailed session — exploring your chart findings in relation to your specific questions. Minu ji focuses on empowering you with understanding and practical guidance, not fear-based predictions.',
+        icon: 'tabler:video',
+      },
+      {
+        title: 'Personal Guidance Report & Remedies',
+        description:
+          'A written report with personalised remedies (mantras, gemstone guidance, auspicious timings for key decisions, lifestyle recommendations) and a clear overview of the year ahead in your key areas of concern.',
+        icon: 'tabler:circle-check',
+      },
+    ]}
+    classes={{ container: 'bg-slate-50 dark:bg-slate-800/30' }}
+  />
 
   <!-- CTA -->
   <CallToAction
     title="Bring Clarity & Harmony to Your Life"
-    subtitle="Book a personal astrology session with Vastu Acharya Minu Malik and rediscover your path."
+    subtitle="Book a personal astrology session with Vastu Acharya Minu Malik — compassionate, honest, and rooted in authentic Vedic wisdom."
     actions={[
       {
         variant: 'primary',
-        text: 'Book Consultation',
+        text: 'Book a Consultation',
         href: '/contact',
         icon: 'tabler:calendar-event',
+      },
+      {
+        variant: 'secondary',
+        text: 'Explore Other Services',
+        href: '/#services',
       },
     ]}
   />

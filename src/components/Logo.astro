@@ -1,9 +1,30 @@
 ---
 import { SITE } from 'astrowind:config';
+// TBD: Replace the OM SVG + wordmark with an actual logo image once the brand asset is ready.
+// e.g. <Image src="~/assets/images/logo.png" alt="BhummiVastu" width={140} height={40} />
 ---
 
-<span
-  class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white"
->
-  🚀 {SITE?.name}
+<span class="flex items-center gap-2 select-none ml-2 rtl:ml-0 rtl:mr-2">
+  <!-- OM symbol as inline SVG — culturally relevant, no image dependency -->
+  <svg
+    class="w-8 h-8 flex-shrink-0"
+    viewBox="0 0 64 64"
+    xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+  >
+    <text
+      x="50%"
+      y="54%"
+      dominant-baseline="middle"
+      text-anchor="middle"
+      font-family="'Noto Serif', Georgia, serif"
+      font-size="46"
+      fill="rgb(109 40 217)"
+    >ॐ</text>
+  </svg>
+
+  <!-- Wordmark -->
+  <span class="text-xl font-bold tracking-tight text-gray-900 dark:text-white whitespace-nowrap leading-none">
+    Bhummi<span style="color: rgb(109 40 217);">Vastu</span>
+  </span>
 </span>
