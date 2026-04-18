@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://www.bhummivastu.com/sitemap-index.xml
+Sitemap: https://amitkrmalik.github.io/sitemap-index.xml

@@ -23,8 +23,10 @@ const whenExternalScripts = (items: (() => AstroIntegration) | (() => AstroInteg
 
 export default defineConfig({
   // ── Deployment target ─────────────────────────────────────────────
-  // Production URL — used by sitemap, canonical tags, and Open Graph
-  site: 'https://www.bhummivastu.com',
+  // Soft launch on GitHub Pages — https://amitkrmalik.github.io/bhummivastu
+  // When going live on www.bhummivastu.com, set site to the domain and remove base.
+  site: 'https://amitkrmalik.github.io',
+  base: '/bhummivastu',
 
   output: 'static',
 
