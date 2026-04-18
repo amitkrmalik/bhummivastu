@@ -1,0 +1,178 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Content from '~/components/widgets/Content.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+
+const metadata = {
+  title: 'Prashna Kundali — Horary Astrology Consultation | BhummiVastu Bangalore',
+  description:
+    'Get an instant answer to your most pressing question with Prashna Kundali (Horary Astrology) by Vastu Acharya Minu Saini. No birth details required. ₹1,000 for a focused 10-minute session.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero -->
+  <HeroText
+    tagline="Prashna Kundali · Horary Astrology"
+    title="Instant Answers to Your Most Pressing Questions"
+    subtitle="No birth chart needed. Prashna Kundali (Horary Astrology) reads the planetary positions at the exact moment your question arises — delivering precise, timely answers when you need them most."
+  />
+
+  <!-- Pricing Banner -->
+  <section class="bg-teal-50 dark:bg-teal-900/20 border-y border-teal-200 dark:border-teal-800 py-4">
+    <div class="max-w-4xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
+      <div>
+        <span class="font-bold text-teal-800 dark:text-teal-200 text-base">₹1,000 · 10-minute focused session</span>
+        <span class="block text-xs text-teal-700 dark:text-teal-400 mt-0.5">One specific question · Immediate answer · No birth details required · Available via WhatsApp or call</span>
+      </div>
+      <a href="https://wa.me/919972709328?text=Hi%2C%20I%20would%20like%20to%20book%20a%20Prashna%20Kundali%20session." target="_blank" rel="noopener noreferrer" class="shrink-0 inline-flex items-center gap-2 bg-teal-600 text-white font-semibold text-sm rounded-lg px-4 py-2 hover:bg-teal-700 transition-colors">
+        Book via WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- What is Prashna Kundali -->
+  <Content
+    tagline="About This Service"
+    title="What is Prashna Kundali?"
+    content={`
+      <p><strong>Prashna Kundali</strong> (also known as Horary Astrology) is an ancient branch of Vedic Astrology that answers a specific, immediate question by reading the planetary positions at the precise moment and location the question is asked. Unlike a natal chart reading — which requires your exact birth date, time, and place — Prashna Kundali works solely from the moment of the question itself.</p>
+      <p>In Vedic tradition, the cosmos is never static. Every moment carries a unique planetary signature, and when a question arises with genuine intensity and sincerity, that moment is cosmically significant. The chart cast at that precise instant contains the answer to the question — hidden within the planetary positions, house placements, and their relationships to each other.</p>
+      <p>Vastu Acharya Minu Saini uses classical Prashna Kundali methodology to answer your most pressing question with directness and precision. This service is ideal when you need a fast, specific answer and don't have the time or birth data for a full horoscope consultation. Available via WhatsApp or phone call.</p>
+    `}
+    items={[
+      {
+        title: 'No birth details required — question is all that is needed',
+        icon: 'tabler:question-mark',
+      },
+      {
+        title: 'Fast, focused answers to a single specific question',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Ideal for yes/no questions and near-term timing queries',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Career, business, relationships, property, health, and travel',
+        icon: 'tabler:list',
+      },
+      {
+        title: 'Classical Vedic Prashna methodology by an experienced practitioner',
+        icon: 'tabler:stars',
+      },
+      {
+        title: 'Available via WhatsApp or phone — quick and convenient',
+        icon: 'tabler:brand-whatsapp',
+      },
+    ]}
+    columns={2}
+    image={{
+      src: 'https://images.unsplash.com/photo-1531171673193-06cb036e028c?w=800&q=80',
+      alt: 'Prashna Kundali — Horary Astrology by Vastu Acharya Minu Saini, BhummiVastu Bangalore',
+    }}
+  />
+
+  <!-- What kind of questions -->
+  <Steps
+    title="What Questions Can Prashna Kundali Answer?"
+    tagline="Common Questions"
+    subtitle="Almost any sincere, specific question can be addressed. Here are the most common categories."
+    items={[
+      {
+        title: 'Career & Job Decisions',
+        description:
+          'Will I get this job? Should I accept this offer? Is this the right time to change companies? Will my interview be successful? When will my promotion come?',
+        icon: 'tabler:device-laptop',
+      },
+      {
+        title: 'Business & Financial',
+        description:
+          'Will this business deal succeed? Should I invest in this property or stock? Will I recover my money? When will my financial situation improve? Should I start this venture now?',
+        icon: 'tabler:trending-up',
+      },
+      {
+        title: 'Relationships & Marriage',
+        description:
+          'Will this relationship lead to marriage? When will I meet my life partner? Will this marriage work out? Is this person right for me? Will a strained relationship heal?',
+        icon: 'tabler:heart',
+      },
+      {
+        title: 'Property & Real Estate',
+        description:
+          'Should I buy this property? Will this deal go through? Is this flat right for my family? Will I get a good price for my property? Should I rent or buy?',
+        icon: 'tabler:home',
+      },
+      {
+        title: 'Health & Recovery',
+        description:
+          'Will this health issue resolve soon? Is this treatment the right one? When will I recover? Should I pursue this medical option?',
+        icon: 'tabler:heart-rate-monitor',
+      },
+      {
+        title: 'Travel & Relocation',
+        description:
+          'Will my visa be approved? Is this the right time to relocate? Will my foreign trip be successful? Should I move to this city for work?',
+        icon: 'tabler:plane',
+      },
+    ]}
+    classes={{ container: 'bg-slate-50 dark:bg-slate-800/30' }}
+  />
+
+  <!-- FAQs -->
+  <FAQs
+    title="Prashna Kundali — Common Questions"
+    tagline="FAQs"
+    columns={1}
+    items={[
+      {
+        title: 'Do I really not need my birth details?',
+        description:
+          'Correct — Prashna Kundali is cast from the moment and location of the question itself. Your birth date, time, and place are not required for this service. This makes it particularly valuable for people who do not have their exact birth time.',
+      },
+      {
+        title: 'How specific should my question be?',
+        description:
+          'The more specific, the better. Instead of "Will I be successful?", ask "Will I get the job offer at Company X that I interviewed for on [date]?" or "Will the property deal I am currently negotiating close before [month]?" A precise question gives a precise answer.',
+      },
+      {
+        title: 'How is the session conducted?',
+        description:
+          'The session is conducted via WhatsApp call or regular phone call. You share your question, Minu ji notes the exact time and location, casts the Prashna chart, and delivers her reading within the 10-minute session. Simple and fast.',
+      },
+      {
+        title: 'Can I ask multiple questions in one session?',
+        description:
+          'Each Prashna Kundali session is for one specific question. If you have multiple questions, each requires a separate session (₹1,000 each). This is because each question must be answered from its own unique moment of asking.',
+      },
+      {
+        title: 'What if I need a more detailed reading?',
+        description:
+          'Prashna Kundali is for immediate, specific questions. For a comprehensive life review, career planning, or relationship analysis, we recommend booking an Astrology for IT Career or Personal Life consultation (₹5,000 · 1 hour) which includes a full birth chart reading and 30 days of follow-up questions.',
+      },
+    ]}
+  />
+
+  <!-- CTA -->
+  <CallToAction
+    title="Ask Your Question Today"
+    subtitle="Prashna Kundali is the fastest way to get a clear, specific answer grounded in Vedic Astrology. Book your 10-minute session for ₹1,000."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Book via WhatsApp',
+        href: 'https://wa.me/919972709328?text=Hi%2C%20I%20would%20like%20to%20book%20a%20Prashna%20Kundali%20session%20for%20a%20specific%20question.',
+        target: '_blank',
+        icon: 'tabler:brand-whatsapp',
+      },
+      {
+        variant: 'secondary',
+        text: 'Explore All Services',
+        href: '/services',
+      },
+    ]}
+  />
+</Layout>

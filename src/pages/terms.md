@@ -3,118 +3,135 @@ title: 'Terms and Conditions'
 layout: '~/layouts/MarkdownLayout.astro'
 ---
 
-_Last updated_: January 06, 2023
+_Last updated: April 2025_
 
-Please read these terms and conditions carefully before using Our Service.
+Please read these Terms and Conditions carefully before booking or using any consultation service offered by BhummiVastu.
 
-## Interpretation and Definitions
+## 1. About BhummiVastu
 
-### Interpretation
+BhummiVastu is a Vastu Shastra and Vedic Astrology consultancy operated by **Vastu Acharya Minu Saini**, based at Pruksa Silvana, Budigere Cross, Off Old Madras Road, Bangalore East Tq. – 560049, Karnataka, India.
 
-The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.
+- **Website:** [https://bhummivastu.com](https://bhummivastu.com)
+- **Email:** minusaini@bhummivastu.com
+- **WhatsApp / Phone:** +91-99727 09328
 
-### Definitions
+## 2. Acceptance of Terms
 
-For the purposes of these Terms and Conditions:
+By accessing this website, submitting a consultation enquiry, making a payment, or attending any consultation session (online or offline) with BhummiVastu, you confirm that you have read, understood, and unconditionally agree to be bound by these Terms and Conditions.
 
-- **Affiliate** means an entity that controls, is controlled by or is under common control with a party, where "control" means ownership of 50% or more of the shares, equity interest or other securities entitled to vote for election of directors or other managing authority.
+If you do not agree to any part of these Terms, you must not use this website or engage any service from BhummiVastu.
 
-- **Country** refers to: California, United States
+**BhummiVastu consultations are available to adults only.** You represent that you are at least 18 years of age. Persons under the age of 18 are not permitted to book or attend any consultation, and BhummiVastu reserves the right to decline or cancel any booking where this condition is not met.
 
-- **Company** (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to AstroWind LLC, 1 Cupertino, CA 95014.
+## 3. Nature of Services — Important Disclaimer
 
-- **Device** means any device that can access the Service such as a computer, a cellphone or a digital tablet.
+BhummiVastu provides consultations in **Vastu Shastra** and **Vedic Astrology**. By engaging our services, you acknowledge and agree to the following:
 
-- **Service** refers to the Website.
+### 3.1 Advisory Nature of Consultations
 
-- **Terms and Conditions** (also referred as "Terms") mean these Terms and Conditions that form the entire agreement between You and the Company regarding the use of the Service. This Terms and Conditions agreement is a Demo.
+All guidance, analysis, recommendations, predictions, remedies, and advice provided during any BhummiVastu consultation — whether through Vastu analysis, birth chart reading, Prashna Kundali, or any other modality — are **advisory in nature only**. They represent one of many possible interpretations based on the principles of Vastu Shastra and Jyotish (Vedic Astrology) as understood and practised by Acharya Minu Saini.
 
-- **Third-party Social Media Service** means any services or content (including data, information, products or services) provided by a third-party that may be displayed, included or made available by the Service.
+### 3.2 Multiple Paths of Possibility
 
-- **Website** refers to AstroWind, accessible from [https://astrowind.vercel.app](https://astrowind.vercel.app)
+Astrology and Vastu operate on the understanding that life is shaped by a combination of **planetary influences, spatial energies, personal choices, karma, and individual free will**. Any prediction, remedy, or outcome shared during a consultation represents a **possible path** — not a guaranteed outcome. The actual trajectory of events depends significantly on the choices, actions, karma, and conduct of the individual client.
 
-- **You** means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.
+### 3.3 No Guarantee of Outcomes
 
-## Acknowledgment
+BhummiVastu and Acharya Minu Saini make **no warranty, representation, or guarantee** — express or implied — that any specific outcome, prediction, or result will be achieved as a result of following the advice, remedies, or recommendations given during a consultation.
 
-These are the Terms and Conditions governing the use of this Service and the agreement that operates between You and the Company. These Terms and Conditions set out the rights and obligations of all users regarding the use of the Service.
+### 3.4 Client Responsibility for Implementation
 
-Your access to and use of the Service is conditioned on Your acceptance of and compliance with these Terms and Conditions. These Terms and Conditions apply to all visitors, users and others who access or use the Service.
+The effectiveness of Vastu corrections, astrological remedies, gemstone recommendations, ritual practices, and spiritual guidelines shared during a consultation depends entirely on the **client's willingness, sincerity, and ability to follow through** on the advised course of action. BhummiVastu shall not be held responsible for outcomes — positive or negative — arising from a client's partial, incorrect, or non-implementation of the advice provided.
 
-By accessing or using the Service You agree to be bound by these Terms and Conditions. If You disagree with any part of these Terms and Conditions then You may not access the Service.
+### 3.5 No Liability for Unfulfilled Predictions
 
-You represent that you are over the age of 18\. The Company does not permit those under 18 to use the Service.
+Acharya Minu Saini and BhummiVastu shall bear **no liability whatsoever** for predictions or outcomes that do not manifest as discussed if the client has:
 
-Your access to and use of the Service is also conditioned on Your acceptance of and compliance with the Privacy Policy of the Company. Our Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your personal information when You use the Application or the Website and tells You about Your privacy rights and how the law protects You. Please read Our Privacy Policy carefully before using Our Service.
+- Failed to follow the prescribed remedies, rituals, or lifestyle changes;
+- Not maintained the righteous conduct, intent, or ethical behaviour recommended as part of the consultation;
+- Deviated from the remedial actions or timelines suggested;
+- Chosen not to implement the Vastu corrections or astrological remedies advised.
 
-## Links to Other Websites
+It is expressly understood by the client that consultations are spiritual and advisory in nature, and that results are co-created through the effort and sincere follow-through of the client.
 
-Our Service may contain links to third-party web sites or services that are not owned or controlled by the Company.
+## 4. Booking and Consent to Share Personal Information
 
-The Company has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third party web sites or services. You further acknowledge and agree that the Company shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with the use of or reliance on any such content, goods or services available on or through any such web sites or services.
+### 4.1 Voluntary Consent
 
-We strongly advise You to read the terms and conditions and privacy policies of any third-party web sites or services that You visit.
+By booking a consultation with BhummiVastu — whether via the website contact form, WhatsApp, email, or any other channel — you **voluntarily and explicitly consent** to sharing personal information including, but not limited to, your full name, date of birth, time of birth, place of birth, contact details, address, property/business details, and any other information relevant to the nature of the consultation requested.
 
-## Termination
+### 4.2 Purpose of Information
 
-We may terminate or suspend Your access immediately, without prior notice or liability, for any reason whatsoever, including without limitation if You breach these Terms and Conditions.
+The personal information you provide is collected solely for the purpose of delivering the specific consultation service you have requested. It will be used to prepare your analysis, schedule your session, communicate with you regarding your booking, and provide follow-up support as included in your chosen consultation package.
 
-Upon termination, Your right to use the Service will cease immediately.
+### 4.3 Sensitive Astrological Data
 
-## Limitation of Liability
+You acknowledge that birth date, time, and place constitute sensitive personal data used for astrological analysis. You share this information willingly and for the express purpose of receiving the consultation. BhummiVastu treats this data with strict confidentiality and will not share it with any third party without your explicit consent.
 
-Notwithstanding any damages that You might incur, the entire liability of the Company and any of its suppliers under any provision of this Terms and Your exclusive remedy for all of the foregoing shall be limited to the amount actually paid by You through the Service or 100 USD if You haven't purchased anything through the Service.
+## 5. Consultation Fees and Payments
 
-To the maximum extent permitted by applicable law, in no event shall the Company or its suppliers be liable for any special, incidental, indirect, or consequential damages whatsoever (including, but not limited to, damages for loss of profits, loss of data or other information, for business interruption, for personal injury, loss of privacy arising out of or in any way related to the use of or inability to use the Service, third-party software and/or third-party hardware used with the Service, or otherwise in connection with any provision of this Terms), even if the Company or any supplier has been advised of the possibility of such damages and even if the remedy fails of its essential purpose.
+- Consultation fees are as listed on the [Pricing page](/pricing) at the time of booking. Fees are subject to change without notice.
+- Full or partial payment may be required to confirm a booking, as communicated at the time of scheduling.
+- **Fees once paid are non-refundable**, except in cases where BhummiVastu cancels or is unable to deliver the booked session. In such cases, the client will be offered a rescheduled session or a full refund at BhummiVastu's discretion.
+- Sessions missed, cancelled, or rescheduled by the client within 24 hours of the scheduled appointment may forfeit the consultation fee.
 
-Some states do not allow the exclusion of implied warranties or limitation of liability for incidental or consequential damages, which means that some of the above limitations may not apply. In these states, each party's liability will be limited to the greatest extent permitted by law.
+## 6. Consultation Medium
 
-## "AS IS" and "AS AVAILABLE" Disclaimer
+Sessions are conducted online via Zoom or Google Meet, or offline / in-person for clients in the Bangalore area, as agreed at the time of booking. BhummiVastu reserves the right to reschedule sessions due to technical difficulties, illness, or unforeseen circumstances, with reasonable notice to the client.
 
-The Service is provided to You "AS IS" and "AS AVAILABLE" and with all faults and defects without warranty of any kind. To the maximum extent permitted under applicable law, the Company, on its own behalf and on behalf of its Affiliates and its and their respective licensors and service providers, expressly disclaims all warranties, whether express, implied, statutory or otherwise, with respect to the Service, including all implied warranties of merchantability, fitness for a particular purpose, title and non-infringement, and warranties that may arise out of course of dealing, course of performance, usage or trade practice. Without limitation to the foregoing, the Company provides no warranty or undertaking, and makes no representation of any kind that the Service will meet Your requirements, achieve any intended results, be compatible or work with any other software, applications, systems or services, operate without interruption, meet any performance or reliability standards or be error free or that any errors or defects can or will be corrected.
+## 7. Limitation of Liability
 
-Without limiting the foregoing, neither the Company nor any of the company's provider makes any representation or warranty of any kind, express or implied: (i) as to the operation or availability of the Service, or the information, content, and materials or products included thereon; (ii) that the Service will be uninterrupted or error-free; (iii) as to the accuracy, reliability, or currency of any information or content provided through the Service; or (iv) that the Service, its servers, the content, or e-mails sent from or on behalf of the Company are free of viruses, scripts, trojan horses, worms, malware, timebombs or other harmful components.
+To the fullest extent permitted by applicable Indian law:
 
-Some jurisdictions do not allow the exclusion of certain types of warranties or limitations on applicable statutory rights of a consumer, so some or all of the above exclusions and limitations may not apply to You. But in such a case the exclusions and limitations set forth in this section shall be applied to the greatest extent enforceable under applicable law.
+- BhummiVastu and Acharya Minu Saini shall not be liable for any direct, indirect, incidental, special, consequential, or punitive damages arising out of or related to any consultation, advice, prediction, remedy, or recommendation provided.
+- BhummiVastu's total liability to any client, for any reason, shall not exceed the consultation fee actually paid by that client for the specific session in question.
+- Consultations are not a substitute for professional medical, legal, financial, or psychological advice. Clients with serious health, legal, or financial concerns are strongly advised to seek qualified professional advice in those respective fields.
 
-## Governing Law
+## 8. Use of Consultation Content for Educational Purposes
 
-The laws of the Country, excluding its conflicts of law rules, shall govern this Terms and Your use of the Service. Your use of the Application may also be subject to other local, state, national, or international laws.
+### 8.1 Right to Use Anonymised Excerpts
 
-## Disputes Resolution
+Acharya Minu Saini reserves the right to use **anonymised excerpts, themes, patterns, or scenarios** drawn from consultation discussions for educational and awareness purposes — including but not limited to blog articles, vlogs, social media posts, video content, podcast discussions, case studies, and print or digital publications produced under the BhummiVastu brand.
 
-If You have any concern or dispute about the Service, You agree to first try to resolve the dispute informally by contacting the Company.
+### 8.2 Strict Anonymisation Commitment
 
-## For European Union (EU) Users
+Any content derived from a consultation will be made sufficiently generic so that it functions as an educational case study illustrating Vastu or astrological principles. **No personally identifiable information will be disclosed under any circumstances.** This includes, but is not limited to, the client's name, address, contact details, employer, specific property location, or any other detail that could identify the individual.
 
-If You are a European Union consumer, you will benefit from any mandatory provisions of the law of the country in which you are resident in.
+### 8.3 Similarity is Coincidental
 
-## United States Legal Compliance
+Clients acknowledge that published blog posts, vlogs, or case studies may bear thematic similarity to their own consultation — as many clients share common life situations and challenges. Such similarity does not constitute a breach of confidentiality. All reasonable steps will be taken to ensure that content is generic, educational, and free of any identifying context.
 
-You represent and warrant that (i) You are not located in a country that is subject to the United States government embargo, or that has been designated by the United States government as a "terrorist supporting" country, and (ii) You are not listed on any United States government list of prohibited or restricted parties.
+### 8.4 Client Consent
 
-## Severability and Waiver
+By booking a consultation, you acknowledge and consent to the above use of anonymised, non-identifying consultation themes for educational content creation. If you have specific concerns about confidentiality, you are welcome to raise them with Acharya Minu Saini before or at the start of your session.
 
-### Severability
+## 9. Intellectual Property
 
-If any provision of these Terms is held to be unenforceable or invalid, such provision will be changed and interpreted to accomplish the objectives of such provision to the greatest extent possible under applicable law and the remaining provisions will continue in full force and effect.
+All content on this website — including text, images, service descriptions, blog posts, video content, the BhummiVastu name, logo, and brand identity — is the exclusive intellectual property of BhummiVastu and Acharya Minu Saini. All rights are reserved.
 
-### Waiver
+- **No reproduction without permission:** No part of this website's content may be copied, reproduced, distributed, published, uploaded, posted, or transmitted in any form or by any means — digital or print — without the prior written permission of Acharya Minu Saini.
+- **No commercial use:** The content on this website may not be used for commercial purposes, resale, or derivative works without explicit written consent.
+- **Consultation reports:** Vastu analysis reports, birth chart readings, and written recommendations delivered to clients are for the client's personal use only and may not be reproduced, shared publicly, or commercially exploited.
+- **Infringement:** Unauthorised use of BhummiVastu's intellectual property may result in legal action under applicable Indian intellectual property laws.
 
-Except as provided herein, the failure to exercise a right or to require performance of an obligation under these Terms shall not effect a party's ability to exercise such right or require such performance at any time thereafter nor shall the waiver of a breach constitute a waiver of any subsequent breach.
+## 10. Third-Party Links
 
-## Translation Interpretation
+This website may contain links to third-party websites (such as social media platforms). BhummiVastu has no control over and accepts no responsibility for the content or privacy practices of those external sites.
 
-These Terms and Conditions may have been translated if We have made them available to You on our Service. You agree that the original English text shall prevail in the case of a dispute.
+## 11. Governing Law and Disputes
 
-## Changes to These Terms and Conditions
+These Terms shall be governed by and construed in accordance with the laws of **India**. Any disputes arising out of these Terms or the use of BhummiVastu services shall be subject to the exclusive jurisdiction of the courts of **Bangalore, Karnataka**.
 
-We reserve the right, at Our sole discretion, to modify or replace these Terms at any time. If a revision is material We will make reasonable efforts to provide at least 30 days' notice prior to any new terms taking effect. What constitutes a material change will be determined at Our sole discretion.
+In the event of a dispute, the parties agree to first attempt resolution through good-faith discussion and informal mediation before initiating any legal proceedings.
 
-By continuing to access or use Our Service after those revisions become effective, You agree to be bound by the revised terms. If You do not agree to the new terms, in whole or in part, please stop using the website and the Service.
+## 12. Changes to These Terms
 
-## Contact Us
+BhummiVastu reserves the right to update or modify these Terms at any time. The revised Terms will be posted on this page with an updated date. Continued use of this website or services after any changes constitutes your acceptance of the revised Terms.
 
-If you have any questions about these Terms and Conditions, You can contact us:
+## 13. Contact Us
 
-- By email: somecoolemail@domain.com
+For any questions regarding these Terms and Conditions, please contact us:
+
+- **Email:** minusaini@bhummivastu.com
+- **WhatsApp:** +91-99727 09328
+- **Address:** Pruksa Silvana, Budigere Cross, Off Old Madras Road, Bangalore East Tq. – 560049, Karnataka, India

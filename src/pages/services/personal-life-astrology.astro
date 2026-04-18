@@ -6,9 +6,9 @@ import Steps from '~/components/widgets/Steps.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: 'Astrology for Personal Life & Relationships in Bangalore | Vastu Acharya Minu Malik',
+  title: 'Astrology for Personal Life & Relationships in Bangalore | Vastu Acharya Minu Saini',
   description:
-    'Find clarity on marriage, relationships, family harmony, and personal well-being with personalised Vedic Astrology by Vastu Acharya Minu Malik in Bangalore. Kundali Milan and life guidance.',
+    'Find clarity on marriage, relationships, family harmony, and personal well-being with personalised Vedic Astrology by Vastu Acharya Minu Saini in Bangalore. Kundali Milan and life guidance.',
 };
 ---
 
@@ -20,39 +20,58 @@ const metadata = {
     subtitle="From marriage timing and Kundali Milan to family harmony and personal well-being — gain deep, compassionate insight into your life journey and the relationships that shape it."
   />
 
+  <!-- Pricing Banner -->
+  <section class="bg-pink-50 dark:bg-pink-900/20 border-y border-pink-200 dark:border-pink-800 py-4">
+    <div class="max-w-4xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
+      <div>
+        <span class="font-bold text-pink-800 dark:text-pink-200 text-base">₹5,000 · 1-hour session</span>
+        <span class="block text-xs text-pink-700 dark:text-pink-400 mt-0.5">Includes: 1-hour live video consultation · Personal guidance report & remedies · 30 days of follow-up questions</span>
+      </div>
+      <a href="/contact" class="shrink-0 inline-flex items-center gap-2 bg-accent text-white font-semibold text-sm rounded-lg px-4 py-2 hover:bg-accent/90 transition-colors">
+        Book Now
+      </a>
+    </div>
+  </section>
+
   <!-- What is Personal Life Astrology -->
   <Content
     tagline="About This Service"
     title="Your Life's Blueprint — Understanding the Patterns That Shape You"
     content={`
-      <p>Life's most meaningful questions — when to marry, how to navigate a relationship challenge, what the chart reveals about family harmony, or how to deal with recurring health patterns — find illuminating answers in your Vedic birth chart. Vastu Acharya Minu Malik provides deeply empathetic, personalised Astrology consultations for personal life, relationships, and well-being.</p>
+      <p>Life's most meaningful questions — when to marry, how to navigate a relationship challenge, what the chart reveals about family harmony, or how to deal with recurring health patterns — find illuminating answers in your Vedic birth chart. Vastu Acharya Minu Saini provides deeply empathetic, personalised Astrology consultations for personal life, relationships, and well-being.</p>
       <p>A Vedic birth chart is a complete cosmic blueprint of your life's potential, patterns, and timing. The 7th house governs marriage and partnerships; the 2nd and 4th houses reflect family and domestic harmony; the 5th house guides matters of children and creativity; while the 6th, 8th, and 12th houses reveal health and karmic patterns. Minu ji analyses these houses — along with divisional charts (Navamsa for marriage, Ashtamsa for longevity) and current planetary transits — to give you a nuanced, honest, and compassionate reading of your personal life.</p>
       <p>This service is ideal for individuals facing a crossroads in relationships, seeking guidance on marriage compatibility (<strong>Kundali Milan</strong>), navigating family disputes, supporting a child's development decisions, understanding recurring health challenges, or simply wanting clarity about the deeper patterns shaping their life. Available by video call — consultations for clients across India and abroad.</p>
     `}
     items={[
       {
-        title: 'Marriage timing, compatibility, and Kundali Milan for lasting partnerships',
-        icon: 'tabler:heart',
+        title: 'Birth Chart Analysis',
+        description: 'Complete Vedic Janma Kundali — all 12 houses, key divisional charts (Navamsa for marriage, Ashtamsa for challenges), and current planetary periods.',
+        icon: 'tabler:chart-dots',
       },
       {
-        title: 'Family harmony guidance and navigation of domestic challenges',
+        title: 'Planetary Influences on Personal Life',
+        description: 'Identifies how current and upcoming planetary periods specifically affect your relationships, family harmony, health, and personal growth.',
+        icon: 'tabler:stars',
+      },
+      {
+        title: 'Personalised Vastu Remedies',
+        description: 'Home and living space direction-based suggestions aligned to your chart — to create a physical environment that supports your personal planetary energy.',
         icon: 'tabler:home',
       },
       {
-        title: 'Insights on children, pregnancy timing, and parental relationships',
-        icon: 'tabler:baby-carriage',
+        title: 'Gemstone Recommendations',
+        description: 'Planetary gemstone guidance tailored to your birth chart — supporting love, family harmony, health, and personal well-being.',
+        icon: 'tabler:diamond',
       },
       {
-        title: 'Clarity on personal health patterns and their astrological roots',
-        icon: 'tabler:brain',
+        title: 'Auspicious Timings',
+        description: 'Muhurta guidance for marriage dates, engagement ceremonies, property purchases, and other major personal life decisions.',
+        icon: 'tabler:calendar-event',
       },
       {
-        title: 'Practical remedies — gemstones, mantras, and lifestyle adjustments',
-        icon: 'tabler:leaf',
-      },
-      {
-        title: 'Available online — video consultations, pan-India and international',
-        icon: 'tabler:globe',
+        title: 'Direction-based Solutions + 1-Hr Consultation + 30 Days Support',
+        description: 'Compass direction guidance for sleeping, study, and daily routines. Includes 1-hour Zoom/Meet session and 30 days of follow-up Q&A.',
+        icon: 'tabler:compass',
       },
     ]}
     columns={2}
@@ -98,7 +117,7 @@ const metadata = {
   <!-- CTA -->
   <CallToAction
     title="Bring Clarity & Harmony to Your Life"
-    subtitle="Book a personal astrology session with Vastu Acharya Minu Malik — compassionate, honest, and rooted in authentic Vedic wisdom."
+    subtitle="Book a personal astrology session with Vastu Acharya Minu Saini — compassionate, honest, and rooted in authentic Vedic wisdom."
     actions={[
       {
         variant: 'primary',

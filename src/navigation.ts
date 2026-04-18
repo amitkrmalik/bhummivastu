@@ -30,15 +30,32 @@ export const headerData = {
           text: 'Personal Life & Relationships',
           href: getPermalink('/services/personal-life-astrology'),
         },
+        {
+          text: 'Prashna Kundali — Quick Answer',
+          href: getPermalink('/services/prashna-kundali'),
+        },
       ],
     },
     {
       text: 'Astro-Vastu (Premium)',
-      href: getPermalink('/services/astro-vastu'),
+      links: [
+        {
+          text: 'Astro-Vastu for Homes',
+          href: getPermalink('/services/astro-vastu'),
+        },
+        {
+          text: 'Astro-Vastu for Offices & Industrial',
+          href: getPermalink('/services/astro-vastu-commercial'),
+        },
+      ],
     },
     {
       text: 'About',
       href: getPermalink('/about'),
+    },
+    {
+      text: 'Certifications',
+      href: getPermalink('/certifications'),
     },
     {
       text: 'Blog',
@@ -69,13 +86,17 @@ export const footerData = {
       links: [
         { text: 'IT Career & Business Growth', href: getPermalink('/services/it-career-astrology') },
         { text: 'Personal Life & Relationships', href: getPermalink('/services/personal-life-astrology') },
-        { text: 'Astro-Vastu (Premium)', href: getPermalink('/services/astro-vastu') },
+        { text: 'Prashna Kundali', href: getPermalink('/services/prashna-kundali') },
+        { text: 'Astro-Vastu for Homes (Premium)', href: getPermalink('/services/astro-vastu') },
+        { text: 'Astro-Vastu for Offices & Industrial (Premium)', href: getPermalink('/services/astro-vastu-commercial') },
       ],
     },
     {
       title: 'Company',
       links: [
         { text: 'About', href: getPermalink('/about') },
+        { text: 'Certifications', href: getPermalink('/certifications') },
+        { text: 'Social Media', href: getPermalink('/social') },
         { text: 'Blog', href: getBlogPermalink() },
         { text: 'Contact', href: getPermalink('/contact') },
         { text: 'Terms', href: getPermalink('/terms') },
@@ -88,12 +109,12 @@ export const footerData = {
     { text: 'Privacy Policy', href: getPermalink('/privacy') },
   ],
   socialLinks: [
-    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' }, // TBD: Add Instagram URL
-    { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },   // TBD: Add Facebook URL
-    { ariaLabel: 'YouTube', icon: 'tabler:brand-youtube', href: '#' },     // TBD: Add YouTube URL
+    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: 'https://www.instagram.com/bhummivastu' },
+    { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: 'https://www.facebook.com/BhummiVastu' },
+    { ariaLabel: 'YouTube', icon: 'tabler:brand-youtube', href: '#' },     // TBD: Add YouTube URL when available
     { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
   ],
   footNote: `
-    &copy; ${new Date().getFullYear()} BhummiVastu &mdash; Vastu Acharya Minu Malik. All rights reserved.
+    &copy; ${new Date().getFullYear()} BhummiVastu &mdash; Vastu Acharya Minu Saini. All rights reserved.
   `,
 };

@@ -1,13 +1,15 @@
 ---
 import Features2 from '~/components/widgets/Features2.astro';
-import Features3 from '~/components/widgets/Features3.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
-  title: 'About us',
+  title: 'About Vastu Acharya Minu Saini | BhummiVastu Bangalore',
+  description:
+    'Meet Vastu Acharya Minu Saini — certified Vastu and Vedic Astrology consultant based in Bangalore. 5+ years of practice, 100+ satisfied clients, non-demolition approach. Serving homes and businesses across India.',
 };
 ---
 
@@ -15,213 +17,192 @@ const metadata = {
   <!-- Hero Widget ******************* -->
 
   <Hero
-    tagline="About us"
+    tagline="About BhummiVastu"
     image={{
-      src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Caos Image',
+      src: '~/assets/images/hero-image.png',
+      alt: 'Vastu Acharya Minu Saini — Vastu & Astrology Consultant, Bangalore',
     }}
   >
     <Fragment slot="title">
-      Elevate your online presence with our <br />
-      <span class="text-accent dark:text-white"> Beautiful Website Templates</span>
+      Meet <span class="text-accent dark:text-white">Vastu Acharya Minu Saini</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      Donec efficitur, ipsum quis congue luctus, mauris magna convallis mauris, eu auctor nisi lectus non augue. Donec
-      quis lorem non massa vulputate efficitur ac at turpis. Sed tincidunt ex a nunc convallis, et lobortis nisi tempus.
-      Suspendisse vitae nisi eget tortor luctus maximus sed non lectus.
+      Certified Vastu and Vedic Astrology consultant based in Bangalore. Helping individuals, families, and businesses
+      create lasting harmony, clarity, and prosperity through the ancient sciences of Vastu Shastra and Jyotish — with a
+      modern, practical, non-demolition approach.
     </Fragment>
   </Hero>
 
   <!-- Stats Widget ****************** -->
 
   <Stats
-    title="Statistics about us"
+    title="Trust Built Through Results"
     stats={[
-      { title: 'Offices', amount: '4' },
-      { title: 'Employees', amount: '248' },
-      { title: 'Templates', amount: '12' },
-      { title: 'Awards', amount: '24' },
+      { title: 'Satisfied Clients', amount: '100+' },
+      { title: 'Years of Practice', amount: '5+' },
+      { title: 'Services Offered', amount: '6' },
+      { title: 'Cities Served', amount: 'Pan India' },
     ]}
   />
 
-  <!-- Features3 Widget ************** -->
+  <!-- Story & Philosophy ************ -->
 
-  <Features3
-    title="Our templates"
-    subtitle="Etiam scelerisque, enim eget vestibulum luctus, nibh mauris blandit nulla, nec vestibulum risus justo ut enim. Praesent lacinia diam et ante imperdiet euismod."
-    columns={3}
-    isBeforeContent={true}
+  <Features2
+    title="The BhummiVastu Story"
+    subtitle="BhummiVastu was born from a deep conviction: that the ancient sciences of Vastu Shastra and Vedic Astrology, when applied with integrity and scientific rigour, have the power to transform not just spaces — but lives."
+    tagline="Our Story"
     items={[
       {
-        title: 'Educational',
+        title: 'Rooted in Tradition',
         description:
-          'Morbi faucibus luctus quam, sit amet aliquet felis tempor id. Cras augue massa, ornare quis dignissim a, molestie vel nulla.',
-        icon: 'tabler:template',
+          'Minu Saini\'s journey into Vastu and Astrology began with years of dedicated study under traditional Vedic masters, absorbing classical texts and practical frameworks that have guided Indian civilisation for millennia.',
+        icon: 'tabler:om',
       },
       {
-        title: 'Interior Design',
+        title: 'Shaped by Modern Practice',
         description:
-          'Vivamus porttitor, tortor convallis aliquam pretium, turpis enim consectetur elit, vitae egestas purus erat ac nunc nulla.',
-        icon: 'tabler:template',
+          'With 5+ years of active consulting across Bangalore and beyond, Minu ji has refined her approach through hundreds of real client cases — homes, offices, factories, and complex Astro-Vastu scenarios.',
+        icon: 'tabler:building',
       },
       {
-        title: 'Photography',
+        title: 'Non-Demolition First',
         description:
-          'Duis sed lectus in nisl vehicula porttitor eget quis odio. Aliquam erat volutpat. Nulla eleifend nulla id sem fermentum.',
-        icon: 'tabler:template',
+          'Every consultation at BhummiVastu begins with a simple commitment: no structural changes, no demolition, no unnecessary expense. Harmony is achieved through colour, direction, elemental placement, and intelligent spatial corrections.',
+        icon: 'tabler:home-check',
+      },
+      {
+        title: 'Grounded in Bangalore',
+        description:
+          'Based at Pruksa Silvana, Budigere Cross, Bangalore East — Minu ji offers in-person consultations for Bangalore clients and detailed online consultations via floor plan and video call for clients across India.',
+        icon: 'tabler:map-pin',
+      },
+      {
+        title: 'Science, Not Superstition',
+        description:
+          'Vastu is a science of spatial geometry and elemental energy — not religion or superstition. Every recommendation is explained with directional logic and scientific reasoning so clients are empowered, not dependent.',
+        icon: 'tabler:atom',
+      },
+      {
+        title: 'Ethical Always',
+        description:
+          'BhummiVastu does not use fear, urgency, or exaggerated claims. Every engagement is built on honesty, transparency, and genuine care for the client\'s well-being and long-term growth.',
+        icon: 'tabler:shield-check',
       },
     ]}
-  />
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-amber-50/60 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
 
-  <!-- Features3 Widget ************** -->
-
-  <Features3
-    columns={3}
-    isAfterContent={true}
-    items={[
-      {
-        title: 'E-commerce',
-        description:
-          'Rutrum non odio at vehicula. Proin ipsum justo, dignissim in vehicula sit amet, dignissim id quam. Sed ac tincidunt sapien.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Blog',
-        description:
-          'Nullam efficitur volutpat sem sed fringilla. Suspendisse et enim eu orci volutpat laoreet ac vitae libero.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Business',
-        description:
-          'Morbi et elit finibus, facilisis justo ut, pharetra ipsum. Donec efficitur, ipsum quis congue luctus, mauris magna.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Branding',
-        description:
-          'Suspendisse vitae nisi eget tortor luctus maximus sed non lectus. Cras malesuada pretium placerat. Nullam venenatis dolor a ante rhoncus.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Medical',
-        description:
-          'Vestibulum malesuada lacus id nibh posuere feugiat. Nam volutpat nulla a felis ultrices, id suscipit mauris congue. In hac habitasse platea dictumst.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Fashion Design',
-        description:
-          'Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus.',
-        icon: 'tabler:template',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-      alt: 'Colorful Image',
-    }}
-  />
-
-  <!-- Steps2 Widget ****************** -->
+  <!-- Core Values ****************** -->
 
   <Steps2
-    title="Our values"
-    subtitle="Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus. Nulla facilisi. Vestibulum malesuada lacus."
+    title="How Minu Saini Works"
+    subtitle="A transparent, structured approach built on deep analysis, honest communication, and lasting results."
+    tagline="The Approach"
     items={[
       {
-        title: 'Customer-centric approach',
+        title: 'Deep Listening First',
         description:
-          'Donec id nibh neque. Quisque et fermentum tortor. Fusce vitae dolor a mauris dignissim commodo. Ut eleifend luctus condimentum.',
+          'Every engagement begins with understanding your specific challenges — health, career, relationships, finances. Solutions are personalised to your life, not copied from a template.',
       },
       {
-        title: 'Constant Improvement',
+        title: 'Precision Analysis',
         description:
-          'Phasellus laoreet fermentum venenatis. Vivamus dapibus pulvinar arcu eget mattis. Fusce eget mauris leo.',
+          'Using a 16-zone Vastu framework, 45 energy fields, and detailed birth chart analysis (for Astrology and Astro-Vastu), every consultation is forensically thorough.',
       },
       {
-        title: 'Ethical Practices',
+        title: 'Clear Communication',
         description:
-          'Vestibulum imperdiet libero et lectus molestie, et maximus augue porta. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
+          'Reports are written in plain language. Every recommendation is explained — why it works, how to implement it, and what outcome to expect. No jargon. No dependency.',
+      },
+      {
+        title: 'Follow-Up Accountability',
+        description:
+          'A complimentary follow-up review 4–6 weeks after implementation ensures corrections are working and results are tracking as expected.',
       },
     ]}
   />
 
-  <!-- Steps2 Widget ****************** -->
+  <!-- Achievements ****************** -->
 
   <Steps2
-    title="Achievements"
-    subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla, sed porttitor est nibh at nulla."
+    title="Credentials & Achievements"
+    subtitle="Built through years of dedicated study and hundreds of successful client consultations."
+    tagline="Recognition"
     isReversed={true}
     callToAction={{
-      text: 'See more',
-      href: '/',
+      text: 'View Certifications',
+      href: '/certifications',
+      icon: 'tabler:certificate',
     }}
     items={[
       {
-        title: 'Global reach',
-        description: 'Nam malesuada urna in enim imperdiet tincidunt. Phasellus non tincidunt nisi, at elementum mi.',
-        icon: 'tabler:globe',
+        title: 'Certified Vastu Acharya',
+        description: 'Formally certified through rigorous training in traditional Vastu Shastra principles, directional science, and Vedic spatial analysis.',
+        icon: 'tabler:certificate',
       },
       {
-        title: 'Positive customer feedback and reviews',
-        description:
-          'Cras semper nulla leo, eget laoreet erat cursus sed. Praesent faucibus massa in purus iaculis dictum.',
-        icon: 'tabler:message-star',
+        title: '100+ Satisfied Clients',
+        description: 'Clients served across Bangalore and beyond — residential homes, commercial offices, startups, industrial units, and Astro-Vastu integrations.',
+        icon: 'tabler:users',
       },
       {
-        title: 'Awards and recognition as industry experts',
-        description:
-          'Phasellus lacinia cursus velit, eu malesuada magna pretium eu. Etiam aliquet tellus purus, blandit lobortis ex rhoncus vitae.',
-        icon: 'tabler:award',
+        title: 'Advanced Vedic & Spiritual Training',
+        description: 'Continuous learning in traditional Vedic disciplines, Jyotish (Vedic Astrology), and spiritual sciences — ensuring consultations remain deeply grounded in authentic tradition.',
+        icon: 'tabler:book-2',
       },
     ]}
   />
 
-  <!-- Features2 Widget ************** -->
+  <!-- Location ********************* -->
 
   <Features2
-    title="Our locations"
-    tagline="Find us"
-    columns={4}
-    items={[
-      {
-        title: 'EE.UU',
-        description: '1234 Lorem Ipsum St, 12345, Miami',
-      },
-      {
-        title: 'Spain',
-        description: '5678 Lorem Ipsum St, 56789, Madrid',
-      },
-      {
-        title: 'Australia',
-        description: '9012 Lorem Ipsum St, 90123, Sydney',
-      },
-      {
-        title: 'Brazil',
-        description: '3456 Lorem Ipsum St, 34567, São Paulo',
-      },
-    ]}
-  />
-
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="Technical Support"
-    tagline="Contact us"
+    title="Where to Find Us"
+    tagline="Our Base"
     columns={2}
     items={[
       {
-        title: 'Chat with us',
-        description:
-          'Integer luctus laoreet libero, auctor varius purus rutrum sit amet. Ut nec molestie nisi, quis eleifend mi.',
-        icon: 'tabler:messages',
+        title: 'Bangalore Office',
+        description: 'Pruksa Silvana, Budigere Cross, Off Old Madras Road, Bangalore East Tq. — 560049',
+        icon: 'tabler:map-pin',
       },
       {
-        title: 'Call us',
-        description:
-          'Mauris faucibus finibus orci, in posuere elit viverra non. In hac habitasse platea dictumst. Cras lobortis metus a hendrerit congue.',
-        icon: 'tabler:headset',
+        title: 'Online Consultations',
+        description: 'Serving clients across India via detailed floor plan review, Google Earth mapping, and video call. Distance is no barrier to a personalised consultation.',
+        icon: 'tabler:video',
+      },
+      {
+        title: 'Phone & WhatsApp',
+        description: '+91-99727 09328 — Call or WhatsApp to discuss your requirements and book a consultation.',
+        icon: 'tabler:phone',
+      },
+      {
+        title: 'Email',
+        description: 'minusaini@bhummivastu.com — Reach us for enquiries, floor plan submissions, or detailed questions.',
+        icon: 'tabler:mail',
+      },
+    ]}
+  />
+
+  <!-- Final CTA ******************** -->
+
+  <CallToAction
+    title="Ready to Begin Your Journey?"
+    subtitle="Book a consultation with Vastu Acharya Minu Saini and take the first step toward a life of harmony, clarity, and prosperity."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Book a Consultation',
+        href: '/contact',
+        icon: 'tabler:calendar-event',
+      },
+      {
+        variant: 'secondary',
+        text: 'Explore Our Services',
+        href: '/#services',
       },
     ]}
   />

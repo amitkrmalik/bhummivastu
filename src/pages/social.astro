@@ -1,0 +1,163 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Social Media | BhummiVastu — Follow Vastu Acharya Minu Saini',
+  description:
+    'Follow BhummiVastu on Instagram, Facebook, and YouTube for Vastu tips, Astrology insights, client stories, and transformation posts by Vastu Acharya Minu Saini.',
+};
+
+const platforms = [
+  {
+    name: 'Instagram',
+    handle: '@bhummivastu',
+    url: 'https://www.instagram.com/bhummivastu',
+    description: 'Daily Vastu tips, directional guidance, before-and-after transformations, and Astrology snippets. Follow for bite-sized wisdom.',
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>`,
+    color: 'from-pink-500 to-orange-400',
+    cta: 'Follow on Instagram',
+  },
+  {
+    name: 'Facebook',
+    handle: 'BhummiVastu',
+    url: 'https://www.facebook.com/BhummiVastu',
+    description: 'In-depth articles, client success stories, event announcements, and community discussions on Vastu and Astrology.',
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>`,
+    color: 'from-blue-600 to-blue-500',
+    cta: 'Like on Facebook',
+  },
+  {
+    name: 'YouTube',
+    handle: 'BhummiVastu',
+    url: '#', // TBD: Add YouTube channel URL when available
+    description: 'Watch detailed Vastu walkthroughs, Q&A sessions, client testimonials, and educational videos on Vastu Shastra and Vedic Astrology. Channel coming soon.',
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>`,
+    color: 'from-red-600 to-red-500',
+    cta: 'Subscribe on YouTube',
+  },
+];
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero -->
+  <HeroText
+    tagline="Connect With Us"
+    title="Follow BhummiVastu on Social Media"
+    subtitle="Stay connected for daily Vastu tips, Astrology insights, transformation stories, and expert guidance from Vastu Acharya Minu Saini."
+  />
+
+  <!-- Social Media Cards ********** -->
+  <section class="py-12 md:py-20">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {platforms.map((p) => (
+          <div class="flex flex-col rounded-2xl border border-gray-100 dark:border-slate-700 shadow-lg overflow-hidden">
+            <div class={`h-2 bg-gradient-to-r ${p.color}`}></div>
+            <div class="flex flex-col flex-1 p-6 gap-4">
+              <div class={`w-12 h-12 rounded-xl bg-gradient-to-br ${p.color} text-white flex items-center justify-center`}>
+                <Fragment set:html={p.icon} />
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-gray-900 dark:text-white">{p.name}</h3>
+                <p class="text-sm text-accent font-medium">{p.handle}</p>
+              </div>
+              <p class="text-sm text-muted dark:text-slate-400 flex-1 leading-relaxed">{p.description}</p>
+              <a
+                href={p.url}
+                target={p.url !== '#' ? '_blank' : undefined}
+                rel="noopener noreferrer"
+                class={`inline-flex items-center justify-center gap-2 bg-gradient-to-r ${p.color} text-white font-semibold rounded-lg px-5 py-2.5 text-sm hover:opacity-90 transition-opacity`}
+              >
+                {p.cta}
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Embedded Instagram Feed Placeholder -->
+  <section class="py-12 bg-amber-50/50 dark:bg-slate-800/30">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center">
+      <p class="text-xs font-bold tracking-widest uppercase text-accent mb-3">Latest from Instagram</p>
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-3">
+        @bhummivastu
+      </h2>
+      <p class="text-base text-muted dark:text-slate-400 mb-8 max-w-xl mx-auto">
+        Follow us on Instagram for daily Vastu tips, behind-the-scenes consultations, and client transformation stories.
+      </p>
+      <!-- Instagram embed or feed widget can be added here -->
+      <!-- Example: Elfsight, Curator.io, or native Instagram embed -->
+      <a
+        href="https://www.instagram.com/bhummivastu"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 bg-gradient-to-r from-pink-500 to-orange-400 text-white font-semibold rounded-lg px-6 py-3 hover:opacity-90 transition-opacity shadow-md"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+        View Instagram Profile
+      </a>
+    </div>
+  </section>
+
+  <!-- Embedded Facebook Page Placeholder -->
+  <section class="py-12">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center">
+      <p class="text-xs font-bold tracking-widest uppercase text-accent mb-3">Facebook Community</p>
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-3">
+        Join Our Facebook Page
+      </h2>
+      <p class="text-base text-muted dark:text-slate-400 mb-8 max-w-xl mx-auto">
+        Like our Facebook page for in-depth articles, event announcements, and a growing community of Vastu enthusiasts across Bangalore and India.
+      </p>
+      <!-- Facebook Page Plugin embed can be added here -->
+      <!-- https://developers.facebook.com/docs/plugins/page-plugin -->
+      <a
+        href="https://www.facebook.com/BhummiVastu"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 bg-blue-600 text-white font-semibold rounded-lg px-6 py-3 hover:bg-blue-700 transition-colors shadow-md"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        Visit Facebook Page
+      </a>
+    </div>
+  </section>
+
+  <!-- YouTube Placeholder ********** -->
+  <section class="py-12 bg-red-50/50 dark:bg-slate-800/30">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center">
+      <p class="text-xs font-bold tracking-widest uppercase text-accent mb-3">YouTube</p>
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-3">
+        YouTube Channel — Coming Soon
+      </h2>
+      <p class="text-base text-muted dark:text-slate-400 max-w-xl mx-auto">
+        Educational videos on Vastu Shastra, Vedic Astrology walkthroughs, client Q&As, and transformation case studies are in production. Subscribe to be notified when we go live.
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA ************************** -->
+  <CallToAction
+    title="Ready to Experience the Transformation?"
+    subtitle="Book a consultation with Vastu Acharya Minu Saini — or reach us directly on WhatsApp."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Book a Consultation',
+        href: '/contact',
+        icon: 'tabler:calendar-event',
+      },
+      {
+        variant: 'secondary',
+        text: 'WhatsApp Us',
+        href: 'https://wa.me/919972709328?text=Hi%2C%20I%20found%20you%20on%20social%20media%20and%20would%20like%20to%20know%20more.',
+        target: '_blank',
+        icon: 'tabler:brand-whatsapp',
+      },
+    ]}
+  />
+</Layout>

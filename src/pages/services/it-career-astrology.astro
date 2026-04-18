@@ -6,9 +6,9 @@ import Steps from '~/components/widgets/Steps.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: 'Astrology for IT Career & Business Growth in Bangalore | Vastu Acharya Minu Malik',
+  title: 'Astrology for IT Career & Business Growth in Bangalore | Vastu Acharya Minu Saini',
   description:
-    'Navigate career transitions, business launches, and growth decisions with personalised Vedic Astrology by Vastu Acharya Minu Malik — trusted by IT professionals and entrepreneurs in Bangalore.',
+    'Navigate career transitions, business launches, and growth decisions with personalised Vedic Astrology by Vastu Acharya Minu Saini — trusted by IT professionals and entrepreneurs in Bangalore.',
 };
 ---
 
@@ -20,39 +20,58 @@ const metadata = {
     subtitle="Whether you are weighing a job offer, planning a startup launch, or navigating a complex business decision — let Vedic Astrology bring you clarity on timing, risk, and opportunity."
   />
 
+  <!-- Pricing Banner -->
+  <section class="bg-indigo-50 dark:bg-indigo-900/20 border-y border-indigo-200 dark:border-indigo-800 py-4">
+    <div class="max-w-4xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
+      <div>
+        <span class="font-bold text-indigo-800 dark:text-indigo-200 text-base">₹5,000 · 1-hour session</span>
+        <span class="block text-xs text-indigo-700 dark:text-indigo-400 mt-0.5">Includes: 1-hour live video consultation · Written summary & Muhurta guidance · 30 days of follow-up questions</span>
+      </div>
+      <a href="/contact" class="shrink-0 inline-flex items-center gap-2 bg-accent text-white font-semibold text-sm rounded-lg px-4 py-2 hover:bg-accent/90 transition-colors">
+        Book Now
+      </a>
+    </div>
+  </section>
+
   <!-- What is IT Career Astrology -->
   <Content
     tagline="About This Service"
     title="Cosmic Timing for Your Career & Business — A Vedic Perspective"
     content={`
-      <p>The tech world moves fast — job switches, freelance transitions, startup launches, international opportunities, and high-stakes business decisions all carry timing-sensitive risks and rewards. Vedic Astrology offers a uniquely powerful framework for IT professionals and entrepreneurs: by analysing your <strong>Janma Kundali</strong> (birth chart) alongside the current planetary periods (Dashas) and transits, Vastu Acharya Minu Malik identifies the precise windows of opportunity and caution in your professional life.</p>
+      <p>The tech world moves fast — job switches, freelance transitions, startup launches, international opportunities, and high-stakes business decisions all carry timing-sensitive risks and rewards. Vedic Astrology offers a uniquely powerful framework for IT professionals and entrepreneurs: by analysing your <strong>Janma Kundali</strong> (birth chart) alongside the current planetary periods (Dashas) and transits, Vastu Acharya Minu Saini identifies the precise windows of opportunity and caution in your professional life.</p>
       <p>This is not fatalism — it is <strong>informed strategy</strong>. Your birth chart reveals the underlying rhythms of your career and financial life: when planetary support is strong (ripe for negotiation, new ventures, or bold moves) and when caution and consolidation serve you better. Knowing the difference is a genuine competitive edge. Minu ji has helped IT engineers navigate promotions, startup founders identify ideal product launch windows, and small business owners decode persistent financial cycles — all through systematic Vedic astrological analysis.</p>
       <p>The consultation covers career timing and job transitions, business launch Muhurtas (auspicious timing), partnership and co-founder compatibility, financial cycles, and strategic decision windows. Available online — consultations by video call for clients across India.</p>
     `}
     items={[
       {
-        title: 'Identify the best months for job change, promotion, or negotiation',
+        title: 'Birth Chart Analysis',
+        description: 'Complete Vedic Janma Kundali analysis — all 12 houses, key planets, and divisional charts relevant to your career, finances, and business.',
+        icon: 'tabler:chart-dots',
+      },
+      {
+        title: 'Planetary Influences on Career & Business',
+        description: 'Identifies the current Mahadasha and Antardasha and their specific impact on your professional trajectory, opportunities, and risk windows.',
+        icon: 'tabler:stars',
+      },
+      {
+        title: 'Personalised Remedies',
+        description: 'Targeted Vedic remedies — mantras, lifestyle adjustments, and directional practices — to strengthen favourable planets and mitigate challenges.',
+        icon: 'tabler:leaf',
+      },
+      {
+        title: 'Gemstone Recommendations',
+        description: 'Planetary gemstone guidance based on your birth chart — which stones to wear, which to avoid, and how to activate them correctly.',
+        icon: 'tabler:diamond',
+      },
+      {
+        title: 'Auspicious Timings (Muhurta)',
+        description: 'Specific auspicious time windows for job applications, interviews, business launches, contract signings, and investment decisions.',
+        icon: 'tabler:calendar-event',
+      },
+      {
+        title: '1-Hour Consultation (Zoom/Meet) + 30 Days Follow-up Support',
+        description: 'A 1-hour live video session via Zoom or Google Meet, plus 30 days of WhatsApp/email follow-up for questions on implementation and timing.',
         icon: 'tabler:clock',
-      },
-      {
-        title: 'Career-specific planetary analysis for IT, tech, and creative professionals',
-        icon: 'tabler:device-laptop',
-      },
-      {
-        title: 'Business timing: launch windows, investor meetings, expansion phases',
-        icon: 'tabler:trending-up',
-      },
-      {
-        title: 'Partnership compatibility for co-founders and business alliances',
-        icon: 'tabler:heart-handshake',
-      },
-      {
-        title: 'Guidance on navigating setbacks, delays, and career transitions',
-        icon: 'tabler:shield-check',
-      },
-      {
-        title: 'Available online — video consultations for clients anywhere in India',
-        icon: 'tabler:globe',
       },
     ]}
     columns={2}
@@ -99,7 +118,7 @@ const metadata = {
   <!-- CTA -->
   <CallToAction
     title="Take Charge of Your Career & Business Future"
-    subtitle="Book a personalised astrology session with Vastu Acharya Minu Malik and make your next move with confidence and cosmic clarity."
+    subtitle="Book a personalised astrology session with Vastu Acharya Minu Saini and make your next move with confidence and cosmic clarity."
     actions={[
       {
         variant: 'primary',

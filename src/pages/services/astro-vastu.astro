@@ -6,9 +6,9 @@ import Steps from '~/components/widgets/Steps.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: 'Astro-Vastu Premium Consultation in Bangalore | Vastu Acharya Minu Malik',
+  title: 'Astro-Vastu Premium Consultation in Bangalore | Vastu Acharya Minu Saini',
   description:
-    'The most powerful Vastu consultation available. Astro-Vastu combines Vastu Shastra and Vedic Astrology in a unified personalised analysis by Vastu Acharya Minu Malik in Bangalore.',
+    'The most powerful Vastu consultation available. Astro-Vastu combines Vastu Shastra and Vedic Astrology in a unified personalised analysis by Vastu Acharya Minu Saini in Bangalore.',
 };
 ---
 
@@ -20,6 +20,28 @@ const metadata = {
     subtitle="Astro-Vastu is the most holistic approach to well-being — combining Vastu Shastra and Vedic Astrology into a single, deeply personalised consultation that addresses your home, your life, and your cosmic blueprint together."
   />
 
+  <!-- Pricing Banner -->
+  <section class="bg-amber-50 dark:bg-amber-900/20 border-y border-amber-200 dark:border-amber-800 py-4">
+    <div class="max-w-4xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
+      <div>
+        <div class="mb-1">
+          <span class="text-xs font-bold uppercase tracking-wider text-amber-600 dark:text-amber-400">For Homes: </span>
+          <span class="font-bold text-amber-800 dark:text-amber-200 text-base">₹10,000</span>
+          <span class="text-amber-700 dark:text-amber-300 text-sm"> or </span>
+          <span class="font-bold text-amber-800 dark:text-amber-200 text-base">₹30/SFT (50% discount available)</span>
+        </div>
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-purple-600 dark:text-purple-400">For Offices / Industrial: </span>
+          <span class="font-bold text-purple-800 dark:text-purple-200 text-sm">₹25,000 or ₹50/SFT (50% discount, >5,000 SFT)</span>
+        </div>
+        <span class="block text-xs text-amber-700 dark:text-amber-400 mt-1">Includes: 2-hour live consultation · Integrated Astro-Vastu report · 30 days of follow-up questions</span>
+      </div>
+      <a href="/contact" class="shrink-0 inline-flex items-center gap-2 bg-accent text-white font-semibold text-sm rounded-lg px-4 py-2 hover:bg-accent/90 transition-colors">
+        Book Now
+      </a>
+    </div>
+  </section>
+
   <!-- What is Astro-Vastu -->
   <Content
     tagline="About This Service"
@@ -27,31 +49,37 @@ const metadata = {
     content={`
       <p>Astro-Vastu is the synthesis of two ancient Vedic sciences — <strong>Vastu Shastra</strong> (the science of space and directional energy) and <strong>Jyotish Astrology</strong> (the science of time, karma, and planetary influence). Where a standard Vastu consultation analyses your space against universal directional principles, Astro-Vastu goes significantly deeper: it cross-references the birth charts of the inhabitants with the Vastu layout of their space, revealing how your personal planetary energies interact with — and are either amplified or suppressed by — your physical environment.</p>
       <p>Consider this: a person with a prominent Mars in their chart, living in a home where the South-East zone (the Fire/Agni corner) is blocked or misaligned, may experience persistent stress, health challenges, or relationship friction. Conversely, a homeowner with a strong and well-placed Jupiter can significantly amplify the blessings of the North-East (Ishanya) zone through targeted Vastu corrections. This level of personalisation is what makes Astro-Vastu uniquely powerful — and it is available only when both sciences are read together.</p>
-      <p>Vastu Acharya Minu Malik's Astro-Vastu Premium consultation is her most comprehensive offering. It combines a full Vastu survey of your space, a complete Jyotish birth chart reading, and a personalised integration report that maps your planetary energy blueprint onto your living or working environment — delivering an extraordinarily precise set of recommendations that address the root causes of life's challenges at multiple levels simultaneously. Available for homes, offices, and commercial spaces.</p>
+      <p>Vastu Acharya Minu Saini's Astro-Vastu Premium consultation is her most comprehensive offering. It combines a full Vastu survey of your space, a complete Jyotish birth chart reading, and a personalised integration report that maps your planetary energy blueprint onto your living or working environment — delivering an extraordinarily precise set of recommendations that address the root causes of life's challenges at multiple levels simultaneously. Available for homes, offices, and commercial spaces.</p>
     `}
     items={[
       {
-        title: 'Full integration of Vastu Shastra and Vedic Astrology for maximum depth',
+        title: '1-Person Birth Chart + Full Vastu Analysis',
+        description: 'Based on the birth chart of one key inhabitant, cross-referenced with the complete 16-zone Vastu analysis of the home. The most personalised home consultation available.',
         icon: 'tabler:stars',
       },
       {
-        title: 'Personalised Vastu corrections calibrated to your birth chart energy',
+        title: 'Complete 16-Zone Vastu Analysis',
+        description: 'Full directional mapping of your home with all Vastu Doshas identified and remedied — same depth as the standard Residential Vastu consultation.',
+        icon: 'tabler:grid-dots',
+      },
+      {
+        title: 'Digital Mapping with Floor Plan',
+        description: 'Compass-oriented digital floor plan map overlaid with both Vastu zones and planetary energy fields for an integrated spatial analysis.',
+        icon: 'tabler:map',
+      },
+      {
+        title: 'Non-Demolition Remedies aligned to Planetary Energy',
+        description: "Vastu corrections are calibrated to the inhabitant's personal planetary influences — making each remedy significantly more targeted and effective.",
         icon: 'tabler:home-check',
       },
       {
-        title: 'Addresses root causes — not just symptoms — of persistent life challenges',
-        icon: 'tabler:refresh',
+        title: 'Gemstone & Auspicious Timing Guidance',
+        description: 'Planetary gemstone recommendations and Muhurta (auspicious timing) guidance for major life decisions — integrated directly with the Vastu findings.',
+        icon: 'tabler:diamond',
       },
       {
-        title: 'Synergistic impact: space energy and personal planetary energy amplified together',
-        icon: 'tabler:trending-up',
-      },
-      {
-        title: 'Holistic remedies covering space alignment, timing, and planetary corrections',
-        icon: 'tabler:shield-check',
-      },
-      {
-        title: 'Includes a priority implementation timeline with short and long-term actions',
+        title: '2-Hour Consultation + 30 Days Follow-up Support',
+        description: 'A 2-hour deep-dive session via Zoom/Meet or in-person (Bangalore), plus 30 days of WhatsApp/email follow-up to guide implementation.',
         icon: 'tabler:clock',
       },
     ]}
@@ -93,9 +121,9 @@ const metadata = {
         icon: 'tabler:chart-dots',
       },
       {
-        title: '90-Minute Consultation & Implementation Roadmap',
+        title: '2-Hour Deep-Dive Consultation & Implementation Roadmap',
         description:
-          'A comprehensive 90-minute session covering all findings — Vastu misalignments, astrological influences, and integrated corrections — followed by a written report with a phased implementation plan and an included follow-up review session.',
+          'A comprehensive 2-hour session covering all findings — Vastu misalignments, astrological influences, and integrated corrections — followed by a written report with a phased implementation plan and 30 days of follow-up questions.',
         icon: 'tabler:circle-check',
       },
     ]}

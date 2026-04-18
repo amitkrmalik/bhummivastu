@@ -1,0 +1,144 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Content from '~/components/widgets/Content.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Astro-Vastu for Offices, Startups & Industrial — Premium | BhummiVastu Bangalore',
+  description:
+    'The most powerful commercial and industrial consultation available. Astro-Vastu Premium combines your birth chart with Vastu Shastra for offices, startups, factories, and warehouses. ₹25,000 or ₹50/SFT. BhummiVastu, Bangalore.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero -->
+  <HeroText
+    tagline="Astro-Vastu Commercial & Industrial — Premium"
+    title="Transform Your Business Space with Planetary Precision"
+    subtitle="Astro-Vastu for commercial and industrial spaces is the most comprehensive business consultation available — integrating the owner's birth chart with the Vastu energy of their workplace for extraordinary, targeted results."
+  />
+
+  <!-- Pricing Banner -->
+  <section class="bg-purple-50 dark:bg-purple-900/20 border-y border-purple-200 dark:border-purple-800 py-4">
+    <div class="max-w-4xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
+      <div>
+        <span class="font-bold text-purple-800 dark:text-purple-200 text-base">₹25,000</span>
+        <span class="text-purple-700 dark:text-purple-300 text-sm"> or </span>
+        <span class="font-bold text-purple-800 dark:text-purple-200 text-base">₹50/SFT (50% discount for spaces &gt;5,000 SFT)</span>
+        <span class="block text-xs text-purple-700 dark:text-purple-400 mt-0.5">Includes: 2-hour live consultation · Integrated Astro-Vastu report · 30 days of follow-up questions</span>
+      </div>
+      <a href="/contact" class="shrink-0 inline-flex items-center gap-2 bg-accent text-white font-semibold text-sm rounded-lg px-4 py-2 hover:bg-accent/90 transition-colors">
+        Book Now
+      </a>
+    </div>
+  </section>
+
+  <!-- What is Astro-Vastu Commercial -->
+  <Content
+    tagline="About This Service"
+    title="Where Your Planetary Blueprint Meets Your Business Space"
+    content={`
+      <p>Commercial and industrial Vastu addresses the spatial energy of your workspace — the directional alignment of the entrance, the owner's cabin, team zones, cash areas, and production floors. But a business is not just a space: it is an extension of its owner's energy and planetary influence. When the space is aligned not just with universal Vastu principles but also with the owner's personal planetary blueprint, the results are transformative in a way that standard Vastu cannot replicate.</p>
+      <p>In Astro-Vastu for commercial spaces, Vastu Acharya Minu Saini analyses the business owner's (and key partners') Vedic birth charts alongside the full Vastu survey of the commercial or industrial space. She identifies how the owner's dominant planetary energies (Lagna lord, 10th house lord, Arudha Lagna) interact with the specific Vastu zones of the workspace — and delivers corrections that amplify the synergies and neutralise the conflicts between the two systems.</p>
+      <p>This Premium service is available for offices, startups, retail showrooms, clinics, co-working spaces, factories, warehouses, and any commercial or industrial property where the owner is invested in deep, lasting transformation. For properties above 5,000 SFT, a 50% discount applies on the per-SFT rate.</p>
+    `}
+    items={[
+      {
+        title: 'Complete Business Premises Analysis',
+        description: 'Full directional assessment of your commercial or industrial space — entrance, owner cabin, team zones, cash areas, storage, and production floor.',
+        icon: 'tabler:building-store',
+      },
+      {
+        title: 'Energy Scanning with Tools + Geopathic Stress Check',
+        description: 'Systematic energy scanning using precision tools to identify Vastu Doshas, energy drains, and geopathic stress lines affecting business performance.',
+        icon: 'tabler:scan',
+      },
+      {
+        title: 'Owner/MD Cabin Placement',
+        description: "Directionally optimal placement and orientation of the owner's cabin, calibrated to the owner's birth chart planetary energy for maximum decision-making power.",
+        icon: 'tabler:armchair',
+      },
+      {
+        title: 'Staff Seating Arrangement',
+        description: "Team seating direction optimised by role — sales, operations, accounts — cross-referenced with the owner's planetary period for business growth alignment.",
+        icon: 'tabler:users',
+      },
+      {
+        title: 'Cash Counter & Safe Direction + Growth & Profit Remedies',
+        description: 'Precise placement of cash counters, safes, and financial zones for positive cash flow, plus targeted Vastu remedies to activate business wealth zones.',
+        icon: 'tabler:cash',
+      },
+      {
+        title: '2-Hour Consultation + 30 Days Follow-up Support',
+        description: 'A 2-hour deep-dive session via Zoom/Meet or in-person (Bangalore), plus 30 days of WhatsApp/email support for confident, phased implementation.',
+        icon: 'tabler:clock',
+      },
+    ]}
+    columns={2}
+    image={{
+      src: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80',
+      alt: 'Modern office space — Astro-Vastu Commercial Premium by BhummiVastu Bangalore',
+    }}
+  />
+
+  <!-- Process Steps -->
+  <Steps
+    title="The Astro-Vastu Commercial Premium Process"
+    tagline="Our Process"
+    subtitle="A systematic 5-step integration of Vastu Shastra and Vedic Astrology for your commercial or industrial space."
+    items={[
+      {
+        title: 'Business Profile & Birth Details',
+        description:
+          'Share the commercial space floor plan or site layout, compass orientation, business type and goals, plus birth date/time/place for the primary business owner and key partners. This data powers both the Vastu analysis and the astrological reading.',
+        icon: 'tabler:file-text',
+      },
+      {
+        title: 'Independent 16-Zone Commercial Vastu Assessment',
+        description:
+          'Full directional mapping of your workspace: entrance energy, owner\'s cabin placement, team workstations, cash and financial zones, client reception, storage and dispatch areas, and any production or operational zones.',
+        icon: 'tabler:compass',
+      },
+      {
+        title: 'Business Astrology Chart Analysis',
+        description:
+          'Detailed analysis of the owner\'s and partners\' birth charts — focusing on the 2nd (wealth), 6th (competition), 10th (career/status), and 11th (income/gains) houses, current planetary Dasha, and transits affecting the business.',
+        icon: 'tabler:binary-tree',
+      },
+      {
+        title: 'Integrated Astro-Vastu Business Report',
+        description:
+          'The unique synthesis — mapping the owner\'s planetary energies onto the commercial Vastu zones to identify powerful alignment opportunities and conflict zones, producing a uniquely personalised set of business growth recommendations.',
+        icon: 'tabler:chart-dots',
+      },
+      {
+        title: '2-Hour Consultation & 30-Day Follow-Up',
+        description:
+          'A comprehensive 2-hour live consultation covering all findings, with a full written report, priority implementation matrix, and 30 days of follow-up questions to support confident, phased implementation.',
+        icon: 'tabler:circle-check',
+      },
+    ]}
+    classes={{ container: 'bg-purple-50/40 dark:bg-purple-900/10' }}
+  />
+
+  <!-- CTA -->
+  <CallToAction
+    title="Unlock Your Business's True Potential"
+    subtitle="Book the Astro-Vastu Commercial Premium consultation and experience a level of personalised business space analysis that creates lasting competitive advantage."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Book Premium Consultation',
+        href: '/contact',
+        icon: 'tabler:sparkles',
+      },
+      {
+        variant: 'secondary',
+        text: 'Explore Other Services',
+        href: '/services',
+      },
+    ]}
+  />
+</Layout>

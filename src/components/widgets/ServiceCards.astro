@@ -7,9 +7,11 @@ interface ServiceCard {
   icon: string;
   title: string;
   description: string;
-  price: string;      // e.g. "Starting from ₹5,000" — use "TBD" if unknown
+  medium: string;        // e.g. "Online (Zoom / Google Meet) · Offline (Bangalore)"
+  includes: string[];    // 3–4 key deliverables shown on the card
+  price: string;
   href: string;
-  accent?: string;    // Tailwind text-colour class for the icon, e.g. "text-blue-600"
+  accent?: string;
 }
 
 interface Props {
@@ -36,8 +38,15 @@ const cards: ServiceCard[] = [
   {
     icon: 'tabler:home',
     title: 'Non-Demolition Vastu for Homes & Flats',
-    description: 'Create a peaceful, prosperous home without breaking a single wall. Practical remedies tailored to your floor plan.',
-    price: 'TBD', // TODO: Confirm price with consultant
+    description: 'Harmonise your home without breaking a single wall. Practical, science-backed Vastu tailored to your floor plan.',
+    medium: 'Online (Zoom / Google Meet) · Offline (Bangalore)',
+    includes: [
+      'Complete 16-Zone Vastu Analysis',
+      'Digital Mapping with Floor Plan',
+      'Entrance & Room Placement Review',
+      'Non-Demolition Remedies + Energy Tips',
+    ],
+    price: '₹5,000 or ₹20/SFT (50% off)',
     href: '/services/residential-vastu',
     accent: 'text-blue-600',
   },
@@ -45,7 +54,14 @@ const cards: ServiceCard[] = [
     icon: 'tabler:building-store',
     title: 'Vastu for Offices & Startups',
     description: 'Align your workspace to attract clients, boost team energy, and accelerate business growth.',
-    price: 'TBD', // TODO: Confirm price with consultant
+    medium: 'Online (Zoom / Google Meet) · Offline (Bangalore)',
+    includes: [
+      'Complete 16-Zone Vastu Analysis',
+      'Owner/MD Cabin Placement',
+      'Staff Seating Arrangement',
+      'Cash Counter & Safe Direction',
+    ],
+    price: '₹10,000 or ₹50/SFT (50% off)',
     href: '/services/commercial-vastu',
     accent: 'text-green-600',
   },
@@ -53,33 +69,91 @@ const cards: ServiceCard[] = [
     icon: 'tabler:building-factory',
     title: 'Vastu for Factories & Warehouses',
     description: 'Optimise layout for safety, workflow efficiency, and operational excellence in your industrial unit.',
-    price: 'TBD', // TODO: Confirm price with consultant
+    medium: 'Online (Zoom / Google Meet) · Offline (up to 200km from Bangalore)',
+    includes: [
+      'Complete Business Premises Analysis',
+      'Energy Scanning & Geopathic Stress Check',
+      'Safety & Workflow Zone Corrections',
+      'Growth & Productivity Remedies',
+    ],
+    price: '₹10,000 or ₹50/SFT (25% off, <5,000 SFT)',
     href: '/services/industrial-vastu',
     accent: 'text-orange-600',
   },
   {
+    icon: 'tabler:home-star',
+    title: 'Astro-Vastu for Homes — Premium',
+    description: "Your birth chart cross-referenced with your home's Vastu energy. The most powerful home consultation available.",
+    medium: 'Online (Zoom / Google Meet) · Offline (Bangalore)',
+    includes: [
+      '1-Person Birth Chart + Full Vastu Report',
+      'Planetary-Space Integration Analysis',
+      'Non-Demolition Remedies',
+      'Gemstone & Auspicious Timing Guidance',
+    ],
+    price: '₹10,000 or ₹30/SFT (50% off)',
+    href: '/services/astro-vastu',
+    accent: 'text-amber-500',
+  },
+  {
+    icon: 'tabler:sparkles',
+    title: 'Astro-Vastu for Offices & Industrial — Premium',
+    description: "Business owner's birth chart meets commercial Vastu for extraordinary, targeted business transformation.",
+    medium: 'Online (Zoom / Google Meet) · Offline (Bangalore)',
+    includes: [
+      'Complete Business Premises Analysis',
+      'Energy Scanning + Geopathic Stress Check',
+      'Owner/MD Cabin & Staff Seating',
+      'Cash Counter, Safe & Growth Remedies',
+    ],
+    price: '₹25,000 or ₹50/SFT (50% off, >5,000 SFT)',
+    href: '/services/astro-vastu-commercial',
+    accent: 'text-purple-600',
+  },
+  {
     icon: 'tabler:device-laptop',
     title: 'Astrology for IT Career & Business Growth',
-    description: 'Navigate career moves, business launches, and growth windows with planetary timing on your side.',
-    price: 'TBD', // TODO: Confirm price with consultant
+    description: 'Navigate career moves, business launches, and growth windows with Vedic planetary timing on your side.',
+    medium: 'Online (Zoom / Google Meet)',
+    includes: [
+      'Birth Chart Analysis',
+      'Planetary Career & Business Influences',
+      'Auspicious Timings for Key Decisions',
+      'Gemstone Recommendations',
+    ],
+    price: '₹5,000 · 1-hr session',
     href: '/services/it-career-astrology',
     accent: 'text-indigo-600',
   },
   {
     icon: 'tabler:heart',
     title: 'Astrology for Personal Life & Relationships',
-    description: 'Find clarity on marriage, family harmony, and personal well-being through in-depth birth chart analysis.',
-    price: 'TBD', // TODO: Confirm price with consultant
+    description: 'Clarity on marriage, family harmony, and well-being through in-depth Vedic birth chart analysis.',
+    medium: 'Online (Zoom / Google Meet)',
+    includes: [
+      'Birth Chart Analysis',
+      'Planetary Life & Relationship Influences',
+      'Personalised Remedies + Gemstone Guidance',
+      'Auspicious Timings + Direction-based Solutions',
+    ],
+    price: '₹5,000 · 1-hr session',
     href: '/services/personal-life-astrology',
     accent: 'text-pink-600',
   },
   {
-    icon: 'tabler:stars',
-    title: 'Astro-Vastu — Premium',
-    description: 'The most holistic approach: your birth chart meets your physical space for life-changing, personalised results.',
-    price: 'TBD', // TODO: Confirm price with consultant (premium tier)
-    href: '/services/astro-vastu',
-    accent: 'text-amber-500',
+    icon: 'tabler:question-mark',
+    title: 'Prashna Kundali — Horary Astrology',
+    description: 'Instant answer to one specific question from the chart cast at the moment of asking. No birth details required.',
+    medium: 'Online (WhatsApp Call / Phone)',
+    includes: [
+      'Max 1 question per session',
+      'No birth details needed',
+      'Answer within the 10-min session',
+      'Career, property, relationships & more',
+    ],
+    price: '₹1,000 · 10-min session',
+    href: '/services/prashna-kundali',
+    accent: 'text-teal-600',
   },
 ];
 ---
@@ -108,30 +182,44 @@ const cards: ServiceCard[] = [
         {/* Card top accent bar */}
         <div class="h-1 w-full bg-gradient-to-r from-accent to-blue-400"></div>
 
-        <div class="flex flex-col flex-1 p-6 gap-4">
-          {/* Icon */}
-          <div class={`w-12 h-12 rounded-xl bg-gray-50 dark:bg-slate-800 flex items-center justify-center ${card.accent ?? 'text-accent'}`}>
-            <Icon name={card.icon} class="w-7 h-7" />
+        <div class="flex flex-col flex-1 p-6 gap-3">
+          {/* Icon + Medium */}
+          <div class="flex items-start justify-between gap-3">
+            <div class={`w-12 h-12 rounded-xl bg-gray-50 dark:bg-slate-800 flex items-center justify-center flex-shrink-0 ${card.accent ?? 'text-accent'}`}>
+              <Icon name={card.icon} class="w-7 h-7" />
+            </div>
+            <span class="text-xs text-muted dark:text-slate-500 leading-snug text-right mt-1 flex items-center gap-1">
+              <Icon name="tabler:video" class="w-3.5 h-3.5 flex-shrink-0 text-accent" />
+              {card.medium}
+            </span>
           </div>
 
           {/* Title */}
-          <h3 class="text-lg font-bold text-gray-900 dark:text-white group-hover:text-accent transition-colors leading-snug">
+          <h3 class="text-base font-bold text-gray-900 dark:text-white group-hover:text-accent transition-colors leading-snug">
             {card.title}
           </h3>
 
           {/* Description */}
-          <p class="text-sm text-muted dark:text-slate-400 flex-1 leading-relaxed">
+          <p class="text-sm text-muted dark:text-slate-400 leading-relaxed">
             {card.description}
           </p>
 
+          {/* What's included */}
+          <div class="border-t border-gray-100 dark:border-slate-700 pt-3 mt-1">
+            <p class="text-xs font-semibold text-gray-500 dark:text-slate-400 uppercase tracking-wide mb-2">What's included</p>
+            <ul class="space-y-1.5">
+              {card.includes.map((item) => (
+                <li class="flex items-start gap-2 text-xs text-gray-600 dark:text-slate-400">
+                  <Icon name="tabler:circle-check-filled" class="w-3.5 h-3.5 text-accent flex-shrink-0 mt-0.5" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           {/* Price + CTA row */}
-          <div class="flex items-center justify-between mt-2 pt-4 border-t border-gray-100 dark:border-slate-700">
-            <span class="text-sm font-semibold text-accent">
-              {card.price === 'TBD'
-                ? <span class="italic text-muted">Price on request</span>
-                : card.price
-              }
-            </span>
+          <div class="flex items-center justify-between pt-3 mt-auto border-t border-gray-100 dark:border-slate-700">
+            <span class="text-sm font-semibold text-accent">{card.price}</span>
             <span class="text-sm font-semibold text-accent group-hover:underline flex items-center gap-1">
               View Details
               <Icon name="tabler:arrow-right" class="w-4 h-4" />

@@ -8,7 +8,7 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 const metadata = {
   title: 'Industrial Vastu Consultant in Bangalore | Vastu for Factories & Warehouses',
   description:
-    'Improve safety, productivity, and operational efficiency with Industrial Vastu by Vastu Acharya Minu Malik in Bangalore. Expert Vastu Shastra for factories, warehouses, and industrial units.',
+    'Improve safety, productivity, and operational efficiency with Industrial Vastu by Vastu Acharya Minu Saini in Bangalore. Expert Vastu Shastra for factories, warehouses, and industrial units.',
 };
 ---
 
@@ -19,6 +19,21 @@ const metadata = {
     title="Vastu for Factories & Warehouses in Bangalore"
     subtitle="A well-aligned industrial space reduces accidents, improves workflow efficiency, and drives operational excellence. Expert Industrial Vastu guidance tailored to your site layout and production goals."
   />
+
+  <!-- Pricing Banner -->
+  <section class="bg-orange-50 dark:bg-orange-900/20 border-y border-orange-200 dark:border-orange-800 py-4">
+    <div class="max-w-4xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
+      <div>
+        <span class="font-bold text-orange-800 dark:text-orange-200 text-base">₹10,000 minimum</span>
+        <span class="text-orange-700 dark:text-orange-300 text-sm"> or </span>
+        <span class="font-bold text-orange-800 dark:text-orange-200 text-base">₹50/SFT (25% discount, under 5,000 SFT)</span>
+        <span class="block text-xs text-orange-700 dark:text-orange-400 mt-0.5">Includes: 2-hour live consultation · Priority Vastu report · 30 days of follow-up questions</span>
+      </div>
+      <a href="/contact" class="shrink-0 inline-flex items-center gap-2 bg-accent text-white font-semibold text-sm rounded-lg px-4 py-2 hover:bg-accent/90 transition-colors">
+        Book Now
+      </a>
+    </div>
+  </section>
 
   <!-- What is Industrial Vastu -->
   <Content
@@ -31,28 +46,34 @@ const metadata = {
     `}
     items={[
       {
-        title: 'Reduced workplace accidents through optimised directional energy',
-        icon: 'tabler:shield-check',
-      },
-      {
-        title: 'Improved supply chain flow and warehouse organisation',
-        icon: 'tabler:arrows-right',
-      },
-      {
-        title: 'Lower employee attrition and improved team cohesion',
-        icon: 'tabler:users',
-      },
-      {
-        title: 'Enhanced operational productivity and output capacity',
-        icon: 'tabler:trending-up',
-      },
-      {
-        title: 'Applicable to factories, warehouses, and large industrial plots',
+        title: 'Complete Business Premises Analysis',
+        description: 'Comprehensive Vastu assessment of your entire industrial site — main gate, production floor, storage zones, management offices, and utilities.',
         icon: 'tabler:building-factory',
       },
       {
-        title: 'On-site surveys within 200km of Bangalore; nationwide online',
-        icon: 'tabler:map-pin',
+        title: 'Energy Scanning with Tools',
+        description: 'Systematic energy scanning of all functional zones using precision compass and spatial analysis tools to identify Vastu Doshas and energy drains.',
+        icon: 'tabler:scan',
+      },
+      {
+        title: 'Geopathic Stress Check',
+        description: 'Assessment of underground geopathic stress lines that can silently cause accidents, health issues, and persistent machinery breakdowns in industrial units.',
+        icon: 'tabler:alert-triangle',
+      },
+      {
+        title: 'Safety & Workflow Zone Corrections',
+        description: 'Directional corrections to the fire zone, heavy machinery placement, dispatch areas, and entry/exit points to reduce accident risk and optimise workflow.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Growth & Profit Remedies',
+        description: 'Targeted Vastu remedies to activate the wealth, growth, and prosperity zones of your industrial property for improved output and financial performance.',
+        icon: 'tabler:trending-up',
+      },
+      {
+        title: '2-Hour Consultation + 30 Days Follow-up Support',
+        description: 'A 2-hour live session via Zoom/Meet or on-site visit (within 200km of Bangalore), plus 30 days of WhatsApp/email support for implementation.',
+        icon: 'tabler:clock',
       },
     ]}
     columns={2}
@@ -98,7 +119,7 @@ const metadata = {
   <!-- CTA -->
   <CallToAction
     title="Optimise Your Industrial Space"
-    subtitle="Connect with Vastu Acharya Minu Malik to assess your factory or warehouse and unlock its true operational potential."
+    subtitle="Connect with Vastu Acharya Minu Saini to assess your factory or warehouse and unlock its true operational potential."
     actions={[
       {
         variant: 'primary',

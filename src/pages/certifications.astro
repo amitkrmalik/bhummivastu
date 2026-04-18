@@ -1,0 +1,142 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Certifications & Awards | Vastu Acharya Minu Saini | BhummiVastu',
+  description:
+    'View the certifications, training credentials, and recognition earned by Vastu Acharya Minu Saini — Vastu and Astrology consultant based in Bangalore.',
+};
+
+// Certifications will be added here as they are shared.
+// Each entry: { title, issuer, year, description, icon }
+const certifications: Array<{
+  title: string;
+  issuer: string;
+  year: string;
+  description: string;
+  icon: string;
+}> = [
+  // ── Add real certifications below once details are shared ──
+  // Example format:
+  // {
+  //   title: 'Vastu Acharya Certification',
+  //   issuer: 'Institute Name',
+  //   year: '2020',
+  //   description: 'Formal certification in classical Vastu Shastra covering directional analysis, 16-zone methodology, and elemental placements.',
+  //   icon: 'tabler:certificate',
+  // },
+];
+
+const continuousLearning = [
+  {
+    title: 'Vastu Shastra — Advanced Directional Analysis',
+    description:
+      'Deep training in the 16-zone Vastu framework, 45 energy fields, directional mapping, and non-demolition remedy systems for residential and commercial spaces.',
+    icon: 'tabler:compass',
+  },
+  {
+    title: 'Vedic Astrology (Jyotish)',
+    description:
+      'Comprehensive study of Vedic birth chart analysis, Dasha systems, planetary periods, and their application to career, relationships, health, and life planning.',
+    icon: 'tabler:stars',
+  },
+  {
+    title: 'Astro-Vastu Integration',
+    description:
+      'Specialised training in cross-referencing Jyotish birth charts with Vastu spatial analysis — the unique methodology behind the Astro-Vastu Premium service.',
+    icon: 'tabler:sparkles',
+  },
+  {
+    title: 'Traditional Vedic & Spiritual Sciences',
+    description:
+      'Ongoing engagement with traditional Vedic texts, spiritual disciplines, and contemporary applications — ensuring consultations remain rooted in authentic tradition.',
+    icon: 'tabler:om',
+  },
+];
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero -->
+  <HeroText
+    tagline="Credentials"
+    title="Certifications & Recognition"
+    subtitle="The knowledge and credentials behind every BhummiVastu consultation — built through years of dedicated study, practice, and continuous learning."
+  />
+
+  <!-- Continuous Learning ********** -->
+  <Features2
+    title="Areas of Deep Expertise"
+    subtitle="Vastu Acharya Minu Saini's knowledge spans traditional Vastu Shastra, Vedic Astrology, and the unique integration of both — developed through formal training and 5+ years of active practice."
+    tagline="Expertise"
+    items={continuousLearning}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-amber-50/60 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- Formal Certifications ******** -->
+  {certifications.length > 0 ? (
+    <Features2
+      title="Formal Certifications"
+      subtitle="Accredited training and formal certification earned through rigorous study programmes."
+      tagline="Certifications"
+      items={certifications.map(c => ({
+        title: `${c.title} — ${c.issuer} (${c.year})`,
+        description: c.description,
+        icon: c.icon,
+      }))}
+    />
+  ) : (
+    <section class="py-16 md:py-24 text-center max-w-2xl mx-auto px-4">
+      <p class="text-xs font-bold tracking-widest uppercase text-accent mb-4">Certifications</p>
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4">
+        Formal Certifications — Coming Soon
+      </h2>
+      <p class="text-base text-muted dark:text-slate-400 leading-relaxed">
+        Vastu Acharya Minu Saini's formal certifications and training records are being compiled and will be published here shortly. Check back soon.
+      </p>
+    </section>
+  )}
+
+  <!-- Stats ************************ -->
+  <section class="py-12 bg-slate-50 dark:bg-slate-800/30">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        {[
+          { label: 'Satisfied Clients', value: '100+' },
+          { label: 'Years of Practice', value: '5+' },
+          { label: 'Services Offered', value: '6' },
+          { label: 'Consultation Mode', value: 'Online & In-Person' },
+        ].map(({ label, value }) => (
+          <div>
+            <p class="text-3xl md:text-4xl font-bold text-accent">{value}</p>
+            <p class="text-sm text-muted mt-1">{label}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA ************************** -->
+  <CallToAction
+    title="Experience Expertise First-Hand"
+    subtitle="Book a consultation with Vastu Acharya Minu Saini and see the depth of knowledge applied to your specific situation."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Book a Consultation',
+        href: '/contact',
+        icon: 'tabler:calendar-event',
+      },
+      {
+        variant: 'secondary',
+        text: 'Explore Services',
+        href: '/services',
+      },
+    ]}
+  />
+</Layout>

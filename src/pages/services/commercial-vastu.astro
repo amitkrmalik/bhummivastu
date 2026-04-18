@@ -8,7 +8,7 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 const metadata = {
   title: 'Commercial Vastu Consultant in Bangalore | Vastu for Offices & Startups',
   description:
-    'Boost productivity, client flow, and business growth with Commercial Vastu by Vastu Acharya Minu Malik. Non-demolition Vastu solutions for offices and startups across Bangalore.',
+    'Boost productivity, client flow, and business growth with Commercial Vastu by Vastu Acharya Minu Saini. Non-demolition Vastu solutions for offices and startups across Bangalore.',
 };
 ---
 
@@ -20,39 +20,60 @@ const metadata = {
     subtitle="Align your workspace with positive energy to attract clients, boost team performance, and accelerate business growth — without major renovations or disruption."
   />
 
+  <!-- Pricing Banner -->
+  <section class="bg-green-50 dark:bg-green-900/20 border-y border-green-200 dark:border-green-800 py-4">
+    <div class="max-w-4xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
+      <div>
+        <span class="font-bold text-green-800 dark:text-green-200 text-base">₹10,000 minimum</span>
+        <span class="text-green-700 dark:text-green-300 text-sm"> or </span>
+        <span class="font-bold text-green-800 dark:text-green-200 text-base">₹50/SFT (50% discount available)</span>
+        <span class="block text-xs text-green-700 dark:text-green-400 mt-0.5">Includes: 1-hour live consultation · Written Vastu report · 30 days of follow-up questions</span>
+      </div>
+      <a href="/contact" class="shrink-0 inline-flex items-center gap-2 bg-accent text-white font-semibold text-sm rounded-lg px-4 py-2 hover:bg-accent/90 transition-colors">
+        Book Now
+      </a>
+    </div>
+  </section>
+
   <!-- What is Commercial Vastu -->
   <Content
     tagline="About This Service"
     title="Your Workspace Is an Energy System — Align It for Growth"
     content={`
-      <p>An office or commercial space is more than walls and workstations — it is a living ecosystem of energy that influences decision-making, client relationships, team dynamics, and financial flow. Commercial Vastu by Vastu Acharya Minu Malik analyses the architectural layout of your office, showroom, or clinic against the principles of Vastu Shastra, maximising the business energy flowing through your space.</p>
+      <p>An office or commercial space is more than walls and workstations — it is a living ecosystem of energy that influences decision-making, client relationships, team dynamics, and financial flow. Commercial Vastu by Vastu Acharya Minu Saini analyses the architectural layout of your office, showroom, or clinic against the principles of Vastu Shastra, maximising the business energy flowing through your space.</p>
       <p>For startups and small businesses in Bangalore's fast-paced tech and services environment, the details matter enormously: the placement of the reception counter, the direction of the owner's cabin, the positioning of cash counters and safes, the orientation of workstations, and even the location of water features all carry measurable energy implications. Minu ji has helped businesses transform their commercial spaces through <strong>non-demolition corrections</strong> — using directional repositioning, colour therapy, and elemental placements rather than expensive structural changes.</p>
       <p>This service covers offices, retail showrooms, clinics and wellness centres, co-working spaces, restaurants, and any commercial premises where you want to improve performance and growth. Consultations are available for on-site visits across Bangalore and online via floor plan review.</p>
     `}
     items={[
       {
-        title: 'Stronger team cohesion and reduced workplace conflict',
+        title: 'Complete 16-Zone Vastu Analysis',
+        description: 'Every zone of your commercial space is assessed for energy alignment — identifying imbalances that affect client flow, team cohesion, and business growth.',
+        icon: 'tabler:grid-dots',
+      },
+      {
+        title: 'Digital Mapping with Floor Plan',
+        description: 'Precision directional mapping of your workspace layout, marking all 16 Vastu zones and the specific Doshas identified in your commercial space.',
+        icon: 'tabler:map',
+      },
+      {
+        title: 'Owner/MD Cabin Placement',
+        description: "Directionally optimal placement and orientation of the owner's or MD's cabin — the single most impactful Vastu correction for any business.",
+        icon: 'tabler:armchair',
+      },
+      {
+        title: 'Staff Seating Arrangement',
+        description: 'Team seating direction guidance to maximise focus, collaboration, and performance across roles — from sales to operations to support.',
         icon: 'tabler:users',
       },
       {
-        title: 'Enhanced client footfall, cash flow, and business growth',
-        icon: 'tabler:trending-up',
+        title: 'Cash Counter & Safe Direction',
+        description: 'Optimal placement of the cash counter, POS terminal, and safe to support continuous, positive cash flow through Vastu directional alignment.',
+        icon: 'tabler:cash',
       },
       {
-        title: 'Optimal main entrance and reception for positive first impressions',
-        icon: 'tabler:door-enter',
-      },
-      {
-        title: 'Direction-aligned cabins and workstations for focused decision-making',
-        icon: 'tabler:building-store',
-      },
-      {
-        title: 'Zero-demolition approach — no structural changes required',
-        icon: 'tabler:shield-check',
-      },
-      {
-        title: 'On-site visits across Bangalore and online consultations',
-        icon: 'tabler:map-pin',
+        title: 'Non-Demolition Remedies + 1-Hr Consultation + 30 Days Support',
+        description: 'All corrections via colour, direction, and placement only. Includes 1-hour live session (Zoom/Meet or in-person, Bangalore) and 30 days of follow-up Q&A.',
+        icon: 'tabler:clock',
       },
     ]}
     columns={2}
@@ -99,7 +120,7 @@ const metadata = {
   <!-- CTA -->
   <CallToAction
     title="Ready to Power Up Your Business?"
-    subtitle="Let Vastu Acharya Minu Malik optimise your office or startup space for sustainable growth. Book a consultation today."
+    subtitle="Let Vastu Acharya Minu Saini optimise your office or startup space for sustainable growth. Book a consultation today."
     actions={[
       {
         variant: 'primary',

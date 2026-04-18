@@ -1,14 +1,14 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
-import Prices from '~/components/widgets/Pricing.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
-import Steps from '~/components/widgets/Steps.astro';
-import Features3 from '~/components/widgets/Features3.astro';
+import Features2 from '~/components/widgets/Features2.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: 'Pricing',
+  title: 'Consultation Pricing | BhummiVastu Vastu & Astrology Bangalore',
+  description:
+    'Transparent consultation pricing for all Vastu and Astrology services by Vastu Acharya Minu Saini in Bangalore. Every package includes a written report and 30 days of follow-up questions.',
 };
 ---
 
@@ -17,213 +17,174 @@ const metadata = {
 
   <HeroText
     tagline="Pricing"
-    title="Stellar Pricing for Every Journey"
-    subtitle="Choose the perfect plan that aligns with your cosmic goals."
+    title="Transparent Consultation Pricing"
+    subtitle="Honest, upfront pricing for every service — no hidden charges, no surprises. All packages include a written report and 30 days of follow-up questions."
   />
 
-  <!-- Pricing Widget ******************* -->
+  <!-- Vastu Services Pricing ******** -->
 
-  <Prices
-    title="Our prices"
-    subtitle="Only pay for what you need"
-    prices={[
+  <Features2
+    title="Vastu Shastra Consultation Pricing"
+    subtitle="Pricing is based on property size (SFT = square feet). Discounts apply when you book early. Every consultation includes a written Vastu report and 30 days of follow-up Q&A."
+    tagline="Vastu Services"
+    columns={3}
+    items={[
       {
-        title: 'basic',
-        subtitle: 'Optimal choice for personal use',
-        price: 29,
-        period: 'per month',
-        items: [
-          {
-            description: 'Etiam in libero, et volutpat',
-          },
-          {
-            description: 'Aenean ac nunc dolor tristique',
-          },
-          {
-            description: 'Cras scelerisque accumsan lib',
-          },
-          {
-            description: 'In hac habitasse',
-          },
-        ],
-        callToAction: {
-          target: '_blank',
-          text: 'Get started',
-          href: '#',
-        },
+        title: 'Residential Vastu — Homes & Flats',
+        description:
+          '**₹5,000 flat fee** or **₹20/SFT** with 50% discount on the per-SFT rate. Includes: 1-hour live consultation (video or in-person), full 16-zone Vastu analysis, zero-demolition remedy report, and 30 days of follow-up questions.',
+        icon: 'tabler:home',
       },
       {
-        title: 'standard',
-        subtitle: 'Optimal choice for small teams',
-        price: 69,
-        period: 'Per Month',
-        items: [
-          {
-            description: 'Proin vel laoreet',
-          },
-          {
-            description: 'Ut efficitur habitasse egestas',
-          },
-          {
-            description: 'Volutpat hac curabitur',
-          },
-          {
-            description: 'Pellentesque blandit ut nibh',
-          },
-          {
-            description: 'Donec fringilla sem',
-          },
-        ],
-        callToAction: {
-          target: '_blank',
-          text: 'Get started',
-          href: '#',
-        },
-        hasRibbon: true,
-        ribbonTitle: 'popular',
+        title: 'Commercial Vastu — Offices & Startups',
+        description:
+          '**₹10,000 minimum** or **₹50/SFT** with 50% discount on the per-SFT rate. Includes: 1-hour live consultation, workspace directional analysis, non-demolition correction report, and 30 days of follow-up questions.',
+        icon: 'tabler:building-store',
       },
       {
-        title: 'premium',
-        subtitle: 'Optimal choice for companies',
-        price: 199,
-        period: 'Per Month',
-        items: [
-          {
-            description: 'Curabitur suscipit risus',
-          },
-          {
-            description: 'Aliquam habitasse malesuada',
-          },
-          {
-            description: 'Suspendisse sit amet blandit',
-          },
-          {
-            description: 'Suspendisse auctor blandit dui',
-          },
-        ],
-        callToAction: {
-          target: '_blank',
-          text: 'Get started',
-          href: '#',
-        },
+        title: 'Industrial Vastu — Factories & Warehouses',
+        description:
+          '**₹10,000 minimum** or **₹50/SFT** with 25% discount (for spaces under 5,000 SFT). Includes: 2-hour live consultation, safety and productivity zone analysis, written report, and 30 days of follow-up questions.',
+        icon: 'tabler:building-factory',
       },
     ]}
-  />
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50/40 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
 
-  <!-- Features3 Widget ************** -->
+  <!-- Astro-Vastu Pricing ********** -->
 
-  <Features3
-    title="Price-related features"
-    subtitle="Discover the advantages of choosing our plans"
+  <Features2
+    title="Astro-Vastu Premium Pricing"
+    subtitle="The most comprehensive offering — your birth chart integrated with your Vastu space analysis for a deeply personalised, transformative result."
+    tagline="Astro-Vastu Premium"
     columns={2}
     items={[
       {
-        title: 'Tiered Pricing Plans',
-        description: 'Choose from a range of pricing plans designed to accommodate different budgets and requirements.',
-        icon: 'tabler:stairs',
+        title: 'Astro-Vastu for Homes — Premium',
+        description:
+          '**₹10,000 flat fee** or **₹30/SFT** with 50% discount on the per-SFT rate. Includes: 2-hour live consultation, full Vastu + Jyotish integration analysis, personalised remedy report, and 30 days of follow-up questions.',
+        icon: 'tabler:home-star',
       },
       {
-        title: 'Transparent Pricing',
-        description: 'Clearly displayed pricing details for each plan, with no hidden costs or unexpected charges.',
-        icon: 'tabler:flip-vertical',
-      },
-      {
-        title: 'Secure Payment Methods',
-        description: 'Secure payment gateways to protect your financial information during transactions.',
-        icon: 'tabler:shield-lock',
-      },
-      {
-        title: 'Instant Access',
-        description: `Immediate access to your chosen plan's features and templates upon subscription.`,
-        icon: 'tabler:accessible',
-      },
-      {
-        title: 'Upgrade Value',
-        description: 'Upgrade to higher-tier plans to unlock more features and benefits for an enhanced experience.',
-        icon: 'tabler:chevrons-up',
-      },
-      {
-        title: '24H support',
-        description: 'Questions answered via live chat, email or phone, every calendar day.',
-        icon: 'tabler:headset',
+        title: 'Astro-Vastu for Offices / Startups / Factories / Warehouses — Premium',
+        description:
+          '**₹25,000 flat fee** or **₹50/SFT** with 50% discount (for spaces above 5,000 SFT). Includes: 2-hour live consultation, business owner birth chart + commercial Vastu integration, written report, and 30 days of follow-up questions.',
+        icon: 'tabler:sparkles',
       },
     ]}
-    classes={{ container: 'max-w-5xl' }}
-  />
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-amber-50/40 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
 
-  <!-- Steps Widget ****************** -->
+  <!-- Astrology Pricing ************ -->
 
-  <Steps
-    title="A guided journey from plans to creativity"
-    tagline="simplified process"
-    isReversed={true}
+  <Features2
+    title="Vedic Astrology Consultation Pricing"
+    subtitle="Fixed-fee sessions with a written summary and 30 days of follow-up questions. No birth details required for Prashna Kundali."
+    tagline="Astrology Services"
+    columns={3}
     items={[
       {
-        title: 'Explore plans',
-        icon: 'tabler:number-1',
+        title: 'IT Career & Business Growth Astrology',
+        description:
+          '**₹5,000 · 1-hour session.** Career moves, business launch timing, salary negotiation windows, and planetary period analysis. Includes written summary and 30 days of follow-up questions.',
+        icon: 'tabler:device-laptop',
       },
       {
-        title: 'Select a plan',
-        icon: 'tabler:number-2',
+        title: 'Personal Life & Relationships Astrology',
+        description:
+          '**₹5,000 · 1-hour session.** Marriage timing, compatibility, family harmony, health patterns, and life direction from your Vedic birth chart. Includes written report and 30 days of follow-up questions.',
+        icon: 'tabler:heart',
       },
       {
-        title: 'Sign Up / Log In',
-        icon: 'tabler:number-3',
-      },
-      {
-        title: 'Review order',
-        icon: 'tabler:number-4',
-      },
-      {
-        title: 'Enter payment details',
-        icon: 'tabler:number-5',
-      },
-      {
-        title: 'Confirmation',
-        icon: 'tabler:number-6',
-      },
-      {
-        title: 'Download and start using the template(s)',
-        icon: 'tabler:number-7',
+        title: 'Prashna Kundali — Horary Astrology',
+        description:
+          '**₹1,000 · 10-minute session.** Instant answer to one specific question — no birth details required. Cast from the moment of asking. Available via WhatsApp or phone call.',
+        icon: 'tabler:question-mark',
       },
     ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1536816579748-4ecb3f03d72a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'Steps image',
-    }}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-purple-50/30 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- Inclusions Summary *********** -->
+
+  <Features2
+    title="What Every Consultation Includes"
+    tagline="Always Included"
+    subtitle="No matter which service you choose, these are standard inclusions with every BhummiVastu consultation."
+    columns={2}
+    items={[
+      {
+        title: 'Live Consultation Session',
+        description:
+          'A structured live session — by video call (for all India clients) or in-person (Bangalore). Duration varies by service: 10 minutes (Prashna Kundali), 1 hour (Vastu & Astrology), or 2 hours (Industrial Vastu & all Astro-Vastu Premium services).',
+        icon: 'tabler:video',
+      },
+      {
+        title: 'Written Report Delivered',
+        description:
+          'A comprehensive PDF report with zone-wise recommendations (Vastu) or chart analysis summary (Astrology) — including remedies, implementation steps, and guidance. Your reference document for the journey ahead.',
+        icon: 'tabler:file-text',
+      },
+      {
+        title: '30 Days of Follow-Up Questions',
+        description:
+          'All consultations (except Prashna Kundali) include 30 days of follow-up questions via WhatsApp or email. You are never left alone during implementation — ask anything that comes up.',
+        icon: 'tabler:message-2',
+      },
+      {
+        title: 'Zero-Demolition Vastu Corrections',
+        description:
+          'Every Vastu service uses only non-invasive, non-demolition remedies — colour therapy, directional repositioning, elemental placements. No structural changes, no unnecessary expense.',
+        icon: 'tabler:home-check',
+      },
+    ]}
   />
 
-  <!-- FAQs Widget ******************* -->
+  <!-- FAQs ************************* -->
 
   <FAQs
     title="Pricing FAQs"
-    subtitle="Choosing the right plan is important, and we're here to answer your questions. If you have queries about our pricing options, you're in the right place."
+    subtitle="Common questions about consultation fees, what's included, and how it works."
     columns={1}
     items={[
       {
-        title: 'Do the plans come with customer support?',
+        title: 'How is the Vastu consultation fee calculated — flat fee or per-SFT?',
         description:
-          'Absolutely, all plans include access to our dedicated customer support to assist you with any queries or concerns.',
+          'For Residential Vastu, you pay ₹5,000 flat (ideal for smaller homes or if you prefer a fixed cost) OR ₹20/SFT with a 50% discount on the per-SFT rate. For a 1,000 SFT flat: ₹20 × 1,000 × 50% = ₹10,000 → but the flat ₹5,000 would apply if it is lower. Minu ji will advise the applicable rate based on your property size when you book.',
       },
       {
-        title: 'Is there a trial period for the different plans?',
+        title: 'What does "30 days of follow-up questions" mean?',
         description:
-          "Unfortunately, we don't offer trial periods for the plans. However, you can check out our demo section to preview the quality of our templates.",
+          'After your consultation, you can send follow-up questions via WhatsApp or email for 30 days. This covers implementation doubts, clarifications on the report, questions that arise as you make changes, and confirmation that you have applied remedies correctly. It is included in the consultation fee — no extra charge.',
       },
       {
-        title: 'Can I switch between plans?',
+        title: 'What is the difference between Vastu and Astro-Vastu?',
         description:
-          'Certainly! You can easily upgrade or downgrade your plan, at any time, to find the one that best suits your evolving requirements.',
+          'Vastu analyses your physical space against universal directional principles. Astro-Vastu also reads the birth charts of the inhabitants and cross-references them with the Vastu zones — making corrections far more personalised. Astro-Vastu typically costs more because it requires both a full Vastu survey and a complete astrological analysis.',
       },
       {
-        title: 'What payment methods do you accept?',
+        title: 'Is there a travel charge for in-person consultations in Bangalore?',
         description:
-          'We accept major credit cards and online payment methods to ensure a convenient and secure transaction process.',
+          'In-person consultations are available for Bangalore clients within the standard consultation fee. For locations beyond Bangalore, travel charges may apply — these are discussed and confirmed before booking.',
       },
       {
-        title: 'Are there any hidden fees beyond the displayed cost?',
+        title: 'What payment methods are accepted?',
         description:
-          'No, the subscription cost covers all the features and templates listed under each plan. There are no hidden fees or extra charges.',
+          'We accept UPI (Google Pay, PhonePe, Paytm), bank transfer (NEFT/IMPS), and cash for in-person consultations. Payment details will be shared upon booking confirmation.',
+      },
+      {
+        title: 'Is the initial enquiry free?',
+        description:
+          'Yes — the initial WhatsApp message or call to discuss your requirements and understand which service is right for you is completely free. A fee applies only once a formal consultation is confirmed.',
       },
     ]}
   />
@@ -231,13 +192,21 @@ const metadata = {
   <!-- CallToAction Widget *********** -->
 
   <CallToAction
-    title="Ready to boost your projects?"
-    subtitle="Join our community of satisfied customers who have transformed their work with our templates."
+    title="Ready to Book Your Consultation?"
+    subtitle="Reach out via WhatsApp or the contact form — Vastu Acharya Minu Saini will confirm your slot within 24 hours."
     actions={[
       {
         variant: 'primary',
-        text: 'Get started now',
-        href: '/',
+        text: 'Book a Consultation',
+        href: '/contact',
+        icon: 'tabler:calendar-event',
+      },
+      {
+        variant: 'secondary',
+        text: 'WhatsApp Us',
+        href: 'https://wa.me/919972709328?text=Hi%2C%20I%20would%20like%20to%20book%20a%20consultation.',
+        target: '_blank',
+        icon: 'tabler:brand-whatsapp',
       },
     ]}
   />

@@ -8,7 +8,7 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 const metadata = {
   title: 'Residential Vastu Consultant in Bangalore | Non-Demolition Vastu for Homes & Flats',
   description:
-    'Vastu Acharya Minu Malik offers expert non-demolition Residential Vastu for homes and flats in Bangalore. Practical, science-backed Vastu Shastra solutions for harmony and prosperity.',
+    'Vastu Acharya Minu Saini offers expert non-demolition Residential Vastu for homes and flats in Bangalore. Practical, science-backed Vastu Shastra solutions for harmony and prosperity.',
 };
 ---
 
@@ -20,13 +20,28 @@ const metadata = {
     subtitle="Create a home that nurtures peace, health, and prosperity — without breaking walls. Expert Vastu guidance tailored to your floor plan, lifestyle, and goals."
   />
 
+  <!-- Pricing Banner -->
+  <section class="bg-amber-50 dark:bg-amber-900/20 border-y border-amber-200 dark:border-amber-800 py-4">
+    <div class="max-w-4xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
+      <div>
+        <span class="font-bold text-amber-800 dark:text-amber-200 text-base">₹5,000 flat fee</span>
+        <span class="text-amber-700 dark:text-amber-300 text-sm"> or </span>
+        <span class="font-bold text-amber-800 dark:text-amber-200 text-base">₹20/SFT (50% discount available)</span>
+        <span class="block text-xs text-amber-700 dark:text-amber-400 mt-0.5">Includes: 1-hour live consultation · Written Vastu report · 30 days of follow-up questions</span>
+      </div>
+      <a href="/contact" class="shrink-0 inline-flex items-center gap-2 bg-accent text-white font-semibold text-sm rounded-lg px-4 py-2 hover:bg-accent/90 transition-colors">
+        Book Now
+      </a>
+    </div>
+  </section>
+
   <!-- What is Residential Vastu -->
   <Content
     tagline="About This Service"
     title="Your Home's Energy Blueprint — Decoded"
     content={`
       <p>Vastu Shastra is an ancient Indian science of architecture and spatial alignment, rooted in the principle that every physical space carries a unique energy field governed by the five elements — Earth, Water, Fire, Air, and Ether. Residential Vastu applies these principles to your home or flat, ensuring that each zone of your living space actively supports the well-being, health, and prosperity of the people who inhabit it.</p>
-      <p>Many Bangalore homeowners unknowingly live in spaces that carry <strong>Vastu Doshas</strong> — energy imbalances caused by directional misalignments of rooms, entrances, kitchens, or bedrooms. These imbalances can silently affect health, relationships, sleep quality, and financial stability over time. Vastu Acharya Minu Malik specialises in identifying and correcting these Doshas through <strong>non-demolition methods</strong> — using colour therapy, elemental placements, and precise spatial adjustments rather than any structural changes.</p>
+      <p>Many Bangalore homeowners unknowingly live in spaces that carry <strong>Vastu Doshas</strong> — energy imbalances caused by directional misalignments of rooms, entrances, kitchens, or bedrooms. These imbalances can silently affect health, relationships, sleep quality, and financial stability over time. Vastu Acharya Minu Saini specialises in identifying and correcting these Doshas through <strong>non-demolition methods</strong> — using colour therapy, elemental placements, and precise spatial adjustments rather than any structural changes.</p>
       <p>Whether you are buying a new flat, moving into a resale apartment, renovating your home, or addressing long-standing challenges in your existing space, a personalised Residential Vastu consultation from BhummiVastu gives you a clear, actionable roadmap to a harmonious home. Available for on-site visits across Bangalore and online via detailed floor plan review.</p>
     `}
     items={[
@@ -51,8 +66,8 @@ const metadata = {
         icon: 'tabler:home-check',
       },
       {
-        title: 'On-site visits across Bangalore and online consultations via floor plan',
-        icon: 'tabler:map-pin',
+        title: '1-hour live consultation + 30 days of follow-up questions included',
+        icon: 'tabler:clock',
       },
     ]}
     columns={2}
@@ -104,7 +119,7 @@ const metadata = {
   <!-- CTA -->
   <CallToAction
     title="Ready to Transform Your Home?"
-    subtitle="Book a consultation with Vastu Acharya Minu Malik and take the first step towards a home that works for you — not against you."
+    subtitle="Book a consultation with Vastu Acharya Minu Saini and take the first step towards a home that works for you — not against you."
     actions={[
       {
         variant: 'primary',
