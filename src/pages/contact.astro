@@ -28,32 +28,37 @@ const metadata = {
       {
         type: 'text',
         name: 'name',
-        label: 'Your Name',
+        label: 'Full Name',
         placeholder: 'e.g. Ramesh Sharma',
+        autocomplete: 'name',
+      },
+      {
+        type: 'tel',
+        name: 'phone',
+        label: 'Phone / WhatsApp Number',
+        placeholder: '+91-99999 99999',
+        autocomplete: 'tel',
       },
       {
         type: 'email',
         name: 'email',
         label: 'Email Address',
         placeholder: 'e.g. ramesh@example.com',
-      },
-      {
-        type: 'text',
-        name: 'phone',
-        label: 'Phone / WhatsApp Number',
-        placeholder: '+91-XXXXX XXXXX',
+        autocomplete: 'email',
       },
     ]}
     textarea={{
-      label: 'Tell us about your requirements',
-      placeholder: 'e.g. I am looking for Residential Vastu consultation for my 2BHK flat in Whitefield, Bangalore...',
+      label: 'Your Message / Requirement',
+      name: 'message',
+      placeholder: 'e.g. I am looking for a Residential Vastu consultation for my 2BHK flat in Whitefield, Bangalore. The flat is approximately 1,100 SFT...',
       rows: 5,
     }}
     disclaimer={{
       label:
-        'By submitting this form, you consent to being contacted by BhummiVastu regarding your consultation enquiry.',
+        'By submitting this form, I voluntarily consent to sharing my personal details with BhummiVastu for the purpose of consultation enquiry, and I agree to the Terms & Conditions and Privacy Policy.',
     }}
-    description="We typically respond within 24 hours. For faster response, WhatsApp us directly."
+    button="Send Enquiry"
+    description="We typically respond within 24 hours. For faster response, WhatsApp us directly at +91-99727 09328."
   />
 
   <!-- Contact Details ************** -->
