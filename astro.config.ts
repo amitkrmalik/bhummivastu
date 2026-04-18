@@ -17,12 +17,19 @@ import { readingTimeRemarkPlugin, responsiveTablesRehypePlugin, lazyImagesRehype
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-const hasExternalScripts = false;
+const hasExternalScripts = true; // Enable Partytown for Google Analytics (GA4)
 const whenExternalScripts = (items: (() => AstroIntegration) | (() => AstroIntegration)[] = []) =>
   hasExternalScripts ? (Array.isArray(items) ? items.map((item) => item()) : [items()]) : [];
 
 export default defineConfig({
+  // ── Deployment target ─────────────────────────────────────────────
+  // Production URL — used by sitemap, canonical tags, and Open Graph
+  site: 'https://www.bhummivastu.com',
+
   output: 'static',
+
+  // Match vercel.json / config.yaml — no trailing slashes
+  trailingSlash: 'never',
 
   integrations: [
     tailwind({
@@ -72,7 +79,8 @@ export default defineConfig({
   ],
 
   image: {
-    domains: ['cdn.pixabay.com'],
+    // Allow remote images from these domains (used in blog posts & pages)
+    domains: ['cdn.pixabay.com', 'images.unsplash.com'],
   },
 
   markdown: {
