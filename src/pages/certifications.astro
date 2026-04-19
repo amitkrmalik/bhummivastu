@@ -17,9 +17,16 @@ const metadata = {
 // Format: { title, issuer, year, image }
 //   image = filename only, e.g. 'vastu-acharya-2020.jpg'
 
+const base = import.meta.env.BASE_URL.replace(/\/$/, ''); // e.g. "/bhummivastu" or ""
+
 const certImages: Array<{ title: string; issuer: string; year: string; image: string }> = [
   // ── Paste entries here once JPEGs are added ──
-  // { title: 'Vastu Acharya', issuer: 'Institute of Vastu Sciences', year: '2020', image: 'vastu-acharya-2020.jpg' },
+  { title: 'MahaVastu Foundation Course Jan-Feb 2023', issuer: 'MahaVastu', year: '2023', image: 'cert-MahaVastu-Foundation-Course-Jan-Feb-2023.jpg' },
+  { title: 'Astro-MahaVastu Remedies Course Sept-Oct 2023', issuer: 'MahaVastu', year: '2023', image: 'cert-Astro-MahaVastu-Remedies-2023-sept-oct.jpg' },
+  { title: 'Astro-MahaVastu Remedies Course Nov-Dec 2023', issuer: 'MahaVastu', year: '2023', image: 'cert-Astro-MahaVastu-Remedies-2023-nov-dec.jpg' },
+  { title: 'Advance Vastu Course Dec 2023', issuer: 'Acharya Vikul Bansal - Pinnacle Vastu', year: '2023', image: 'cert-Advance-Vastu-Course-Dec-2023.jpg' },
+  { title: 'KP ASTROLOGY, BNN ASTROLOGY, ADVANCE VASTU, ASTRO VASTU, GPS ASTROLOGY AND TATOO ACTIVATION', issuer: 'SHREE RAJIV MODGIL JI - ASTRO KP', year: '2025', image: 'cert-KP-ASTRO-BNN-2025-Nov.jpg' },
+  { title: 'Professional Vastu & Numerology Jan 2024', issuer: 'Acharya Vikul Bansal - Pinnacle Vastu', year: '2024', image: 'cert-Professional-Vastu-Numerology-Jan-2024.jpg' },
 ];
 
 const continuousLearning = [
@@ -91,14 +98,14 @@ const continuousLearning = [
         {certImages.map(({ title, issuer, year, image }) => (
           <div class="group flex flex-col rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900 shadow-md hover:shadow-xl transition-shadow duration-300">
             <a
-              href={`/images/certifications/${image}`}
+              href={`${base}/images/certifications/${image}`}
               target="_blank"
               rel="noopener"
               title={`View full certificate — ${title}`}
               class="block overflow-hidden bg-amber-50 dark:bg-slate-800"
             >
               <img
-                src={`/images/certifications/${image}`}
+                src={`${base}/images/certifications/${image}`}
                 alt={`${title} certificate — ${issuer}, ${year}`}
                 class="w-full object-contain max-h-64 p-4 group-hover:scale-[1.02] transition-transform duration-300"
                 loading="lazy"
