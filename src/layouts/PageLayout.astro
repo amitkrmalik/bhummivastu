@@ -20,6 +20,7 @@ const { metadata } = Astro.props;
     <Announcement />
   </slot>
   <slot name="header">
+    {/* @ts-expect-error — navigation.ts infers discriminated union for links; runtime shape is correct */}
     <Header {...headerData} isSticky showRssFeed showToggleTheme />
   </slot>
   <main>
