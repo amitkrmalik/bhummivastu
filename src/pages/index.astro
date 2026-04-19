@@ -9,7 +9,7 @@ import Features2 from '~/components/widgets/Features2.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import { Icon } from 'astro-icon/components';
-import { featuredTestimonials, averageRating, totalReviews, getInitials } from '~/data/testimonials';
+import { featuredTestimonials, averageRating, totalReviews, getInitials, serviceList } from '~/data/testimonials';
 
 const avatarColors = [
   'bg-amber-100 text-amber-700',
@@ -257,10 +257,14 @@ const metadata = {
                   {t.location && <p class="text-xs text-muted truncate">{t.location}</p>}
                 </div>
               </div>
-              {t.service && (
-                <span class="mt-2 inline-block text-xs bg-amber-100 dark:bg-amber-900/40 text-amber-800 dark:text-amber-300 rounded-full px-2.5 py-0.5 font-medium">
-                  {t.service}
-                </span>
+              {serviceList(t.service).length > 0 && (
+                <div class="mt-2 flex flex-wrap gap-1">
+                  {serviceList(t.service).map((s) => (
+                    <span class="inline-block text-xs bg-amber-100 dark:bg-amber-900/40 text-amber-800 dark:text-amber-300 rounded-full px-2.5 py-0.5 font-medium">
+                      {s}
+                    </span>
+                  ))}
+                </div>
               )}
             </div>
           ))
