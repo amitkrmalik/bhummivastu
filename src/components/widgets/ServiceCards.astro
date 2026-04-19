@@ -7,7 +7,7 @@ interface ServiceCard {
   icon: string;
   title: string;
   description: string;
-  medium: string;        // e.g. "Online (Zoom / Google Meet) · In-Person (Bangalore & Karnataka)"
+  medium: string[];      // Each string = one line, rendered with its own icon
   includes: string[];    // 3–4 key deliverables shown on the card
   price: string;
   href: string;
@@ -34,12 +34,20 @@ const {
   bg,
 } = Astro.props;
 
+const mediumIcons: Record<number, string> = {
+  0: 'tabler:video',       // first line → video/online icon
+  1: 'tabler:map-pin',     // second line → in-person/location icon
+};
+
 const cards: ServiceCard[] = [
   {
     icon: 'tabler:home',
     title: 'Non-Demolition Vastu for Homes & Flats',
     description: 'Harmonise your home without breaking a single wall. Practical, science-backed Vastu tailored to your floor plan.',
-    medium: 'Online (Zoom / Google Meet) · In-Person (Bangalore & across India)',
+    medium: [
+      'Online (Zoom / Google Meet)',
+      'In-Person (Pan India)',
+    ],
     includes: [
       'Complete 16-Zone Vastu Analysis',
       'Digital Mapping with Floor Plan',
@@ -54,7 +62,10 @@ const cards: ServiceCard[] = [
     icon: 'tabler:building-store',
     title: 'Vastu for Offices & Startups',
     description: 'Align your workspace to attract clients, boost team energy, and accelerate business growth.',
-    medium: 'Online (Zoom / Google Meet) · In-Person (Bangalore & across India)',
+    medium: [
+      'Online (Zoom / Google Meet)',
+      'In-Person (Pan India)',
+    ],
     includes: [
       'Complete 16-Zone Vastu Analysis',
       'Owner/MD Cabin Placement',
@@ -69,7 +80,10 @@ const cards: ServiceCard[] = [
     icon: 'tabler:building-factory',
     title: 'Vastu for Factories & Warehouses',
     description: 'Optimise layout for safety, workflow efficiency, and operational excellence in your industrial unit.',
-    medium: 'Online (Zoom / Google Meet) · In-Person (Bangalore & Karnataka)',
+    medium: [
+      'Online (Zoom / Google Meet)',
+      'In-Person (Pan India)',
+    ],
     includes: [
       'Complete Business Premises Analysis',
       'Energy Scanning & Geopathic Stress Check',
@@ -84,7 +98,10 @@ const cards: ServiceCard[] = [
     icon: 'tabler:home-star',
     title: 'Astro-Vastu for Homes — Premium',
     description: "Your birth chart cross-referenced with your home's Vastu energy. The most powerful home consultation available.",
-    medium: 'Online (Zoom / Google Meet) · In-Person (Bangalore & across India)',
+    medium: [
+      'Online (Zoom / Google Meet)',
+      'In-Person (Pan India)',
+    ],
     includes: [
       '1-Person Birth Chart + Full Vastu Report',
       'Planetary-Space Integration Analysis',
@@ -99,7 +116,10 @@ const cards: ServiceCard[] = [
     icon: 'tabler:sparkles',
     title: 'Astro-Vastu for Offices & Industrial — Premium',
     description: "Business owner's birth chart meets commercial Vastu for extraordinary, targeted business transformation.",
-    medium: 'Online (Zoom / Google Meet) · In-Person (Bangalore & across India)',
+    medium: [
+      'Online (Zoom / Google Meet)',
+      'In-Person (Pan India)',
+    ],
     includes: [
       'Complete Business Premises Analysis',
       'Energy Scanning + Geopathic Stress Check',
@@ -114,7 +134,9 @@ const cards: ServiceCard[] = [
     icon: 'tabler:device-laptop',
     title: 'Astrology for IT Career & Business Growth',
     description: 'Navigate career moves, business launches, and growth windows with Vedic planetary timing on your side.',
-    medium: 'Online (Zoom / Google Meet)',
+    medium: [
+      'Online (Zoom / Google Meet)',
+    ],
     includes: [
       'Birth Chart Analysis',
       'Planetary Career & Business Influences',
@@ -129,7 +151,9 @@ const cards: ServiceCard[] = [
     icon: 'tabler:heart',
     title: 'Astrology for Personal Life & Relationships',
     description: 'Clarity on marriage, family harmony, and well-being through in-depth Vedic birth chart analysis.',
-    medium: 'Online (Zoom / Google Meet)',
+    medium: [
+      'Online (Zoom / Google Meet)',
+    ],
     includes: [
       'Birth Chart Analysis',
       'Planetary Life & Relationship Influences',
@@ -144,7 +168,9 @@ const cards: ServiceCard[] = [
     icon: 'tabler:question-mark',
     title: 'Prashna Kundali — Horary Astrology',
     description: 'Instant answer to one specific question from the chart cast at the moment of asking. No birth details required.',
-    medium: 'Online (WhatsApp Call / Phone)',
+    medium: [
+      'Online (WhatsApp / Phone Call)',
+    ],
     includes: [
       'Max 1 question per session',
       'No birth details needed',
@@ -188,10 +214,15 @@ const cards: ServiceCard[] = [
             <div class={`w-12 h-12 rounded-xl bg-gray-50 dark:bg-slate-800 flex items-center justify-center flex-shrink-0 ${card.accent ?? 'text-accent'}`}>
               <Icon name={card.icon} class="w-7 h-7" />
             </div>
-            <span class="text-xs text-muted dark:text-slate-500 leading-snug text-right mt-1 flex items-center gap-1">
-              <Icon name="tabler:video" class="w-3.5 h-3.5 flex-shrink-0 text-accent" />
-              {card.medium}
-            </span>
+            {/* Medium lines — one per entry, each on its own line */}
+            <div class="flex flex-col items-end gap-1 mt-1">
+              {card.medium.map((line, i) => (
+                <span class="flex items-center gap-1 text-xs text-muted dark:text-slate-500 leading-none whitespace-nowrap">
+                  <Icon name={mediumIcons[i] ?? 'tabler:device-mobile'} class="w-3.5 h-3.5 flex-shrink-0 text-accent" />
+                  {line}
+                </span>
+              ))}
+            </div>
           </div>
 
           {/* Title */}
