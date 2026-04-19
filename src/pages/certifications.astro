@@ -7,27 +7,19 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 const metadata = {
   title: 'Certifications & Awards | Vastu Acharya Minu Saini | BhummiVastu',
   description:
-    'View the certifications, training credentials, and recognition earned by Vastu Acharya Minu Saini — Vastu and Astrology consultant based in Bangalore.',
+    'View the certifications, training credentials, and recognition earned by Vastu Acharya Minu Saini — Vastu and Astrology consultant serving clients across India.',
 };
 
-// Certifications will be added here as they are shared.
-// Each entry: { title, issuer, year, description, icon }
-const certifications: Array<{
-  title: string;
-  issuer: string;
-  year: string;
-  description: string;
-  icon: string;
-}> = [
-  // ── Add real certifications below once details are shared ──
-  // Example format:
-  // {
-  //   title: 'Vastu Acharya Certification',
-  //   issuer: 'Institute Name',
-  //   year: '2020',
-  //   description: 'Formal certification in classical Vastu Shastra covering directional analysis, 16-zone methodology, and elemental placements.',
-  //   icon: 'tabler:certificate',
-  // },
+// ── Certificate images go in: src/assets/images/certifications/
+// Copy JPEGs there and add entries below.
+// Then also copy them to public/images/certifications/ so the <img> src resolves.
+//
+// Format: { title, issuer, year, image }
+//   image = filename only, e.g. 'vastu-acharya-2020.jpg'
+
+const certImages: Array<{ title: string; issuer: string; year: string; image: string }> = [
+  // ── Paste entries here once JPEGs are added ──
+  // { title: 'Vastu Acharya', issuer: 'Institute of Vastu Sciences', year: '2020', image: 'vastu-acharya-2020.jpg' },
 ];
 
 const continuousLearning = [
@@ -59,14 +51,15 @@ const continuousLearning = [
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero -->
+
+  <!-- ── Hero ──────────────────────────────────────────── -->
   <HeroText
     tagline="Credentials"
     title="Certifications & Recognition"
     subtitle="The knowledge and credentials behind every BhummiVastu consultation — built through years of dedicated study, practice, and continuous learning."
   />
 
-  <!-- Continuous Learning ********** -->
+  <!-- ── Expertise Areas ───────────────────────────────── -->
   <Features2
     title="Areas of Deep Expertise"
     subtitle="Vastu Acharya Minu Saini's knowledge spans traditional Vastu Shastra, Vedic Astrology, and the unique integration of both — developed through formal training and 5+ years of active practice."
@@ -78,38 +71,58 @@ const continuousLearning = [
     </Fragment>
   </Features2>
 
-  <!-- Formal Certifications ******** -->
-  {certifications.length > 0 ? (
-    <Features2
-      title="Formal Certifications"
-      subtitle="Accredited training and formal certification earned through rigorous study programmes."
-      tagline="Certifications"
-      items={certifications.map(c => ({
-        title: `${c.title} — ${c.issuer} (${c.year})`,
-        description: c.description,
-        icon: c.icon,
-      }))}
-    />
-  ) : (
-    <section class="py-16 md:py-24 text-center max-w-2xl mx-auto px-4">
-      <p class="text-xs font-bold tracking-widest uppercase text-accent mb-4">Certifications</p>
-      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4">
-        Formal Certifications — Coming Soon
+  <!-- ── Formal Certifications ─────────────────────────── -->
+  <section class="py-16 md:py-20 max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="text-center mb-12">
+      <p class="text-xs font-bold tracking-widest uppercase text-accent mb-3">Certifications</p>
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">
+        Formal Certifications & Awards
       </h2>
-      <p class="text-base text-muted dark:text-slate-400 leading-relaxed">
-        Vastu Acharya Minu Saini's formal certifications and training records are being compiled and will be published here shortly. Check back soon.
-      </p>
-    </section>
-  )}
+      {certImages.length === 0 && (
+        <p class="mt-4 text-base text-muted dark:text-slate-400 max-w-xl mx-auto">
+          Formal certifications and awards are being compiled and will be published here shortly.
+          Check back soon.
+        </p>
+      )}
+    </div>
 
-  <!-- Stats ************************ -->
+    {certImages.length > 0 && (
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {certImages.map(({ title, issuer, year, image }) => (
+          <div class="group flex flex-col rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900 shadow-md hover:shadow-xl transition-shadow duration-300">
+            <a
+              href={`/images/certifications/${image}`}
+              target="_blank"
+              rel="noopener"
+              title={`View full certificate — ${title}`}
+              class="block overflow-hidden bg-amber-50 dark:bg-slate-800"
+            >
+              <img
+                src={`/images/certifications/${image}`}
+                alt={`${title} certificate — ${issuer}, ${year}`}
+                class="w-full object-contain max-h-64 p-4 group-hover:scale-[1.02] transition-transform duration-300"
+                loading="lazy"
+              />
+            </a>
+            <div class="p-5 flex flex-col gap-1 border-t border-gray-100 dark:border-gray-700">
+              <h3 class="font-bold text-gray-900 dark:text-white text-base leading-snug">{title}</h3>
+              <p class="text-sm text-amber-700 dark:text-amber-400 font-medium">{issuer}</p>
+              <p class="text-xs text-muted mt-1">Awarded: {year}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    )}
+  </section>
+
+  <!-- ── Stats ─────────────────────────────────────────── -->
   <section class="py-12 bg-slate-50 dark:bg-slate-800/30">
     <div class="max-w-5xl mx-auto px-4">
       <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
         {[
           { label: 'Satisfied Clients', value: '100+' },
           { label: 'Years of Practice', value: '5+' },
-          { label: 'Services Offered', value: '6' },
+          { label: 'Services Offered', value: '8' },
           { label: 'Consultation Mode', value: 'Online & In-Person' },
         ].map(({ label, value }) => (
           <div>
@@ -121,10 +134,10 @@ const continuousLearning = [
     </div>
   </section>
 
-  <!-- CTA ************************** -->
+  <!-- ── CTA ───────────────────────────────────────────── -->
   <CallToAction
     title="Experience Expertise First-Hand"
-    subtitle="Book a consultation with Vastu Acharya Minu Saini and see the depth of knowledge applied to your specific situation."
+    subtitle="Book a consultation with Vastu Acharya Minu Saini and see the depth of knowledge applied to your specific situation — online for clients across India."
     actions={[
       {
         variant: 'primary',
@@ -139,4 +152,5 @@ const continuousLearning = [
       },
     ]}
   />
+
 </Layout>
