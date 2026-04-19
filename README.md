@@ -19,16 +19,16 @@ BhummiVastu is a conversion-optimised consultancy website targeting clients acro
 
 ## Services Covered
 
-| Service | Price |
-|---|---|
-| Non-Demolition Vastu for Homes | ₹5,000 / ₹20 per SFT |
-| Astro-Vastu for Homes (Premium) | ₹10,000 / ₹30 per SFT |
-| Vastu for Offices & Startups | ₹10,000 / ₹50 per SFT |
-| Vastu for Factories & Warehouses | ₹10,000 / ₹50 per SFT |
+| Service                                        | Price                 |
+| ---------------------------------------------- | --------------------- |
+| Non-Demolition Vastu for Homes                 | ₹5,000 / ₹20 per SFT  |
+| Astro-Vastu for Homes (Premium)                | ₹10,000 / ₹30 per SFT |
+| Vastu for Offices & Startups                   | ₹10,000 / ₹50 per SFT |
+| Vastu for Factories & Warehouses               | ₹10,000 / ₹50 per SFT |
 | Astro-Vastu for Offices & Industrial (Premium) | ₹25,000 / ₹50 per SFT |
-| Astrology for IT Careers & Business | ₹5,000 (1 hr) |
-| Astrology for Personal Life & Relationships | ₹5,000 (1 hr) |
-| Prashna Kundali / Horary Astrology | ₹1,000 (10 min) |
+| Astrology for IT Careers & Business            | ₹5,000 (1 hr)         |
+| Astrology for Personal Life & Relationships    | ₹5,000 (1 hr)         |
+| Prashna Kundali / Horary Astrology             | ₹1,000 (10 min)       |
 
 All consultations include **30 days of follow-up Q&A support**.
 
@@ -48,26 +48,26 @@ All consultations include **30 days of follow-up Q&A support**.
 
 ## Pages
 
-| Route | Description |
-|---|---|
-| `/` | Homepage — hero, services, about, process |
-| `/about` | Consultant bio, credentials, approach |
-| `/services` | Services overview |
-| `/pricing` | Full pricing with all 8 services |
-| `/contact` | Contact form + WhatsApp |
-| `/certifications` | Awards & certifications (awaiting data) |
-| `/social` | Social media highlights |
-| `/services/residential-vastu` | Home Vastu page |
-| `/services/commercial-vastu` | Office & startup Vastu page |
-| `/services/industrial-vastu` | Factory & warehouse Vastu page |
-| `/services/astro-vastu` | Astro-Vastu for Homes page |
-| `/services/astro-vastu-commercial` | Astro-Vastu for Offices & Industrial page |
-| `/services/it-career-astrology` | Astrology for IT & Business page |
-| `/services/personal-life-astrology` | Astrology for Personal Life page |
-| `/services/prashna-kundali` | Prashna Kundali / Horary Astrology page |
-| `/blog` | Blog listing |
-| `/terms` | Terms & Conditions |
-| `/privacy` | Privacy Policy |
+| Route                               | Description                               |
+| ----------------------------------- | ----------------------------------------- |
+| `/`                                 | Homepage — hero, services, about, process |
+| `/about`                            | Consultant bio, credentials, approach     |
+| `/services`                         | Services overview                         |
+| `/pricing`                          | Full pricing with all 8 services          |
+| `/contact`                          | Contact form + WhatsApp                   |
+| `/certifications`                   | Awards & certifications (awaiting data)   |
+| `/social`                           | Social media highlights                   |
+| `/services/residential-vastu`       | Home Vastu page                           |
+| `/services/commercial-vastu`        | Office & startup Vastu page               |
+| `/services/industrial-vastu`        | Factory & warehouse Vastu page            |
+| `/services/astro-vastu`             | Astro-Vastu for Homes page                |
+| `/services/astro-vastu-commercial`  | Astro-Vastu for Offices & Industrial page |
+| `/services/it-career-astrology`     | Astrology for IT & Business page          |
+| `/services/personal-life-astrology` | Astrology for Personal Life page          |
+| `/services/prashna-kundali`         | Prashna Kundali / Horary Astrology page   |
+| `/blog`                             | Blog listing                              |
+| `/terms`                            | Terms & Conditions                        |
+| `/privacy`                          | Privacy Policy                            |
 
 ---
 

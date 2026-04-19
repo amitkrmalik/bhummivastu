@@ -11,27 +11,32 @@ const WEB3FORMS_KEY = '64a9dcb4-ce93-4b2e-81f0-f8be97f245cd';
 <div id="form-success" class="hidden text-center py-12 px-6">
   <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-100 dark:bg-green-900 mb-4">
     <svg class="w-8 h-8 text-green-600 dark:text-green-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
     </svg>
   </div>
   <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Message Sent!</h3>
   <p class="text-gray-600 dark:text-gray-400">
     Thank you for reaching out. Vastu Acharya Minu Saini will get back to you within 24 hours.<br />
-    For a faster response, <a href="https://wa.me/919972709328?text=Hi%2C%20I%20submitted%20an%20enquiry%20on%20your%20website" class="text-amber-600 font-medium hover:underline" target="_blank" rel="noopener">WhatsApp us directly</a>.
+    For a faster response, <a
+      href="https://wa.me/919972709328?text=Hi%2C%20I%20submitted%20an%20enquiry%20on%20your%20website"
+      class="text-amber-600 font-medium hover:underline"
+      target="_blank"
+      rel="noopener">WhatsApp us directly</a
+    >.
   </p>
 </div>
 
 <!-- Error state -->
-<div id="form-error" class="hidden mb-4 p-4 rounded-lg bg-red-50 dark:bg-red-900/30 border border-red-200 dark:border-red-700">
+<div
+  id="form-error"
+  class="hidden mb-4 p-4 rounded-lg bg-red-50 dark:bg-red-900/30 border border-red-200 dark:border-red-700"
+>
   <p class="text-sm text-red-700 dark:text-red-300 font-medium" id="form-error-msg">
     Something went wrong. Please try again or WhatsApp us directly at +91-99727 09328.
   </p>
 </div>
 
-<form
-  id="bhummivastu-contact-form"
-  novalidate
->
+<form id="bhummivastu-contact-form" novalidate>
   <!-- Web3Forms hidden fields -->
   <input type="hidden" name="access_key" value={WEB3FORMS_KEY} />
   <input type="hidden" name="subject" value="New Consultation Enquiry — BhummiVastu" />
@@ -59,7 +64,7 @@ const WEB3FORMS_KEY = '64a9dcb4-ce93-4b2e-81f0-f8be97f245cd';
               data-validate={name}
               class="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900 focus:ring-2 focus:ring-amber-400 focus:border-amber-400 outline-none transition"
             />
-            <p class="hidden mt-1 text-xs text-red-600 dark:text-red-400" id={`error-${name}`}></p>
+            <p class="hidden mt-1 text-xs text-red-600 dark:text-red-400" id={`error-${name}`} />
           </div>
         ) : null
       )
@@ -151,14 +156,20 @@ const WEB3FORMS_KEY = '64a9dcb4-ce93-4b2e-81f0-f8be97f245cd';
   function showFieldError(fieldName: string, message: string) {
     const el = document.getElementById(`error-${fieldName}`);
     const input = document.querySelector(`[data-validate="${fieldName}"]`) as HTMLElement | null;
-    if (el) { el.textContent = message; el.classList.remove('hidden'); }
+    if (el) {
+      el.textContent = message;
+      el.classList.remove('hidden');
+    }
     if (input) input.classList.add('border-red-400');
   }
 
   function clearFieldError(fieldName: string) {
     const el = document.getElementById(`error-${fieldName}`);
     const input = document.querySelector(`[data-validate="${fieldName}"]`) as HTMLElement | null;
-    if (el) { el.textContent = ''; el.classList.add('hidden'); }
+    if (el) {
+      el.textContent = '';
+      el.classList.add('hidden');
+    }
     if (input) input.classList.remove('border-red-400');
   }
 
@@ -221,12 +232,20 @@ const WEB3FORMS_KEY = '64a9dcb4-ce93-4b2e-81f0-f8be97f245cd';
       } else {
         if (errorMsgEl) errorMsgEl.textContent = result.message ?? 'Submission failed. Please try again.';
         errorEl?.classList.remove('hidden');
-        if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = 'Send Message'; }
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Send Message';
+        }
       }
     } catch {
-      if (errorMsgEl) errorMsgEl.textContent = 'Network error. Please check your connection and try again, or WhatsApp us at +91-99727 09328.';
+      if (errorMsgEl)
+        errorMsgEl.textContent =
+          'Network error. Please check your connection and try again, or WhatsApp us at +91-99727 09328.';
       errorEl?.classList.remove('hidden');
-      if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = 'Send Message'; }
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send Message';
+      }
     }
   });
 </script>

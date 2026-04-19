@@ -88,7 +88,10 @@ export const footerData = {
         { text: 'Personal Life & Relationships', href: getPermalink('/services/personal-life-astrology') },
         { text: 'Prashna Kundali', href: getPermalink('/services/prashna-kundali') },
         { text: 'Astro-Vastu for Homes (Premium)', href: getPermalink('/services/astro-vastu') },
-        { text: 'Astro-Vastu for Offices & Industrial (Premium)', href: getPermalink('/services/astro-vastu-commercial') },
+        {
+          text: 'Astro-Vastu for Offices & Industrial (Premium)',
+          href: getPermalink('/services/astro-vastu-commercial'),
+        },
       ],
     },
     {
@@ -111,7 +114,7 @@ export const footerData = {
   socialLinks: [
     { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: 'https://www.instagram.com/bhummivastu' },
     { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: 'https://www.facebook.com/BhummiVastu' },
-    { ariaLabel: 'YouTube', icon: 'tabler:brand-youtube', href: '#' },     // TBD: Add YouTube URL when available
+    { ariaLabel: 'YouTube', icon: 'tabler:brand-youtube', href: '#' }, // TBD: Add YouTube URL when available
     { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
   ],
   footNote: `

@@ -21,12 +21,42 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, ''); // e.g. "/bhummivastu"
 
 const certImages: Array<{ title: string; issuer: string; year: string; image: string }> = [
   // ── Paste entries here once JPEGs are added ──
-  { title: 'MahaVastu Foundation Course Jan-Feb 2023', issuer: 'MahaVastu', year: '2023', image: 'cert-MahaVastu-Foundation-Course-Jan-Feb-2023.jpg' },
-  { title: 'Astro-MahaVastu Remedies Course Sept-Oct 2023', issuer: 'MahaVastu', year: '2023', image: 'cert-Astro-MahaVastu-Remedies-2023-sept-oct.jpg' },
-  { title: 'Astro-MahaVastu Remedies Course Nov-Dec 2023', issuer: 'MahaVastu', year: '2023', image: 'cert-Astro-MahaVastu-Remedies-2023-nov-dec.jpg' },
-  { title: 'Advance Vastu Course Dec 2023', issuer: 'Acharya Vikul Bansal - Pinnacle Vastu', year: '2023', image: 'cert-Advance-Vastu-Course-Dec-2023.jpg' },
-  { title: 'KP ASTROLOGY, BNN ASTROLOGY, ADVANCE VASTU, ASTRO VASTU, GPS ASTROLOGY AND TATOO ACTIVATION', issuer: 'SHREE RAJIV MODGIL JI - ASTRO KP', year: '2025', image: 'cert-KP-ASTRO-BNN-2025-Nov.jpg' },
-  { title: 'Professional Vastu & Numerology Jan 2024', issuer: 'Acharya Vikul Bansal - Pinnacle Vastu', year: '2024', image: 'cert-Professional-Vastu-Numerology-Jan-2024.jpg' },
+  {
+    title: 'MahaVastu Foundation Course Jan-Feb 2023',
+    issuer: 'MahaVastu',
+    year: '2023',
+    image: 'cert-MahaVastu-Foundation-Course-Jan-Feb-2023.jpg',
+  },
+  {
+    title: 'Astro-MahaVastu Remedies Course Sept-Oct 2023',
+    issuer: 'MahaVastu',
+    year: '2023',
+    image: 'cert-Astro-MahaVastu-Remedies-2023-sept-oct.jpg',
+  },
+  {
+    title: 'Astro-MahaVastu Remedies Course Nov-Dec 2023',
+    issuer: 'MahaVastu',
+    year: '2023',
+    image: 'cert-Astro-MahaVastu-Remedies-2023-nov-dec.jpg',
+  },
+  {
+    title: 'Advance Vastu Course Dec 2023',
+    issuer: 'Acharya Vikul Bansal - Pinnacle Vastu',
+    year: '2023',
+    image: 'cert-Advance-Vastu-Course-Dec-2023.jpg',
+  },
+  {
+    title: 'KP ASTROLOGY, BNN ASTROLOGY, ADVANCE VASTU, ASTRO VASTU, GPS ASTROLOGY AND TATOO ACTIVATION',
+    issuer: 'SHREE RAJIV MODGIL JI - ASTRO KP',
+    year: '2025',
+    image: 'cert-KP-ASTRO-BNN-2025-Nov.jpg',
+  },
+  {
+    title: 'Professional Vastu & Numerology Jan 2024',
+    issuer: 'Acharya Vikul Bansal - Pinnacle Vastu',
+    year: '2024',
+    image: 'cert-Professional-Vastu-Numerology-Jan-2024.jpg',
+  },
 ];
 
 const continuousLearning = [
@@ -58,7 +88,6 @@ const continuousLearning = [
 ---
 
 <Layout metadata={metadata}>
-
   <!-- ── Hero ──────────────────────────────────────────── -->
   <HeroText
     tagline="Credentials"
@@ -82,61 +111,64 @@ const continuousLearning = [
   <section class="py-16 md:py-20 max-w-6xl mx-auto px-4 sm:px-6">
     <div class="text-center mb-12">
       <p class="text-xs font-bold tracking-widest uppercase text-accent mb-3">Certifications</p>
-      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">
-        Formal Certifications & Awards
-      </h2>
-      {certImages.length === 0 && (
-        <p class="mt-4 text-base text-muted dark:text-slate-400 max-w-xl mx-auto">
-          Formal certifications and awards are being compiled and will be published here shortly.
-          Check back soon.
-        </p>
-      )}
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">Formal Certifications & Awards</h2>
+      {
+        certImages.length === 0 && (
+          <p class="mt-4 text-base text-muted dark:text-slate-400 max-w-xl mx-auto">
+            Formal certifications and awards are being compiled and will be published here shortly. Check back soon.
+          </p>
+        )
+      }
     </div>
 
-    {certImages.length > 0 && (
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {certImages.map(({ title, issuer, year, image }) => (
-          <div class="group flex flex-col rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900 shadow-md hover:shadow-xl transition-shadow duration-300">
-            <a
-              href={`${base}/images/certifications/${image}`}
-              target="_blank"
-              rel="noopener"
-              title={`View full certificate — ${title}`}
-              class="block overflow-hidden bg-amber-50 dark:bg-slate-800"
-            >
-              <img
-                src={`${base}/images/certifications/${image}`}
-                alt={`${title} certificate — ${issuer}, ${year}`}
-                class="w-full object-contain max-h-64 p-4 group-hover:scale-[1.02] transition-transform duration-300"
-                loading="lazy"
-              />
-            </a>
-            <div class="p-5 flex flex-col gap-1 border-t border-gray-100 dark:border-gray-700">
-              <h3 class="font-bold text-gray-900 dark:text-white text-base leading-snug">{title}</h3>
-              <p class="text-sm text-amber-700 dark:text-amber-400 font-medium">{issuer}</p>
-              <p class="text-xs text-muted mt-1">Awarded: {year}</p>
+    {
+      certImages.length > 0 && (
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {certImages.map(({ title, issuer, year, image }) => (
+            <div class="group flex flex-col rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900 shadow-md hover:shadow-xl transition-shadow duration-300">
+              <a
+                href={`${base}/images/certifications/${image}`}
+                target="_blank"
+                rel="noopener"
+                title={`View full certificate — ${title}`}
+                class="block overflow-hidden bg-amber-50 dark:bg-slate-800"
+              >
+                <img
+                  src={`${base}/images/certifications/${image}`}
+                  alt={`${title} certificate — ${issuer}, ${year}`}
+                  class="w-full object-contain max-h-64 p-4 group-hover:scale-[1.02] transition-transform duration-300"
+                  loading="lazy"
+                />
+              </a>
+              <div class="p-5 flex flex-col gap-1 border-t border-gray-100 dark:border-gray-700">
+                <h3 class="font-bold text-gray-900 dark:text-white text-base leading-snug">{title}</h3>
+                <p class="text-sm text-amber-700 dark:text-amber-400 font-medium">{issuer}</p>
+                <p class="text-xs text-muted mt-1">Awarded: {year}</p>
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
-    )}
+          ))}
+        </div>
+      )
+    }
   </section>
 
   <!-- ── Stats ─────────────────────────────────────────── -->
   <section class="py-12 bg-slate-50 dark:bg-slate-800/30">
     <div class="max-w-5xl mx-auto px-4">
       <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-        {[
-          { label: 'Satisfied Clients', value: '100+' },
-          { label: 'Years of Practice', value: '5+' },
-          { label: 'Services Offered', value: '8' },
-          { label: 'Consultation Mode', value: 'Online & In-Person' },
-        ].map(({ label, value }) => (
-          <div>
-            <p class="text-3xl md:text-4xl font-bold text-accent">{value}</p>
-            <p class="text-sm text-muted mt-1">{label}</p>
-          </div>
-        ))}
+        {
+          [
+            { label: 'Satisfied Clients', value: '100+' },
+            { label: 'Years of Practice', value: '5+' },
+            { label: 'Services Offered', value: '8' },
+            { label: 'Consultation Mode', value: 'Online & In-Person' },
+          ].map(({ label, value }) => (
+            <div>
+              <p class="text-3xl md:text-4xl font-bold text-accent">{value}</p>
+              <p class="text-sm text-muted mt-1">{label}</p>
+            </div>
+          ))
+        }
       </div>
     </div>
   </section>
@@ -159,5 +191,4 @@ const continuousLearning = [
       },
     ]}
   />
-
 </Layout>

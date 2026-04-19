@@ -50,4 +50,4 @@ Embrace the ancient wisdom of Vastu and unlock your full learning potential. The
 
 ---
 
-*Vastu Acharya **Minu Saini** is a certified Vastu and Astrology consultant based in Bangalore. For a personalised Vastu analysis of your home or study space, [book a consultation](/contact) or reach out on [WhatsApp](https://wa.me/919972709328?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20Vastu%20for%20studies).*
+_Vastu Acharya **Minu Saini** is a certified Vastu and Astrology consultant based in Bangalore. For a personalised Vastu analysis of your home or study space, [book a consultation](/contact) or reach out on [WhatsApp](https://wa.me/919972709328?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20Vastu%20for%20studies)._

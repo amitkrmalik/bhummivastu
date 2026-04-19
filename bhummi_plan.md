@@ -1,6 +1,7 @@
 # BhummiVastu Landing Page Transformation Plan
 
 ## Overview
+
 This plan details the transformation of the current landing page into an effective introduction and conversion page for a Vastu and astrology consultant. The plan is broken into actionable sprints, with requirements, content needs, and clear TODO/TBD markers for missing information or assets.
 
 ---
@@ -8,40 +9,43 @@ This plan details the transformation of the current landing page into an effecti
 ## Deviation Review (as of April 12, 2026)
 
 ### What is DONE ✅
-| Sprint | Status | Notes |
-|--------|--------|-------|
-| Sprint 1 — Hero Section | Partially done | Title, subtitle, CTAs updated. **Still missing: actual consultant photo, credentials/certifications.** Placeholder image `hero-image.png` in use. |
-| Sprint 2 — Navigation | Done | `navigation.ts` fully rebuilt with two-level dropdowns, Book Now CTA, and BhummiVastu footer. |
-| Sprint 3 — Service Cards | Done | `ServiceCards.astro` created, old 9-item grid replaced. All 6 cards link to stub pages. Prices are `TBD`. |
-| Sprint 6 (stub) — Service Pages | Stub only | All 6 pages under `src/pages/services/` created. Content, process steps, images, testimonials, and pricing are all TBD placeholders. |
+
+| Sprint                          | Status         | Notes                                                                                                                                             |
+| ------------------------------- | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Sprint 1 — Hero Section         | Partially done | Title, subtitle, CTAs updated. **Still missing: actual consultant photo, credentials/certifications.** Placeholder image `hero-image.png` in use. |
+| Sprint 2 — Navigation           | Done           | `navigation.ts` fully rebuilt with two-level dropdowns, Book Now CTA, and BhummiVastu footer.                                                     |
+| Sprint 3 — Service Cards        | Done           | `ServiceCards.astro` created, old 9-item grid replaced. All 6 cards link to stub pages. Prices are `TBD`.                                         |
+| Sprint 6 (stub) — Service Pages | Stub only      | All 6 pages under `src/pages/services/` created. Content, process steps, images, testimonials, and pricing are all TBD placeholders.              |
 
 ### What is NOT yet done ❌
-| Section | Current state in `index.astro` | Required state |
-|---------|-------------------------------|----------------|
-| Note / Mission Statement | Generic "Simplicity, Best Practices..." text | BhummiVastu mission statement |
-| Features widget | Generic AstroWind features list | Remove entirely (replaced by ServiceCards) |
-| Content blocks (×3) | Generic AstroWind lorem-ipsum content | Remove / replace with consultant bio + About section |
-| Steps widget | Generic "Download → Add content → Customize" | Replace with "How a consultation works" process steps |
-| Features2 widget | "Most used widgets" template content | Replace with Core Values/Principles |
-| BlogLatestPosts | Generic AstroWind blog intro | Replace with Vastu/Astrology blog intro (or remove if no blog yet) |
-| FAQs | Generic AstroWind FAQs | Replace with real Vastu & Astrology FAQs |
-| Stats | Generic download/star counts | Replace with real social proof stats (clients served, years experience, etc.) |
-| Testimonials | Not present at all | Add `Testimonials.astro` with real client quotes |
-| CallToAction | Links to GitHub / generic text | Replace with "Book a Consultation" CTA |
-| Contact page | Exists but untouched | Update with consultant's phone, email, address, WhatsApp link |
-| Footer | Now updated ✅ | Social links still `#` placeholders (TBD) |
+
+| Section                  | Current state in `index.astro`               | Required state                                                                |
+| ------------------------ | -------------------------------------------- | ----------------------------------------------------------------------------- |
+| Note / Mission Statement | Generic "Simplicity, Best Practices..." text | BhummiVastu mission statement                                                 |
+| Features widget          | Generic AstroWind features list              | Remove entirely (replaced by ServiceCards)                                    |
+| Content blocks (×3)      | Generic AstroWind lorem-ipsum content        | Remove / replace with consultant bio + About section                          |
+| Steps widget             | Generic "Download → Add content → Customize" | Replace with "How a consultation works" process steps                         |
+| Features2 widget         | "Most used widgets" template content         | Replace with Core Values/Principles                                           |
+| BlogLatestPosts          | Generic AstroWind blog intro                 | Replace with Vastu/Astrology blog intro (or remove if no blog yet)            |
+| FAQs                     | Generic AstroWind FAQs                       | Replace with real Vastu & Astrology FAQs                                      |
+| Stats                    | Generic download/star counts                 | Replace with real social proof stats (clients served, years experience, etc.) |
+| Testimonials             | Not present at all                           | Add `Testimonials.astro` with real client quotes                              |
+| CallToAction             | Links to GitHub / generic text               | Replace with "Book a Consultation" CTA                                        |
+| Contact page             | Exists but untouched                         | Update with consultant's phone, email, address, WhatsApp link                 |
+| Footer                   | Now updated ✅                               | Social links still `#` placeholders (TBD)                                     |
 
 ---
 
 ## Section Sprints & Requirements
 
 ### ⚠️ Sprint 1: Consultant Introduction (Hero Section) — PARTIAL
+
 - **Goal:** Present the consultant's name, credentials, welcoming message, and photo prominently.
 - **Done:** Title, subtitle copy, trust badges, and both CTAs implemented.
 - **Still needed:**
   - **TBD: Consultant photo** — Replace `src/assets/images/hero-image.png` with a professional headshot or on-location photo of Vastu Acharya Minu Malik. Ideal size: 1024×576px or square 800×800px.
   - **TBD: Credentials line** — Add a short credentials badge under the title, e.g. _"Certified Vastu Acharya · 15+ years experience · Bangalore"_
-  - **TBD: Tagline** — Consider adding a short sanskrit or brand tagline as the `tagline` prop on `Hero.astro` (e.g. _"यत्र नारी तत्र रमन्ते  · Where harmony lives"_)
+  - **TBD: Tagline** — Consider adding a short sanskrit or brand tagline as the `tagline` prop on `Hero.astro` (e.g. _"यत्र नारी तत्र रमन्ते · Where harmony lives"_)
 - **Implementation:**
   - Update `image` prop in Hero in `src/pages/index.astro`
   - Add `tagline` prop to Hero once confirmed
@@ -50,6 +54,7 @@ This plan details the transformation of the current landing page into an effecti
 ---
 
 ### ✅ Sprint 2: Navigation Menu Redesign (Two-Click Rule) — COMPLETED
+
 - **Goal:** Reorganise the header navigation so any visitor can reach their service in two clicks. Use a clean, two-level dropdown structure with a prominent Book Now CTA button.
 - **Menu Structure:**
   ```
@@ -82,6 +87,7 @@ This plan details the transformation of the current landing page into an effecti
 ---
 
 ### ✅ Sprint 3: Service Cards on Landing Page — COMPLETED
+
 - **Goal:** Replace the current expertise grid with a polished grid of "Service Cards" that show icon, benefit title, starting price, and a "View Details" link for each service.
 - **Card Structure (per card):**
   - **Icon** — Tabler icon or custom SVG representing the service
@@ -90,14 +96,14 @@ This plan details the transformation of the current landing page into an effecti
   - **"View Details" link** — Routes to the dedicated sub-page
 - **Services & Cards:**
 
-  | Service | Icon (suggestion) | Benefit Title | Starting Price | Sub-page URL |
-  |---|---|---|---|---|
-  | Residential Vastu | `tabler:home` | Non-Demolition Vastu for Homes & Flats | TBD | `/services/residential-vastu` |
-  | Commercial Vastu | `tabler:building-store` | Vastu for Offices & Startups | TBD | `/services/commercial-vastu` |
-  | Industrial Vastu | `tabler:building-factory` | Vastu for Factories & Warehouses | TBD | `/services/industrial-vastu` |
-  | IT Career & Growth | `tabler:device-laptop` | Astrology for IT Careers & Business | TBD | `/services/it-career-astrology` |
-  | Personal & Relationships | `tabler:heart` | Astrology for Life & Relationships | TBD | `/services/personal-life-astrology` |
-  | Astro-Vastu Premium | `tabler:stars` | Science of Space meets Power of Stars | TBD | `/services/astro-vastu` |
+  | Service                  | Icon (suggestion)         | Benefit Title                          | Starting Price | Sub-page URL                        |
+  | ------------------------ | ------------------------- | -------------------------------------- | -------------- | ----------------------------------- |
+  | Residential Vastu        | `tabler:home`             | Non-Demolition Vastu for Homes & Flats | TBD            | `/services/residential-vastu`       |
+  | Commercial Vastu         | `tabler:building-store`   | Vastu for Offices & Startups           | TBD            | `/services/commercial-vastu`        |
+  | Industrial Vastu         | `tabler:building-factory` | Vastu for Factories & Warehouses       | TBD            | `/services/industrial-vastu`        |
+  | IT Career & Growth       | `tabler:device-laptop`    | Astrology for IT Careers & Business    | TBD            | `/services/it-career-astrology`     |
+  | Personal & Relationships | `tabler:heart`            | Astrology for Life & Relationships     | TBD            | `/services/personal-life-astrology` |
+  | Astro-Vastu Premium      | `tabler:stars`            | Science of Space meets Power of Stars  | TBD            | `/services/astro-vastu`             |
 
 - **TBD:**
   - [ ] Confirm starting prices for each service
@@ -112,6 +118,7 @@ This plan details the transformation of the current landing page into an effecti
 ---
 
 ### ✅ Sprint 4: Mission Statement + "About the Consultant" Bio Section — COMPLETED
+
 - **Mission section:** `Mission.astro` created — Purusha Sūkta shloka, translation, and Vastu/Astrology bridge. Live in `index.astro`.
 - **About section:** `AboutConsultant.astro` created with SEO-optimised bio, credentials list, and dual CTAs. Live in `index.astro` after Mission.
 - **All generic AstroWind template blocks removed** from `index.astro` (Features, 3×Content, Steps, Features2, BlogLatestPosts, generic FAQs, generic Stats, generic CallToAction).
@@ -144,7 +151,7 @@ This plan details the transformation of the current landing page into an effecti
   - **TBD:**
     - [ ] Write 3-paragraph bio copy
     - [ ] Confirm certifying body and years of experience
-    - [ ] Provide professional photo  - **Note:** Sri Vidya references have been removed from copy and component. Advanced training is described generically as "traditional Vedic and spiritual disciplines".- **Implementation in `index.astro`:**
+    - [ ] Provide professional photo - **Note:** Sri Vidya references have been removed from copy and component. Advanced training is described generically as "traditional Vedic and spiritual disciplines".- **Implementation in `index.astro`:**
   1. Update `<Note>` props: change `title` and `description`
   2. Replace the first `<Content isReversed>` block (currently "AstroWind's Blueprint") with the About section
   3. Remove the two remaining generic `<Content>` blocks that follow it
@@ -152,18 +159,20 @@ This plan details the transformation of the current landing page into an effecti
 ---
 
 ### Sprint 5: Core Principles/Values + "How a Consultation Works" Steps
+
 - **Goal:** (a) Replace the generic `Features2` block with BhummiVastu's core values ✅, and (b) replace the generic Steps widget with a clear consultation process — reducing friction for first-time visitors.
 
 #### ✅ Section A — Core Values (`Features2.astro`) — COMPLETED
+
 - **Confirmed values (implemented in `index.astro`):**
 
-  | Value | Icon | Value Statement |
-  |-------|------|----------------|
-  | Scientific Logic | `tabler:atom` | Solutions based on energy principles & spatial geometry — the "how" and "why" explained |
-  | Zero-Demolition Practicality | `tabler:home-check` | Non-disruptive corrections using colours, elements, and precise placements — no demolition |
-  | Ethical Integrity | `tabler:shield-check` | No fear-based selling; honest, transparent guidance — only what is necessary |
-  | Client-Centric Empathy | `tabler:heart-handshake` | Deeply personalised solutions tailored to career, health, and relationship goals |
-  | Empowerment Through Knowledge | `tabler:book-open` | Educate clients to maintain harmony independently — empowerment, not dependency |
+  | Value                         | Icon                     | Value Statement                                                                            |
+  | ----------------------------- | ------------------------ | ------------------------------------------------------------------------------------------ |
+  | Scientific Logic              | `tabler:atom`            | Solutions based on energy principles & spatial geometry — the "how" and "why" explained    |
+  | Zero-Demolition Practicality  | `tabler:home-check`      | Non-disruptive corrections using colours, elements, and precise placements — no demolition |
+  | Ethical Integrity             | `tabler:shield-check`    | No fear-based selling; honest, transparent guidance — only what is necessary               |
+  | Client-Centric Empathy        | `tabler:heart-handshake` | Deeply personalised solutions tailored to career, health, and relationship goals           |
+  | Empowerment Through Knowledge | `tabler:book-open`       | Educate clients to maintain harmony independently — empowerment, not dependency            |
 
 - **Old plan values superseded:** Authenticity → Ethical Integrity · Personalisation → Client-Centric Empathy · Non-Demolition First → Zero-Demolition Practicality · Accessible Wisdom → Empowerment Through Knowledge · Measurable Results → Scientific Logic · Confidentiality → absorbed into Ethical Integrity.
 - **Background:** Warm amber tint (`bg-amber-50/60`) for visual contrast with surrounding sections.
@@ -182,13 +191,13 @@ This plan details the transformation of the current landing page into an effecti
 - **Title:** _"Your Journey to Harmony — 5 Simple Steps"_
 - **5 steps implemented (confirmed icons, all validated against tabler icon set):**
 
-  | Step | Icon | Title | Key Content |
-  |------|------|-------|-------------|
-  | 1 | `tabler:message-share` | Discovery & Data Sharing | Floor plan + birth details → unique energy blueprint |
-  | 2 | `tabler:compass` | Technical Survey & Directional Mapping | Google Earth / on-site · identifies Vastu Doshas |
-  | 3 | `tabler:binary-tree` | 16-Zone Zonal Analysis | 16 directions · 45 energy fields · cross-ref with Dashas |
-  | 4 | `tabler:video` | Live Consultation & Written Report | PDF report + video/in-person explanation of zero-demolition remedies |
-  | 5 | `tabler:refresh` | Implementation & Follow-Up Support | Complimentary follow-up · tracks measurable shifts |
+  | Step | Icon                   | Title                                  | Key Content                                                          |
+  | ---- | ---------------------- | -------------------------------------- | -------------------------------------------------------------------- |
+  | 1    | `tabler:message-share` | Discovery & Data Sharing               | Floor plan + birth details → unique energy blueprint                 |
+  | 2    | `tabler:compass`       | Technical Survey & Directional Mapping | Google Earth / on-site · identifies Vastu Doshas                     |
+  | 3    | `tabler:binary-tree`   | 16-Zone Zonal Analysis                 | 16 directions · 45 energy fields · cross-ref with Dashas             |
+  | 4    | `tabler:video`         | Live Consultation & Written Report     | PDF report + video/in-person explanation of zero-demolition remedies |
+  | 5    | `tabler:refresh`       | Implementation & Follow-Up Support     | Complimentary follow-up · tracks measurable shifts                   |
 
 - **Image:** Unsplash placeholder (consultant analysing floor plan). **TBD:** Replace with actual photo of Minu ji at work or reviewing a floor plan.
 - **SEO keywords woven in:** _16-Zone Zonal Analysis_, _Vastu Doshas_, _zero-demolition remedy_, _Astro-Vastu_, _Bangalore_, _directional mapping_, _non-demolition_
@@ -199,6 +208,7 @@ This plan details the transformation of the current landing page into an effecti
 ---
 
 ### ✅ Sprint 6: Individual Service Detail Pages (Content Fill) — COMPLETED
+
 - **Goal:** Fill the 6 stub pages under `src/pages/services/` with real content. ✅
 - **All 6 pages completed with:**
   - `Content.astro` block: 3-paragraph description with SEO keywords woven in naturally
@@ -227,6 +237,7 @@ This plan details the transformation of the current landing page into an effecti
 ---
 
 ### Sprint 7: Testimonials + Social Proof Stats
+
 - **Goal:** Build immediate trust with real client feedback and impressive numbers — this is the most conversion-critical section after the Hero.
 - **Section A — Testimonials (`Testimonials.astro`):**
   - Place after Service Cards and before FAQs in `index.astro`
@@ -251,6 +262,7 @@ This plan details the transformation of the current landing page into an effecti
     - [ ] Obtain or create placeholder avatar images
     - [ ] Confirm client names / anonymisation preference
   - **Placeholder testimonials (replace before launch):**
+
     ```
     1. title: "Our new home feels completely different"
        testimonial: "We were struggling with constant arguments and health issues in our flat. After Minu ji's Vastu consultation, she suggested simple changes — no demolition at all. Within three months, the atmosphere was calmer and my husband got a promotion. I highly recommend her to every family in Bangalore."
@@ -267,6 +279,7 @@ This plan details the transformation of the current landing page into an effecti
        name: "Divya K."
        job: "IT Professional, Whitefield, Bangalore"
     ```
+
 - **Section B — Stats (`Stats.astro`):**
   - Place just after Testimonials
   - Replace generic GitHub stats with real social proof:
@@ -281,6 +294,7 @@ This plan details the transformation of the current landing page into an effecti
 ---
 
 ### Sprint 8: FAQs
+
 - **Goal:** Answer the most common objections and questions — reduces bounce rate and improves SEO through long-tail keyword coverage.
 - **Component:** `FAQs.astro` (already in `index.astro` — just needs content replacement)
 - **Props:** `tagline="FAQs"`, `title="Frequently Asked Questions"`, `subtitle="Everything you need to know before booking a consultation."`
@@ -300,6 +314,7 @@ This plan details the transformation of the current landing page into an effecti
 ---
 
 ### Sprint 9: Contact/Booking Section + Final CTA
+
 - **Goal:** Make booking frictionless — the page must end with a clear, compelling action path.
 - **Section A — Final CTA Banner (`CallToAction.astro`):**
   - Replace current generic "Get template" CTA at the bottom of `index.astro`
@@ -333,6 +348,7 @@ This plan details the transformation of the current landing page into an effecti
 ---
 
 ### Sprint 10: Footer + Blog Setup
+
 - **Goal:** Finalise the footer with real links, and decide on blog strategy — blog content is one of the strongest local SEO levers for a consultant.
 - **Section A — Footer (already partially done in Sprint 2, needs TBD items):**
   - **TBD:**
@@ -357,7 +373,9 @@ This plan details the transformation of the current landing page into an effecti
 ---
 
 ## Page Section Order (Final Design)
+
 The final `index.astro` page should follow this order:
+
 1. `Hero` — Consultant intro, photo, credentials, CTAs
 2. `ServiceCards` — 6 service cards with links ✅
 3. `Note` — Mission statement
@@ -373,6 +391,7 @@ The final `index.astro` page should follow this order:
 ---
 
 ## General Notes
+
 - All TBD sections are marked with comments in code for easy future updates.
 - Use placeholder images/text where real content is not yet available.
 - Ensure all sections are mobile-friendly and visually consistent.

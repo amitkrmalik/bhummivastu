@@ -119,4 +119,3 @@ For any questions, data requests, or concerns regarding this Privacy Policy, ple
 - **Email:** minusaini@bhummivastu.com
 - **WhatsApp:** +91-99727 09328
 - **Address:** Pruksa Silvana, Budigere Cross, Off Old Madras Road, Bangalore East Tq. – 560049, Karnataka, India
-

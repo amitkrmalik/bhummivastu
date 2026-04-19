@@ -73,4 +73,4 @@ Beyond activating specific zones, Vastu offers general guidelines to improve fin
 
 By aligning your home or workplace with Vastu principles, you can create an environment that supports financial growth and stability. Regularly declutter, maintain cleanliness, and incorporate Vastu remedies to ensure a continuous flow of prosperity. With mindful adjustments, Vastu can transform your space into a magnet for wealth and opportunities.
 
-*Ready to have your home's wealth zones properly analysed? Vastu Acharya **Minu Saini** offers a complete 16-zone Vastu assessment with non-demolition remedies. [Book a consultation](/contact) or [WhatsApp us](https://wa.me/919972709328?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20Vastu%20for%20wealth%20and%20finances) to get started.*
+_Ready to have your home's wealth zones properly analysed? Vastu Acharya **Minu Saini** offers a complete 16-zone Vastu assessment with non-demolition remedies. [Book a consultation](/contact) or [WhatsApp us](https://wa.me/919972709328?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20Vastu%20for%20wealth%20and%20finances) to get started._
