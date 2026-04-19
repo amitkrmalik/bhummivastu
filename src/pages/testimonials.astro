@@ -1,0 +1,312 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import { Icon } from 'astro-icon/components';
+import { testimonials, featuredTestimonials, averageRating, totalReviews, getInitials } from '~/data/testimonials';
+
+const metadata = {
+  title: 'Client Testimonials | Vastu Acharya Minu Saini | BhummiVastu',
+  description:
+    'Real Google reviews from clients of Vastu Acharya Minu Saini — BhummiVastu. Read what homeowners, businesses, and professionals say about their Vastu and Astrology consultations.',
+};
+
+// Star renderer helper
+function stars(rating: number) {
+  return Array.from({ length: 5 }, (_, i) => (i < rating ? '★' : '☆')).join('');
+}
+
+// Avatar background colours — cycle through these
+const avatarColors = [
+  'bg-amber-100 text-amber-700',
+  'bg-blue-100 text-blue-700',
+  'bg-green-100 text-green-700',
+  'bg-purple-100 text-purple-700',
+  'bg-rose-100 text-rose-700',
+  'bg-teal-100 text-teal-700',
+];
+---
+
+<Layout metadata={metadata}>
+  <!-- ── HERO: Trust snapshot ─────────────────────────────────────────── -->
+  <section
+    class="relative py-16 md:py-20 bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 overflow-hidden"
+  >
+    <!-- Decorative squares -->
+    <div
+      aria-hidden="true"
+      class="pointer-events-none absolute -top-12 -right-12 w-64 h-64 border-[28px] border-amber-200/30 dark:border-amber-900/20 rotate-12"
+    >
+    </div>
+    <div
+      aria-hidden="true"
+      class="pointer-events-none absolute -bottom-12 -left-12 w-56 h-56 border-[22px] border-orange-200/30 dark:border-orange-900/20 -rotate-12"
+    >
+    </div>
+
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center relative">
+      <p class="text-xs font-bold tracking-widest uppercase text-amber-600 dark:text-amber-400 mb-4">Client Reviews</p>
+      <h1 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+        What Clients Say About Their Consultations
+      </h1>
+      <p class="text-base md:text-lg text-muted dark:text-slate-400 max-w-2xl mx-auto mb-10">
+        Real experiences from homeowners, business owners, and professionals across India who chose BhummiVastu for
+        their Vastu and Astrology consultations.
+      </p>
+
+      <!-- Aggregate rating strip -->
+      <div
+        class="inline-flex flex-wrap items-center justify-center gap-6 bg-white/80 dark:bg-slate-800/80 border border-amber-200 dark:border-amber-900/50 rounded-2xl px-8 py-5 shadow-md"
+      >
+        <!-- Google Logo + badge -->
+        <div class="flex items-center gap-2">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+              fill="#4285F4"></path>
+            <path
+              d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+              fill="#34A853"></path>
+            <path
+              d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"
+              fill="#FBBC05"></path>
+            <path
+              d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+              fill="#EA4335"></path>
+          </svg>
+          <span class="text-sm font-semibold text-gray-700 dark:text-slate-300">Google Reviews</span>
+        </div>
+
+        <!-- Stars + number -->
+        <div class="flex items-center gap-2">
+          <span class="text-3xl font-bold text-gray-900 dark:text-white">{averageRating}</span>
+          <div>
+            <div class="text-amber-400 text-xl leading-none tracking-tight">{stars(Math.round(averageRating))}</div>
+            <p class="text-xs text-muted mt-0.5">{totalReviews} verified reviews</p>
+          </div>
+        </div>
+
+        <!-- Divider -->
+        <div class="hidden sm:block w-px h-10 bg-gray-200 dark:bg-slate-600"></div>
+
+        <!-- Quick stats -->
+        <div class="flex gap-5 text-center">
+          <div>
+            <p class="text-xl font-bold text-accent">100+</p>
+            <p class="text-xs text-muted">Clients Served</p>
+          </div>
+          <div>
+            <p class="text-xl font-bold text-accent">5+</p>
+            <p class="text-xs text-muted">Years Practice</p>
+          </div>
+          <div>
+            <p class="text-xl font-bold text-accent">Pan India</p>
+            <p class="text-xs text-muted">Online & In-Person</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FEATURED REVIEWS ─────────────────────────────────────────────── -->
+  {
+    featuredTestimonials.length > 0 && (
+      <section class="py-14 md:py-16 bg-white dark:bg-slate-900">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+          <div class="text-center mb-10">
+            <p class="text-xs font-bold tracking-widest uppercase text-accent mb-2">Highlighted</p>
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">Featured Client Experiences</h2>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {featuredTestimonials.map((t, i) => (
+              <div class="relative flex flex-col bg-gradient-to-br from-amber-50 to-orange-50 dark:from-slate-800 dark:to-slate-800 border-2 border-amber-200 dark:border-amber-800/50 rounded-2xl p-6 shadow-lg">
+                {/* Quote mark */}
+                <span
+                  aria-hidden="true"
+                  class="absolute top-4 right-5 text-6xl text-amber-200 dark:text-amber-900/60 font-serif leading-none select-none"
+                >
+                  "
+                </span>
+
+                {/* Stars */}
+                <div class="text-amber-400 text-lg mb-3 leading-none">{stars(t.rating)}</div>
+
+                {/* Review text */}
+                <blockquote class="flex-1 text-sm text-gray-700 dark:text-slate-300 leading-relaxed mb-5 relative z-10">
+                  {t.text}
+                </blockquote>
+
+                <hr class="border-amber-200 dark:border-amber-900/40 mb-4" />
+
+                {/* Reviewer */}
+                <div class="flex items-center gap-3">
+                  <div
+                    class={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0 ${avatarColors[i % avatarColors.length]}`}
+                  >
+                    {getInitials(t.name, t.initials)}
+                  </div>
+                  <div class="min-w-0">
+                    <p class="text-sm font-semibold text-gray-900 dark:text-white truncate">{t.name}</p>
+                    {t.location && <p class="text-xs text-muted truncate">{t.location}</p>}
+                  </div>
+                  {/* Verified badge */}
+                  <div class="ml-auto flex-shrink-0" title="Verified Google Review">
+                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                        fill="#4285F4"
+                      />
+                      <path
+                        d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                        fill="#34A853"
+                      />
+                      <path
+                        d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"
+                        fill="#FBBC05"
+                      />
+                      <path
+                        d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                        fill="#EA4335"
+                      />
+                    </svg>
+                  </div>
+                </div>
+
+                {/* Service tag */}
+                {t.service && (
+                  <div class="mt-3">
+                    <span class="inline-block text-xs bg-amber-100 dark:bg-amber-900/40 text-amber-800 dark:text-amber-300 rounded-full px-3 py-0.5 font-medium">
+                      {t.service}
+                    </span>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  <!-- ── ALL REVIEWS GRID ──────────────────────────────────────────────── -->
+  <section class="py-14 md:py-16 bg-slate-50 dark:bg-slate-800/30">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10">
+        <p class="text-xs font-bold tracking-widest uppercase text-accent mb-2">All Reviews</p>
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">Every Client Experience</h2>
+        <p class="text-muted mt-2 text-sm">Sorted by most recent · Sourced from Google Reviews</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        {
+          testimonials.map((t, i) => (
+            <div class="flex flex-col bg-white dark:bg-slate-900 border border-gray-100 dark:border-slate-700 rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow duration-200">
+              {/* Header row */}
+              <div class="flex items-start justify-between gap-3 mb-3">
+                <div class="flex items-center gap-3 min-w-0">
+                  <div
+                    class={`w-9 h-9 rounded-full flex items-center justify-center font-bold text-xs flex-shrink-0 ${avatarColors[i % avatarColors.length]}`}
+                  >
+                    {getInitials(t.name, t.initials)}
+                  </div>
+                  <div class="min-w-0">
+                    <p class="text-sm font-semibold text-gray-900 dark:text-white leading-tight truncate">{t.name}</p>
+                    {t.location && (
+                      <p class="text-xs text-muted truncate flex items-center gap-1">
+                        <Icon name="tabler:map-pin" class="w-3 h-3 inline flex-shrink-0" />
+                        {t.location}
+                      </p>
+                    )}
+                  </div>
+                </div>
+                {/* Google icon */}
+                <div class="flex-shrink-0" title="Google Review">
+                  <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                      fill="#4285F4"
+                    />
+                    <path
+                      d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                      fill="#34A853"
+                    />
+                    <path
+                      d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"
+                      fill="#FBBC05"
+                    />
+                    <path
+                      d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                      fill="#EA4335"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              {/* Stars + date */}
+              <div class="flex items-center gap-2 mb-3">
+                <span class="text-amber-400 text-sm leading-none">{stars(t.rating)}</span>
+                <span class="text-xs text-muted">{t.date}</span>
+              </div>
+
+              {/* Review text */}
+              <blockquote class="flex-1 text-sm text-gray-600 dark:text-slate-400 leading-relaxed mb-3">
+                {t.text}
+              </blockquote>
+
+              {/* Service tag */}
+              {t.service && (
+                <div class="mt-auto pt-3 border-t border-gray-100 dark:border-slate-700">
+                  <span class="inline-block text-xs bg-gray-100 dark:bg-slate-800 text-gray-600 dark:text-slate-400 rounded-full px-2.5 py-0.5 font-medium">
+                    {t.service}
+                  </span>
+                </div>
+              )}
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TRUST STRIP ───────────────────────────────────────────────────── -->
+  <section class="py-10 bg-white dark:bg-slate-900 border-t border-gray-100 dark:border-slate-700">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <p class="text-sm text-muted dark:text-slate-400 mb-6">
+        All reviews are sourced from Google Business Profile — unedited and verified.
+      </p>
+      <div class="flex flex-wrap justify-center gap-6 md:gap-10 text-center">
+        {
+          [
+            { icon: 'tabler:shield-check', label: 'Verified Google Reviews' },
+            { icon: 'tabler:star', label: `${averageRating} / 5 Average Rating` },
+            { icon: 'tabler:users', label: '100+ Satisfied Clients' },
+            { icon: 'tabler:map-pin', label: 'Clients Across India' },
+          ].map(({ icon, label }) => (
+            <div class="flex items-center gap-2 text-sm text-gray-600 dark:text-slate-400">
+              <Icon name={icon} class="w-4 h-4 text-accent flex-shrink-0" />
+              {label}
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA ───────────────────────────────────────────────────────────── -->
+  <CallToAction
+    title="Ready to Experience the Difference?"
+    subtitle="Join 100+ clients across India who have transformed their homes, offices, and lives through authentic Vastu and Astrology consultations."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Book a Consultation',
+        href: '/contact',
+        icon: 'tabler:calendar-event',
+      },
+      {
+        variant: 'secondary',
+        text: 'View Services & Pricing',
+        href: '/pricing',
+      },
+    ]}
+  />
+</Layout>

@@ -54,6 +54,10 @@ export const headerData = {
       href: getPermalink('/about'),
     },
     {
+      text: 'Testimonials',
+      href: getPermalink('/testimonials'),
+    },
+    {
       text: 'Certifications',
       href: getPermalink('/certifications'),
     },
@@ -98,6 +102,7 @@ export const footerData = {
       title: 'Company',
       links: [
         { text: 'About', href: getPermalink('/about') },
+        { text: 'Testimonials', href: getPermalink('/testimonials') },
         { text: 'Certifications', href: getPermalink('/certifications') },
         { text: 'Social Media', href: getPermalink('/social') },
         { text: 'Blog', href: getBlogPermalink() },
