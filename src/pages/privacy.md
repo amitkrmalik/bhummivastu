@@ -13,7 +13,7 @@ By using this website or engaging our services, you acknowledge that you have re
 
 BhummiVastu is a Vastu Shastra and Vedic Astrology consultancy operated by Vastu Acharya Minu Saini.
 
-- **Website:** [https://bhummivastu.com](https://bhummivastu.com)
+- **Website:** [BhummiVastu website](../)
 - **Email:** minusaini@bhummivastu.com
 - **WhatsApp / Phone:** +91-99727 09328
 - **Address:** Pruksa Silvana, Budigere Cross, Off Old Madras Road, Bangalore East Tq. – 560049, Karnataka, India
@@ -90,7 +90,7 @@ BhummiVastu services are available to adults aged **18 and above only**. We do n
 
 ## 10. Use of Anonymised Consultation Content
 
-As described in our [Terms and Conditions](/terms), Acharya Minu Saini reserves the right to use **anonymised, non-identifying themes and scenarios** from consultations for educational content — including blog articles, vlogs, case studies, and social media posts published under the BhummiVastu brand.
+As described in our [Terms and Conditions](../terms/), Acharya Minu Saini reserves the right to use **anonymised, non-identifying themes and scenarios** from consultations for educational content — including blog articles, vlogs, case studies, and social media posts published under the BhummiVastu brand.
 
 Your **personal identity is fully protected** in this process:
 

@@ -10,7 +10,7 @@ import Steps from '~/components/widgets/Steps.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import { Icon } from 'astro-icon/components';
 import { featuredTestimonials, averageRating, totalReviews, getInitials, serviceList } from '~/data/testimonials';
-import { getAsset } from '~/utils/permalinks';
+import { getAsset, getPermalink } from '~/utils/permalinks';
 
 const avatarColors = [
   'bg-amber-100 text-amber-700',
@@ -40,7 +40,7 @@ const metadata = {
       {
         variant: 'primary',
         text: 'Book Consultation',
-        href: '/contact',
+        href: getPermalink('/contact'),
         icon: 'tabler:calendar-event',
       },
       { text: 'Our Services', href: '#services' },
@@ -283,7 +283,7 @@ const metadata = {
       <!-- Link to full page -->
       <div class="text-center">
         <a
-          href="/testimonials"
+          href={getPermalink('/testimonials')}
           class="inline-flex items-center gap-2 text-sm font-semibold text-accent hover:underline"
         >
           Read all {totalReviews} reviews
@@ -301,13 +301,13 @@ const metadata = {
       {
         variant: 'primary',
         text: 'Book a Consultation',
-        href: '/contact',
+        href: getPermalink('/contact'),
         icon: 'tabler:calendar-event',
       },
       {
         variant: 'secondary',
         text: 'View Services & Pricing',
-        href: '/pricing',
+        href: getPermalink('/pricing'),
       },
     ]}
   />

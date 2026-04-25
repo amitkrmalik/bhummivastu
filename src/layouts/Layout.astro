@@ -2,6 +2,7 @@
 import '~/assets/styles/tailwind.css';
 
 import { I18N } from 'astrowind:config';
+import { getAsset, getCanonical, getPermalink } from '~/utils/permalinks';
 
 import CommonMeta from '~/components/common/CommonMeta.astro';
 import Favicons from '~/components/Favicons.astro';
@@ -23,6 +24,43 @@ export interface Props {
 
 const { metadata = {} } = Astro.props;
 const { language, textDirection } = I18N;
+const siteUrl = String(getCanonical(getPermalink('/')));
+const imageUrl = String(getCanonical(getAsset('/images/media/hero-image-minu.jpeg')));
+const localBusinessSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'BhummiVastu — Vastu Acharya Minu Saini',
+  image: imageUrl,
+  '@id': siteUrl,
+  url: siteUrl,
+  telephone: '+919972709328',
+  email: 'minusaini@bhummivastu.com',
+  description:
+    'Certified Vastu and Vedic Astrology consultant based in Bangalore. Offering Residential Vastu, Commercial Vastu, Industrial Vastu, and Astrology consultations across India.',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'RA14, Pruksa Silvana, Budigere Cross, Off Old Madras Road, Bangalore East Tq.',
+    addressLocality: 'Bangalore',
+    postalCode: '560049',
+    addressCountry: 'IN',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 13.1168721,
+    longitude: 78.1441487,
+  },
+  areaServed: [
+    { '@type': 'City', name: 'Bangalore' },
+    { '@type': 'State', name: 'Karnataka' },
+    { '@type': 'Country', name: 'India' },
+  ],
+  sameAs: [
+    'https://www.facebook.com/BhummiVastu',
+    'https://www.instagram.com/bhummivastu',
+    'https://www.youtube.com/@BhummiVastu',
+    siteUrl,
+  ],
+};
 ---
 
 <!doctype html>
@@ -44,42 +82,7 @@ const { language, textDirection } = I18N;
     <slot />
 
     <!-- LocalBusiness Structured Data -->
-    <script is:inline type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "ProfessionalService",
-        "name": "BhummiVastu — Vastu Acharya Minu Saini",
-        "image": "https://www.bhummivastu.com/assets/images/default.png",
-        "@id": "https://www.bhummivastu.com/",
-        "url": "https://www.bhummivastu.com/",
-        "telephone": "+919972709328",
-        "email": "minusaini@bhummivastu.com",
-        "description": "Certified Vastu and Vedic Astrology consultant based in Bangalore. Offering Residential Vastu, Commercial Vastu, Industrial Vastu, and Astrology consultations across India.",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "RA14, Pruksa Silvana, Budigere Cross, Off Old Madras Road, Bangalore East Tq.",
-          "addressLocality": "Bangalore",
-          "postalCode": "560049",
-          "addressCountry": "IN"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 13.1168721,
-          "longitude": 78.1441487
-        },
-        "areaServed": [
-          { "@type": "City", "name": "Bangalore" },
-          { "@type": "State", "name": "Karnataka" },
-          { "@type": "Country", "name": "India" }
-        ],
-        "sameAs": [
-          "https://www.facebook.com/BhummiVastu",
-          "https://www.instagram.com/bhummivastu",
-          "https://www.youtube.com/@BhummiVastu",
-          "https://www.bhummivastu.com/"
-        ]
-      }
-    </script>
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
 
     <!-- WhatsApp Floating Button -->
     <a

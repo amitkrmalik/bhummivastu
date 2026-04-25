@@ -20,7 +20,8 @@ const { page, category } = Astro.props as Props;
 const currentPage = page.currentPage ?? 1;
 
 const metadata = {
-  title: `Category '${category.title}' ${currentPage > 1 ? ` — Page ${currentPage}` : ''}`,
+  title: `${category.title} Articles${currentPage > 1 ? ` — Page ${currentPage}` : ''}`,
+  description: `Read BhummiVastu blog articles in the "${category.title}" category for practical Vastu and Astrology insights.`,
   robots: {
     index: blogCategoryRobots?.index,
     follow: blogCategoryRobots?.follow,

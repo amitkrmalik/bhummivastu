@@ -11,8 +11,6 @@ tags:
   - concentration
   - academic success
   - vastu shastra
-metadata:
-  canonical: https://bhummivastu.com/supercharge-your-studies/
 ---
 
 Feeling mentally scattered and struggling to focus on your studies? Ancient wisdom offers a powerful yet simple solution: **Vastu Shastra**. By strategically aligning your home environment, you can tap into positive energies that significantly enhance concentration, boost learning capabilities, and ultimately lead to academic success.
@@ -50,4 +48,4 @@ Embrace the ancient wisdom of Vastu and unlock your full learning potential. The
 
 ---
 
-_Vastu Acharya **Minu Saini** is a certified Vastu and Astrology consultant based in Bangalore. For a personalised Vastu analysis of your home or study space, [book a consultation](/contact) or reach out on [WhatsApp](https://wa.me/919972709328?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20Vastu%20for%20studies)._
+_Vastu Acharya **Minu Saini** is a certified Vastu and Astrology consultant based in Bangalore. For a personalised Vastu analysis of your home or study space, [book a consultation](../contact/) or reach out on [WhatsApp](https://wa.me/919972709328?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20Vastu%20for%20studies)._

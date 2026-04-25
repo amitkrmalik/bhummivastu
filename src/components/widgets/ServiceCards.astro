@@ -2,6 +2,7 @@
 import { Icon } from 'astro-icon/components';
 import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
 import Headline from '~/components/ui/Headline.astro';
+import { getPermalink } from '~/utils/permalinks';
 
 interface ServiceCard {
   icon: string;
@@ -45,7 +46,7 @@ const cards: ServiceCard[] = [
       'Non-Demolition Remedies + Energy Tips',
     ],
     price: '₹5,000 or ₹20/SFT (50% off)',
-    href: '/services/residential-vastu',
+    href: getPermalink('/services/residential-vastu'),
     accent: 'text-blue-600',
   },
   {
@@ -60,7 +61,7 @@ const cards: ServiceCard[] = [
       'Cash Counter & Safe Direction',
     ],
     price: '₹10,000 or ₹50/SFT (50% off)',
-    href: '/services/commercial-vastu',
+    href: getPermalink('/services/commercial-vastu'),
     accent: 'text-green-600',
   },
   {
@@ -75,7 +76,7 @@ const cards: ServiceCard[] = [
       'Growth & Productivity Remedies',
     ],
     price: '₹10,000 or ₹50/SFT (25% off, <5,000 SFT)',
-    href: '/services/industrial-vastu',
+    href: getPermalink('/services/industrial-vastu'),
     accent: 'text-orange-600',
   },
   {
@@ -91,7 +92,7 @@ const cards: ServiceCard[] = [
       'Gemstone & Auspicious Timing Guidance',
     ],
     price: '₹10,000 or ₹30/SFT (50% off)',
-    href: '/services/astro-vastu',
+    href: getPermalink('/services/astro-vastu'),
     accent: 'text-amber-500',
   },
   {
@@ -107,7 +108,7 @@ const cards: ServiceCard[] = [
       'Cash Counter, Safe & Growth Remedies',
     ],
     price: '₹25,000 or ₹50/SFT (50% off, >5,000 SFT)',
-    href: '/services/astro-vastu-commercial',
+    href: getPermalink('/services/astro-vastu-commercial'),
     accent: 'text-purple-600',
   },
   {
@@ -123,7 +124,7 @@ const cards: ServiceCard[] = [
       'Gemstone Recommendations',
     ],
     price: '₹5,000 · 1-hr session',
-    href: '/services/it-career-astrology',
+    href: getPermalink('/services/it-career-astrology'),
     accent: 'text-indigo-600',
   },
   {
@@ -138,7 +139,7 @@ const cards: ServiceCard[] = [
       'Auspicious Timings + Direction-based Solutions',
     ],
     price: '₹5,000 · 1-hr session',
-    href: '/services/personal-life-astrology',
+    href: getPermalink('/services/personal-life-astrology'),
     accent: 'text-pink-600',
   },
   {
@@ -154,7 +155,7 @@ const cards: ServiceCard[] = [
       'Career, property, relationships & more',
     ],
     price: '₹1,000 · 10-min session',
-    href: '/services/prashna-kundali',
+    href: getPermalink('/services/prashna-kundali'),
     accent: 'text-teal-600',
   },
 ];

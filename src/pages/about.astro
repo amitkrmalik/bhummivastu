@@ -5,7 +5,7 @@ import Stats from '~/components/widgets/Stats.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Layout from '~/layouts/PageLayout.astro';
-import { getAsset } from '~/utils/permalinks';
+import { getAsset, getPermalink } from '~/utils/permalinks';
 
 const metadata = {
   title: 'About Vastu Acharya Minu Saini | Vastu & Astrology Consultant | BhummiVastu',
@@ -140,7 +140,7 @@ const metadata = {
     isReversed={true}
     callToAction={{
       text: 'View Certifications',
-      href: '/certifications',
+      href: getPermalink('/certifications'),
       icon: 'tabler:certificate',
     }}
     items={[
@@ -206,13 +206,13 @@ const metadata = {
       {
         variant: 'primary',
         text: 'Book a Consultation',
-        href: '/contact',
+        href: getPermalink('/contact'),
         icon: 'tabler:calendar-event',
       },
       {
         variant: 'secondary',
         text: 'Explore Our Services',
-        href: '/#services',
+        href: `${getPermalink('/')}#services`,
       },
     ]}
   />

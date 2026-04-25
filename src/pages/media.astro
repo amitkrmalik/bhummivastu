@@ -4,6 +4,7 @@ import { YouTube } from 'astro-embed';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Layout from '~/layouts/PageLayout.astro';
 import { featuredMedia, getEmbedUrl, getYouTubeId, mediaItems } from '~/data/media';
+import { getPermalink } from '~/utils/permalinks';
 
 const metadata = {
   title: 'Media | BhummiVastu | Videos, Reels & Social Content',
@@ -127,7 +128,7 @@ const embedShellClass = (type: string) =>
 
           <div class="mt-6 flex flex-wrap gap-3">
             <a
-              href="/certifications"
+              href={getPermalink('/certifications')}
               class="inline-flex items-center gap-2 rounded-lg bg-accent px-5 py-2.5 text-sm font-semibold text-white hover:bg-accent/90 transition-colors"
             >
               View Certifications
@@ -388,13 +389,13 @@ const embedShellClass = (type: string) =>
       {
         variant: 'primary',
         text: 'Book a Consultation',
-        href: '/contact',
+        href: getPermalink('/contact'),
         icon: 'tabler:calendar-event',
       },
       {
         variant: 'secondary',
         text: 'View Services',
-        href: '/services',
+        href: getPermalink('/services'),
       },
     ]}
   />

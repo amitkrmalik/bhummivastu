@@ -1,6 +1,6 @@
 ---
 import { Icon } from 'astro-icon/components';
-import { getAsset } from '~/utils/permalinks';
+import { getAsset, getPermalink } from '~/utils/permalinks';
 
 interface Props {
   id?: string;
@@ -78,14 +78,14 @@ const credentials = [
 
         <div class="mt-8 flex flex-col sm:flex-row gap-4">
           <a
-            href="/contact"
+            href={getPermalink('/contact')}
             class="inline-flex items-center justify-center gap-2 bg-accent text-white font-semibold rounded-lg px-6 py-3 hover:bg-accent/90 transition-colors shadow-md"
           >
             <Icon name="tabler:calendar-event" class="w-5 h-5" />
             Book a Consultation
           </a>
           <a
-            href="/about"
+            href={getPermalink('/about')}
             class="inline-flex items-center justify-center gap-2 border border-accent text-accent font-semibold rounded-lg px-6 py-3 hover:bg-accent/5 transition-colors"
           >
             Learn More About Minu

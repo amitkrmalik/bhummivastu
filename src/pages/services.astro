@@ -5,6 +5,7 @@ import Hero from '~/components/widgets/Hero.astro';
 import Testimonials from '~/components/widgets/Testimonials.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import Layout from '~/layouts/PageLayout.astro';
+import { getPermalink } from '~/utils/permalinks';
 
 const metadata = {
   title: 'Vastu & Astrology Services | BhummiVastu | Bangalore & Online Across India',
@@ -21,7 +22,12 @@ const metadata = {
     title="Vastu & Astrology Consultations Tailored for Your Life"
     subtitle="From harmonising your home to navigating your career path — BhummiVastu offers six specialised services grounded in authentic Vedic wisdom and delivered with modern precision."
     actions={[
-      { variant: 'primary', text: 'Book a Consultation', href: '/contact', icon: 'tabler:calendar-event' },
+      {
+        variant: 'primary',
+        text: 'Book a Consultation',
+        href: getPermalink('/contact'),
+        icon: 'tabler:calendar-event',
+      },
       {
         text: 'Talk to Us on WhatsApp',
         href: 'https://wa.me/919972709328?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20your%20Vastu%20and%20Astrology%20services.',
@@ -208,7 +214,7 @@ const metadata = {
       {
         variant: 'primary',
         text: 'Book a Consultation',
-        href: '/contact',
+        href: getPermalink('/contact'),
         icon: 'tabler:calendar-event',
       },
       {

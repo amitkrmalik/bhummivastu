@@ -11,8 +11,6 @@ tags:
   - south-west zone
   - vastu shastra
   - home vastu
-metadata:
-  canonical: https://bhummivastu.com/from-bickering-to-stronger-family-bonds/
 ---
 
 An imbalanced home environment can contribute to over **70% of recurring family friction and stress**. How Vastu Shastra rebalances your home's energy to foster harmony and connection.
@@ -94,4 +92,4 @@ Notice shifts in family mood, communication, and interactions over the next few 
 
 Every home has a unique energetic blueprint. Small, targeted adjustments — no demolition required — can create a measurable shift in your family's daily dynamic.
 
-_Vastu Acharya **Minu Saini** specialises in complete 16-zone Non-Demolition Vastu analysis for homes across Bangalore and India. [Book a consultation](/contact) or [WhatsApp us](https://wa.me/919972709328?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20Vastu%20for%20family%20harmony) to have your home assessed._
+_Vastu Acharya **Minu Saini** specialises in complete 16-zone Non-Demolition Vastu analysis for homes across Bangalore and India. [Book a consultation](../contact/) or [WhatsApp us](https://wa.me/919972709328?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20Vastu%20for%20family%20harmony) to have your home assessed._

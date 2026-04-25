@@ -4,6 +4,7 @@ import HeroText from '~/components/widgets/HeroText.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import { getPermalink } from '~/utils/permalinks';
 
 const metadata = {
   title: 'Consultation Pricing | BhummiVastu | Vastu & Astrology — India',
@@ -198,7 +199,7 @@ const metadata = {
       {
         variant: 'primary',
         text: 'Book a Consultation',
-        href: '/contact',
+        href: getPermalink('/contact'),
         icon: 'tabler:calendar-event',
       },
       {

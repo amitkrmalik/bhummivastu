@@ -11,7 +11,7 @@ Please read these Terms and Conditions carefully before booking or using any con
 
 BhummiVastu is a Vastu Shastra and Vedic Astrology consultancy operated by **Vastu Acharya Minu Saini**, based at Pruksa Silvana, Budigere Cross, Off Old Madras Road, Bangalore East Tq. – 560049, Karnataka, India.
 
-- **Website:** [https://bhummivastu.com](https://bhummivastu.com)
+- **Website:** [BhummiVastu website](../)
 - **Email:** minusaini@bhummivastu.com
 - **WhatsApp / Phone:** +91-99727 09328
 
@@ -70,7 +70,7 @@ You acknowledge that birth date, time, and place constitute sensitive personal d
 
 ## 5. Consultation Fees and Payments
 
-- Consultation fees are as listed on the [Pricing page](/pricing) at the time of booking. Fees are subject to change without notice.
+- Consultation fees are as listed on the [Pricing page](../pricing/) at the time of booking. Fees are subject to change without notice.
 - Full or partial payment may be required to confirm a booking, as communicated at the time of scheduling.
 - **Fees once paid are non-refundable**, except in cases where BhummiVastu cancels or is unable to deliver the booked session. In such cases, the client will be offered a rescheduled session or a full refund at BhummiVastu's discretion.
 - Sessions missed, cancelled, or rescheduled by the client within 24 hours of the scheduled appointment may forfeit the consultation fee.
