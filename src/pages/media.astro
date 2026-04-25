@@ -1,0 +1,196 @@
+---
+import { Icon } from 'astro-icon/components';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { featuredMedia, mediaItems } from '~/data/media';
+
+const metadata = {
+  title: 'Media | BhummiVastu | Videos, Reels & Social Content',
+  description:
+    'Browse BhummiVastu media appearances, Facebook reels, posts, and educational social content shared by Vastu Acharya Minu Saini.',
+};
+
+const platformClasses = {
+  Facebook: 'bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300',
+  Instagram: 'bg-pink-100 text-pink-700 dark:bg-pink-900/40 dark:text-pink-300',
+  YouTube: 'bg-red-100 text-red-700 dark:bg-red-900/40 dark:text-red-300',
+  Other: 'bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300',
+};
+
+const platformIcons = {
+  Facebook: 'tabler:brand-facebook',
+  Instagram: 'tabler:brand-instagram',
+  YouTube: 'tabler:brand-youtube',
+  Other: 'tabler:world',
+};
+---
+
+<Layout metadata={metadata}>
+  <section
+    class="relative py-16 md:py-20 bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 overflow-hidden"
+  >
+    <div
+      aria-hidden="true"
+      class="pointer-events-none absolute -top-12 -right-12 w-64 h-64 border-[28px] border-amber-200/30 dark:border-amber-900/20 rotate-12"
+    >
+    </div>
+    <div
+      aria-hidden="true"
+      class="pointer-events-none absolute -bottom-12 -left-12 w-56 h-56 border-[22px] border-orange-200/30 dark:border-orange-900/20 -rotate-12"
+    >
+    </div>
+
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center relative">
+      <p class="text-xs font-bold tracking-widest uppercase text-amber-600 dark:text-amber-400 mb-4">Media Library</p>
+      <h1 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+        Videos, Reels & Media Content by BhummiVastu
+      </h1>
+      <p class="text-base md:text-lg text-muted dark:text-slate-400 max-w-3xl mx-auto mb-10">
+        A curated library of educational videos, reels, posts, and social media content shared by Vastu Acharya Minu
+        Saini — designed to help visitors quickly explore her knowledge, communication style, and practical guidance.
+      </p>
+
+      <div
+        class="inline-flex flex-wrap items-center justify-center gap-6 bg-white/80 dark:bg-slate-800/80 border border-amber-200 dark:border-amber-900/50 rounded-2xl px-8 py-5 shadow-md"
+      >
+        <div>
+          <p class="text-2xl font-bold text-accent">{mediaItems.length}</p>
+          <p class="text-xs text-muted">Media Items</p>
+        </div>
+        <div class="hidden sm:block w-px h-10 bg-gray-200 dark:bg-slate-600"></div>
+        <div>
+          <p class="text-2xl font-bold text-accent">{featuredMedia.length}</p>
+          <p class="text-xs text-muted">Featured</p>
+        </div>
+        <div class="hidden sm:block w-px h-10 bg-gray-200 dark:bg-slate-600"></div>
+        <div>
+          <p class="text-2xl font-bold text-accent">Social</p>
+          <p class="text-xs text-muted">Authority Signals</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {
+    featuredMedia.length > 0 && (
+      <section class="py-14 md:py-16 bg-white dark:bg-slate-900">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+          <div class="text-center mb-10">
+            <p class="text-xs font-bold tracking-widest uppercase text-accent mb-2">Featured Media</p>
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">Start Here</h2>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {featuredMedia.map((item) => (
+              <a
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group flex flex-col rounded-2xl border border-amber-200 dark:border-amber-800/50 bg-gradient-to-br from-amber-50 to-orange-50 dark:from-slate-800 dark:to-slate-800 p-6 shadow-md hover:shadow-lg transition-shadow"
+              >
+                <div class="flex items-center justify-between gap-3 mb-4">
+                  <div class="flex flex-wrap gap-2">
+                    <span
+                      class:list={[
+                        'inline-flex rounded-full px-3 py-1 text-xs font-semibold',
+                        platformClasses[item.platform],
+                      ]}
+                    >
+                      {item.platform}
+                    </span>
+                    <span class="inline-flex rounded-full px-3 py-1 text-xs font-semibold bg-white/80 text-gray-700 dark:bg-slate-700 dark:text-slate-200">
+                      {item.type}
+                    </span>
+                  </div>
+                  <Icon name="tabler:external-link" class="w-4 h-4 text-accent flex-shrink-0" />
+                </div>
+
+                <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2 group-hover:text-accent transition-colors">
+                  {item.title}
+                </h3>
+                <p class="text-sm text-muted dark:text-slate-400 leading-relaxed flex-1">{item.summary}</p>
+
+                {item.published && <p class="mt-4 text-xs text-muted dark:text-slate-500">{item.published}</p>}
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  <section class="py-14 md:py-16 bg-slate-50 dark:bg-slate-800/30">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10">
+        <p class="text-xs font-bold tracking-widest uppercase text-accent mb-2">All Media</p>
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">Explore the Full Library</h2>
+        <p class="text-sm text-muted dark:text-slate-400 mt-2">
+          Edit titles, summaries, and links in <code>src/data/media.ts</code>.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        {
+          mediaItems.map((item) => (
+            <div class="flex flex-col bg-white dark:bg-slate-900 border border-gray-100 dark:border-slate-700 rounded-2xl p-5 shadow-sm">
+              <div class="flex items-center justify-between gap-3 mb-3">
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class:list={[
+                      'inline-flex rounded-full px-2.5 py-0.5 text-xs font-semibold',
+                      platformClasses[item.platform],
+                    ]}
+                  >
+                    {item.platform}
+                  </span>
+                  <span class="inline-flex rounded-full px-2.5 py-0.5 text-xs font-semibold bg-gray-100 text-gray-700 dark:bg-slate-800 dark:text-slate-300">
+                    {item.type}
+                  </span>
+                </div>
+                <Icon name={platformIcons[item.platform]} class="w-4 h-4 text-accent flex-shrink-0" />
+              </div>
+
+              <h3 class="text-base font-bold text-gray-900 dark:text-white mb-2">{item.title}</h3>
+              <p class="text-sm text-muted dark:text-slate-400 leading-relaxed flex-1">{item.summary}</p>
+
+              <div class="mt-4 pt-4 border-t border-gray-100 dark:border-slate-700 flex items-center justify-between gap-3">
+                {item.published ? (
+                  <span class="text-xs text-muted">{item.published}</span>
+                ) : (
+                  <span class="text-xs text-muted">Social media post</span>
+                )}
+                <a
+                  href={item.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-1 text-sm font-semibold text-accent hover:underline"
+                >
+                  Open
+                  <Icon name="tabler:arrow-up-right" class="w-4 h-4" />
+                </a>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <CallToAction
+    title="Want to Learn More Before Booking?"
+    subtitle="Explore BhummiVastu media content, then book a consultation when you are ready for personalised guidance."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Book a Consultation',
+        href: '/contact',
+        icon: 'tabler:calendar-event',
+      },
+      {
+        variant: 'secondary',
+        text: 'View Services',
+        href: '/services',
+      },
+    ]}
+  />
+</Layout>
