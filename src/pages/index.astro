@@ -10,6 +10,7 @@ import Steps from '~/components/widgets/Steps.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import { Icon } from 'astro-icon/components';
 import { featuredTestimonials, averageRating, totalReviews, getInitials, serviceList } from '~/data/testimonials';
+import { getAsset } from '~/utils/permalinks';
 
 const avatarColors = [
   'bg-amber-100 text-amber-700',
@@ -44,7 +45,6 @@ const metadata = {
       },
       { text: 'Our Services', href: '#services' },
     ]}
-    image={{ src: '~/assets/images/hero-image.png', alt: 'Vastu Acharya Minu Saini (photo TBD)' }}
   >
     <Fragment slot="title">
       <span class="block text-3xl md:text-5xl font-bold leading-tight">
@@ -84,7 +84,16 @@ const metadata = {
         >
         100+ happy clients and success stories
       </span>
-      <!-- TODO: Insert actual consultant photo and credentials when available -->
+    </Fragment>
+    <Fragment slot="image">
+      <img
+        src={getAsset('/images/media/hero-image-minu.jpeg')}
+        alt="Vastu Acharya Minu Saini — founder of BhummiVastu"
+        width="640"
+        height="800"
+        class="mx-auto rounded-md w-full max-w-md object-cover shadow-xl"
+        loading="eager"
+      />
     </Fragment>
   </Hero>
 

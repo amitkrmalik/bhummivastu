@@ -5,6 +5,7 @@ import Stats from '~/components/widgets/Stats.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Layout from '~/layouts/PageLayout.astro';
+import { getAsset } from '~/utils/permalinks';
 
 const metadata = {
   title: 'About Vastu Acharya Minu Saini | Vastu & Astrology Consultant | BhummiVastu',
@@ -16,13 +17,7 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
 
-  <Hero
-    tagline="About BhummiVastu"
-    image={{
-      src: '~/assets/images/hero-image.png',
-      alt: 'Vastu Acharya Minu Saini — Vastu & Astrology Consultant, India',
-    }}
-  >
+  <Hero tagline="About BhummiVastu">
     <Fragment slot="title">
       Meet <span class="text-accent dark:text-white">Vastu Acharya Minu Saini</span>
     </Fragment>
@@ -31,6 +26,16 @@ const metadata = {
       Certified Vastu and Vedic Astrology consultant serving clients across India. Helping individuals, families, and
       businesses create lasting harmony, clarity, and prosperity through the ancient sciences of Vastu Shastra and
       Jyotish — with a modern, practical, non-demolition approach.
+    </Fragment>
+    <Fragment slot="image">
+      <img
+        src={getAsset('/images/media/hero-image-minu.jpeg')}
+        alt="Vastu Acharya Minu Saini — Vastu & Astrology Consultant, India"
+        width="640"
+        height="800"
+        class="mx-auto rounded-md w-full max-w-md object-cover shadow-xl"
+        loading="eager"
+      />
     </Fragment>
   </Hero>
 

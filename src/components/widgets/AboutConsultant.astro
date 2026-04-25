@@ -1,9 +1,6 @@
 ---
-// AboutConsultant.astro — About Vastu Acharya Minu Saini
-// Two-column layout: rich bio text on the left, image + credentials on the right.
-// TBD: Replace placeholder image with an actual professional photo.
-import Image from '~/components/common/Image.astro';
 import { Icon } from 'astro-icon/components';
+import { getAsset } from '~/utils/permalinks';
 
 interface Props {
   id?: string;
@@ -99,25 +96,22 @@ const credentials = [
 
       <!-- Right — Photo + credentials -->
       <div class="md:basis-1/2 flex flex-col items-center gap-6">
-        <!-- TBD: Replace src with actual professional headshot of Vastu Acharya Minu Saini -->
-        <!-- Ideal image: warm, professional, approachable — 600×700px portrait or square -->
         <div class="relative w-full max-w-sm">
           <div class="absolute inset-0 bg-gradient-to-br from-accent/20 to-amber-400/20 rounded-2xl -rotate-2"></div>
-          <Image
-            src="~/assets/images/hero-image.png"
+          <img
+            src={getAsset('/images/media/hero-image-minu.jpeg')}
             alt="Vastu Acharya Minu Saini — Vastu and Astrology Consultant, India"
             class="relative rounded-2xl shadow-xl w-full object-cover"
-            width={480}
-            height={560}
-            widths={[320, 480, 640]}
-            sizes="(max-width: 640px) 320px, 480px"
+            width="480"
+            height="560"
             loading="lazy"
           />
-          <!-- TBD: uncomment and populate once real photo is available -->
-          <!-- <div class="absolute bottom-4 left-4 right-4 bg-white/90 dark:bg-slate-900/90 rounded-xl px-4 py-3 text-center shadow">
+          <div
+            class="absolute bottom-4 left-4 right-4 bg-white/90 dark:bg-slate-900/90 rounded-xl px-4 py-3 text-center shadow"
+          >
             <p class="font-bold text-gray-900 dark:text-white text-sm">Vastu Acharya Minu Saini</p>
             <p class="text-xs text-muted">Vastu & Astrology Consultant · Pan India</p>
-          </div> -->
+          </div>
         </div>
 
         <!-- Credentials list -->
