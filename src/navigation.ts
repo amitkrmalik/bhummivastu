@@ -7,15 +7,44 @@ export const headerData = {
       links: [
         {
           text: 'Vastu Services',
-          href: `${getPermalink('/services')}#vastu-services`,
+        },
+        {
+          text: 'Residential Vastu (Homes / Flats)',
+          href: getPermalink('/services/residential-vastu'),
+        },
+        {
+          text: 'Commercial Vastu (Offices / Startups)',
+          href: getPermalink('/services/commercial-vastu'),
+        },
+        {
+          text: 'Industrial Vastu (Factories / Warehouses)',
+          href: getPermalink('/services/industrial-vastu'),
         },
         {
           text: 'Astrology',
-          href: `${getPermalink('/services')}#astrology-services`,
+        },
+        {
+          text: 'IT Career & Business Growth',
+          href: getPermalink('/services/it-career-astrology'),
+        },
+        {
+          text: 'Personal Life & Relationships',
+          href: getPermalink('/services/personal-life-astrology'),
+        },
+        {
+          text: 'Prashna Kundali — Quick Answer',
+          href: getPermalink('/services/prashna-kundali'),
         },
         {
           text: 'Astro-Vastu (Premium)',
-          href: `${getPermalink('/services')}#astro-vastu-premium`,
+        },
+        {
+          text: 'Astro-Vastu for Homes',
+          href: getPermalink('/services/astro-vastu'),
+        },
+        {
+          text: 'Astro-Vastu for Offices & Industrial',
+          href: getPermalink('/services/astro-vastu-commercial'),
         },
       ],
     },

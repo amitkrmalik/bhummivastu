@@ -100,15 +100,21 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
                   <ul class="dropdown-menu md:backdrop-blur-md dark:md:bg-dark rounded md:absolute pl-4 md:pl-0 md:hidden font-medium md:bg-white/90 md:min-w-[200px] drop-shadow-xl">
                     {links.map(({ text: text2, href: href2 }) => (
                       <li>
-                        <a
-                          class:list={[
-                            'first:rounded-t last:rounded-b md:hover:bg-gray-100 hover:text-link dark:hover:text-white dark:hover:bg-gray-700 py-2 px-5 block whitespace-no-wrap',
-                            { 'aw-link-active': href2 === currentPath },
-                          ]}
-                          href={href2}
-                        >
-                          {text2}
-                        </a>
+                        {href2 ? (
+                          <a
+                            class:list={[
+                              'last:rounded-b md:hover:bg-gray-100 hover:text-link dark:hover:text-white dark:hover:bg-gray-700 py-2 px-5 block whitespace-no-wrap',
+                              { 'aw-link-active': href2 === currentPath },
+                            ]}
+                            href={href2}
+                          >
+                            {text2}
+                          </a>
+                        ) : (
+                          <span class="block px-5 pt-3 pb-1 text-[0.72rem] font-semibold uppercase tracking-[0.14em] text-accent dark:text-amber-400 first:pt-4">
+                            {text2}
+                          </span>
+                        )}
                       </li>
                     ))}
                   </ul>
