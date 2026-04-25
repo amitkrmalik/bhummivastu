@@ -11,6 +11,9 @@ const metadata = {
     'Browse BhummiVastu media appearances, Facebook reels, posts, and educational social content shared by Vastu Acharya Minu Saini.',
 };
 
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const mentorPhoto = `${base}/images/media/MahaVastu-Expert_pic_1.jpeg`;
+
 const platformClasses = {
   Facebook: 'bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300',
   Instagram: 'bg-pink-100 text-pink-700 dark:bg-pink-900/40 dark:text-pink-300',
@@ -70,6 +73,75 @@ const embedShellClass = (type: string) =>
         <div>
           <p class="text-2xl font-bold text-accent">Social</p>
           <p class="text-xs text-muted">Authority Signals</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-14 md:py-16 bg-white dark:bg-slate-900">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div
+        class="grid lg:grid-cols-[1.05fr_0.95fr] gap-8 items-center rounded-[2rem] border border-amber-200/70 dark:border-amber-900/40 bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 p-6 md:p-8 shadow-lg"
+      >
+        <a
+          href={mentorPhoto}
+          target="_blank"
+          rel="noopener"
+          class="block overflow-hidden rounded-2xl border border-amber-200 dark:border-amber-900/40 bg-white dark:bg-slate-900 shadow-md"
+          title="View full photo"
+        >
+          <img
+            src={mentorPhoto}
+            alt="Vastu Acharya Minu Saini with Vastu Acharya Sri Khushdeep Bansal"
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </a>
+
+        <div>
+          <p class="text-xs font-bold tracking-widest uppercase text-accent mb-3">Mentorship Milestone</p>
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white leading-tight">
+            With Vastu Acharya Sri Khushdeep Bansal
+          </h2>
+          <p class="mt-4 text-base text-gray-700 dark:text-slate-300 leading-relaxed">
+            Beyond videos, reels, and social posts, this image reflects a defining milestone in Minu Saini’s journey —
+            receiving guidance from
+            <strong class="text-amber-800 dark:text-amber-300">Vastu Acharya Sri Khushdeep Bansal</strong>, her Guru and
+            Margdarshak in the MahaVastu tradition.
+          </p>
+          <p class="mt-4 text-base text-gray-700 dark:text-slate-300 leading-relaxed">
+            It represents the lineage, discipline, and dharmic responsibility behind BhummiVastu’s work — not just media
+            presence, but a practice rooted in authentic guidance and spiritual accountability.
+          </p>
+
+          <div class="mt-5 flex flex-wrap gap-2">
+            {
+              ['Guided Learning', 'MahaVastu Lineage', 'Dharmic Practice'].map((label) => (
+                <span class="inline-flex rounded-full px-3 py-1 text-xs font-semibold bg-white/80 text-amber-800 border border-amber-200 dark:bg-slate-800 dark:text-amber-300 dark:border-amber-900/40">
+                  {label}
+                </span>
+              ))
+            }
+          </div>
+
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a
+              href="/certifications"
+              class="inline-flex items-center gap-2 rounded-lg bg-accent px-5 py-2.5 text-sm font-semibold text-white hover:bg-accent/90 transition-colors"
+            >
+              View Certifications
+              <Icon name="tabler:arrow-right" class="w-4 h-4" />
+            </a>
+            <a
+              href={mentorPhoto}
+              target="_blank"
+              rel="noopener"
+              class="inline-flex items-center gap-2 rounded-lg border border-amber-300 dark:border-amber-800/50 px-5 py-2.5 text-sm font-semibold text-amber-900 dark:text-amber-300 hover:bg-white/70 dark:hover:bg-slate-800 transition-colors"
+            >
+              Open Full Photo
+              <Icon name="tabler:photo" class="w-4 h-4" />
+            </a>
+          </div>
         </div>
       </div>
     </div>
