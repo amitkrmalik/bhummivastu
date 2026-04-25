@@ -1,8 +1,9 @@
 ---
 import { Icon } from 'astro-icon/components';
+import { YouTube } from 'astro-embed';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Layout from '~/layouts/PageLayout.astro';
-import { featuredMedia, mediaItems } from '~/data/media';
+import { featuredMedia, getEmbedUrl, getYouTubeId, mediaItems } from '~/data/media';
 
 const metadata = {
   title: 'Media | BhummiVastu | Videos, Reels & Social Content',
@@ -23,6 +24,9 @@ const platformIcons = {
   YouTube: 'tabler:brand-youtube',
   Other: 'tabler:world',
 };
+
+const embedShellClass = (type: string) =>
+  type === 'Post' ? 'min-h-[430px]' : type === 'Reel' || type === 'Short' ? 'aspect-[9/16]' : 'aspect-video';
 ---
 
 <Layout metadata={metadata}>
@@ -82,12 +86,7 @@ const platformIcons = {
 
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {featuredMedia.map((item) => (
-              <a
-                href={item.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="group flex flex-col rounded-2xl border border-amber-200 dark:border-amber-800/50 bg-gradient-to-br from-amber-50 to-orange-50 dark:from-slate-800 dark:to-slate-800 p-6 shadow-md hover:shadow-lg transition-shadow"
-              >
+              <article class="group flex flex-col rounded-2xl border border-amber-200 dark:border-amber-800/50 bg-gradient-to-br from-amber-50 to-orange-50 dark:from-slate-800 dark:to-slate-800 p-6 shadow-md hover:shadow-lg transition-shadow">
                 <div class="flex items-center justify-between gap-3 mb-4">
                   <div class="flex flex-wrap gap-2">
                     <span
@@ -102,7 +101,31 @@ const platformIcons = {
                       {item.type}
                     </span>
                   </div>
-                  <Icon name="tabler:external-link" class="w-4 h-4 text-accent flex-shrink-0" />
+                  <Icon name={platformIcons[item.platform]} class="w-4 h-4 text-accent flex-shrink-0" />
+                </div>
+
+                <div
+                  class:list={[
+                    'relative overflow-hidden rounded-xl bg-slate-100 dark:bg-slate-900 mb-4',
+                    embedShellClass(item.type),
+                  ]}
+                >
+                  {item.platform === 'YouTube' && getYouTubeId(item.url) ? (
+                    <YouTube id={getYouTubeId(item.url)!} title={item.title} />
+                  ) : getEmbedUrl(item) ? (
+                    <iframe
+                      src={getEmbedUrl(item)}
+                      title={item.title}
+                      class="absolute inset-0 w-full h-full border-0"
+                      loading="lazy"
+                      allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                      allowfullscreen
+                    />
+                  ) : (
+                    <div class="absolute inset-0 flex items-center justify-center p-6 text-center text-sm text-muted dark:text-slate-400">
+                      Preview unavailable for this item. Use the button below to open it on the original platform.
+                    </div>
+                  )}
                 </div>
 
                 <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2 group-hover:text-accent transition-colors">
@@ -110,8 +133,23 @@ const platformIcons = {
                 </h3>
                 <p class="text-sm text-muted dark:text-slate-400 leading-relaxed flex-1">{item.summary}</p>
 
-                {item.published && <p class="mt-4 text-xs text-muted dark:text-slate-500">{item.published}</p>}
-              </a>
+                <div class="mt-4 flex items-center justify-between gap-3">
+                  {item.published ? (
+                    <p class="text-xs text-muted dark:text-slate-500">{item.published}</p>
+                  ) : (
+                    <span class="text-xs text-muted dark:text-slate-500">Embedded preview</span>
+                  )}
+                  <a
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-1 text-sm font-semibold text-accent hover:underline"
+                  >
+                    Open original
+                    <Icon name="tabler:arrow-up-right" class="w-4 h-4" />
+                  </a>
+                </div>
+              </article>
             ))}
           </div>
         </div>
@@ -148,6 +186,30 @@ const platformIcons = {
                   </span>
                 </div>
                 <Icon name={platformIcons[item.platform]} class="w-4 h-4 text-accent flex-shrink-0" />
+              </div>
+
+              <div
+                class:list={[
+                  'relative overflow-hidden rounded-xl bg-slate-100 dark:bg-slate-800 mb-4',
+                  embedShellClass(item.type),
+                ]}
+              >
+                {item.platform === 'YouTube' && getYouTubeId(item.url) ? (
+                  <YouTube id={getYouTubeId(item.url)!} title={item.title} />
+                ) : getEmbedUrl(item) ? (
+                  <iframe
+                    src={getEmbedUrl(item)}
+                    title={item.title}
+                    class="absolute inset-0 w-full h-full border-0"
+                    loading="lazy"
+                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                    allowfullscreen
+                  />
+                ) : (
+                  <div class="absolute inset-0 flex items-center justify-center p-6 text-center text-sm text-muted dark:text-slate-400">
+                    Preview unavailable for this item. Use the link below to open it on the original platform.
+                  </div>
+                )}
               </div>
 
               <h3 class="text-base font-bold text-gray-900 dark:text-white mb-2">{item.title}</h3>
