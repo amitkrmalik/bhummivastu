@@ -138,6 +138,20 @@ src/
 
 ---
 
+## AI Content Skill Stack
+
+This repo now includes a stackable skill framework for AI and manual content operations:
+
+- **Skill pack root:** `.github/skills/`
+- **Workflow orchestration:** `.github/skills/workflows/content-lifecycle.md`
+- **Machine-readable stack:** `.github/skills/stack.yml`
+- **Reusable templates:** `.github/skills/templates/`
+
+It enforces typed content (`astrology | numerology | vastu | spiritual | misc`) and a gated workflow:
+domain review → knowledge verification → humanization → social media gate → essence re-verification.
+
+---
+
 ## Pending / Roadmap
 
 - [ ] Real consultant photo (replace placeholder hero image)

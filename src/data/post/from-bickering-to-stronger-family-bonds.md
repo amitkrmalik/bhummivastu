@@ -5,6 +5,17 @@ title: From Bickering to Stronger Family Bonds — How Vastu Rebalances Your Hom
 excerpt: Recurring arguments at home? Vastu teaches that specific zones govern harmony, trust, and joy. Learn the 5-step path to a calmer, more connected family life.
 image: https://images.unsplash.com/photo-1609220136736-443140cffec6?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Vastu Tips
+contentType: vastu
+contentWorkflow:
+  stage: approved
+  domainSkill: skill-domain-classifier
+  socialSkill: skill-social-media-gate
+  finalSkill: skill-essence-reverify
+  claimStatus: verifiable
+  humanized: true
+  claimReferences:
+    - MahaVastu 16-zone principles and directional mapping practice
+    - Field observations from residential Vastu consultations
 tags:
   - vastu for family harmony
   - relationship vastu

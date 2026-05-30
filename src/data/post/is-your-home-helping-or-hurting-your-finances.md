@@ -5,6 +5,17 @@ title: Is Your Home Helping or Hurting Your Finances? A Vastu Guide to Wealth Zo
 excerpt: Could your home or workplace be silently influencing your financial fate? Discover which Vastu zones govern wealth — and simple, non-demolition tips to activate them.
 image: https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2071&q=80
 category: Vastu Tips
+contentType: vastu
+contentWorkflow:
+  stage: approved
+  domainSkill: skill-domain-classifier
+  socialSkill: skill-social-media-gate
+  finalSkill: skill-essence-reverify
+  claimStatus: verifiable
+  humanized: true
+  claimReferences:
+    - MahaVastu wealth-zone guidance for North, North-East, and South-East
+    - Case-based recommendations from practical home and workplace audits
 tags:
   - vastu for wealth
   - financial vastu

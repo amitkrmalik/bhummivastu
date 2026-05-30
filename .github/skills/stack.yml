@@ -1,0 +1,32 @@
+version: 1
+project: bhummivastu
+
+contentTypes:
+  - astrology
+  - numerology
+  - vastu
+  - spiritual
+  - misc
+
+defaultStack:
+  - skill-change-impact-review
+  - skill-intake-routing
+  - skill-domain-classifier
+  - skill-knowledge-verifier
+  - skill-humanized-writer
+  - skill-social-media-gate
+  - skill-essence-reverify
+  - skill-publish-integrator
+
+gates:
+  requireContentType: true
+  requireKnowledgeVerification: true
+  requireSocialGate: true
+  requireEssenceReverification: true
+  requireHumanizedTone: true
+
+publishTargets:
+  blogPosts: src/data/post
+  servicePages: src/pages/services
+  socialData: src/data/media.ts
+  testimonialsData: src/data/testimonials.ts

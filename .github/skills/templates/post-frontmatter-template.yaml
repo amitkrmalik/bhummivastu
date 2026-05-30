@@ -1,0 +1,20 @@
+publishDate: 2026-01-01T00:00:00Z
+author: Minu Saini
+title: "Add title"
+excerpt: "Add short summary"
+image: "https://example.com/image.jpg"
+category: "Add category"
+
+contentType: vastu # astrology | numerology | vastu | spiritual | misc
+contentWorkflow:
+  stage: draft # draft | domain-reviewed | humanized | social-gated | essence-reverified | approved
+  domainSkill: skill-domain-classifier
+  socialSkill: skill-social-media-gate
+  finalSkill: skill-essence-reverify
+  claimStatus: verifiable # verified | verifiable
+  humanized: false
+  claimReferences:
+    - "Add at least one reference or case-backed source"
+
+tags:
+  - add-tag

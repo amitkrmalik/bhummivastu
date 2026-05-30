@@ -46,6 +46,22 @@ const metadataDefinition = () =>
     })
     .optional();
 
+const contentTypeDefinition = () => z.enum(['astrology', 'numerology', 'vastu', 'spiritual', 'misc']);
+
+const workflowStageDefinition = () =>
+  z.enum(['draft', 'domain-reviewed', 'humanized', 'social-gated', 'essence-reverified', 'approved']);
+
+const contentWorkflowDefinition = () =>
+  z.object({
+    stage: workflowStageDefinition(),
+    domainSkill: z.string().min(1),
+    socialSkill: z.string().min(1),
+    finalSkill: z.string().min(1),
+    claimStatus: z.enum(['verified', 'verifiable']),
+    humanized: z.boolean(),
+    claimReferences: z.array(z.string().min(1)).min(1),
+  });
+
 const postCollection = defineCollection({
   loader: glob({ pattern: ['*.md', '*.mdx'], base: 'src/data/post' }),
   schema: z.object({
@@ -56,6 +72,9 @@ const postCollection = defineCollection({
     title: z.string(),
     excerpt: z.string().optional(),
     image: z.string().optional(),
+
+    contentType: contentTypeDefinition(),
+    contentWorkflow: contentWorkflowDefinition(),
 
     category: z.string().optional(),
     tags: z.array(z.string()).optional(),

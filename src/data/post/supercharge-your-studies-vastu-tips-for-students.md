@@ -5,6 +5,17 @@ title: Supercharge Your Studies — Vastu Tips to Boost Concentration and Academ
 excerpt: Feeling mentally scattered and struggling to focus? Ancient Vastu wisdom can transform your study environment into a powerhouse of concentration, learning, and academic achievement.
 image: https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1973&q=80
 category: Vastu Tips
+contentType: vastu
+contentWorkflow:
+  stage: approved
+  domainSkill: skill-domain-classifier
+  socialSkill: skill-social-media-gate
+  finalSkill: skill-essence-reverify
+  claimStatus: verifiable
+  humanized: true
+  claimReferences:
+    - Traditional Vastu zone guidance for learning and concentration
+    - Practical implementation outcomes observed during consultations
 tags:
   - vastu for students
   - study tips
