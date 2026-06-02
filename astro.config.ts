@@ -25,8 +25,10 @@ export default defineConfig({
   // ── Deployment target ─────────────────────────────────────────────
   // Soft launch on GitHub Pages — https://amitkrmalik.github.io/bhummivastu
   // When going live on www.bhummivastu.com, set site to the domain and remove base.
-  site: 'https://amitkrmalik.github.io',
-  base: '/bhummivastu',
+  // site: 'https://amitkrmalik.github.io',
+  // base: '/bhummivastu',
+  site: 'https://www.bhummivastu.com',
+  // base: '/bhummivastu',
 
   output: 'static',
 

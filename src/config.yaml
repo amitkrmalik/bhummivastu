@@ -1,7 +1,8 @@
 site:
   name: BhummiVastu
-  site: 'https://amitkrmalik.github.io/bhummivastu'
-  base: '/bhummivastu'
+  # site: 'https://amitkrmalik.github.io/bhummivastu'
+  site: 'https://www.bhummivastu.com'
+  # base: '/bhummivastu'
   trailingSlash: false
 
   googleSiteVerificationId: orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M
