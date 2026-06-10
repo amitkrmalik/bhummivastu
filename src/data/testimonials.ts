@@ -86,8 +86,9 @@ export const testimonials: Testimonial[] = [
     name: 'Nehha A Sehgal',
     rating: 5,
     date: 'June 2026',
-    text: 'We are truly grateful for the guidance and astrology remedies recommended by Minu Saini.Her deep understanding of Birth stars , energy principles, combined with practical and effective remedies, has brought remarkable stability and positivity into the challenges faced in past .Since following the suggested changes, we have experienced noticeable improvements in various aspects of our lives — from enhanced focus and performance & professional growth, and increase in finances. Minu’s recommendations have truly worked for us and has brought remarkable stability.',
-    service: ['Astro-Vastu (Homes)', 'Astrology reading'],
+    text: `We are truly grateful for the guidance and astrology remedies recommended by Minu Saini.Her deep understanding of Birth stars , energy principles, combined with practical and effective remedies, has brought remarkable stability and positivity into the challenges faced in past .Since following the suggested changes, we have experienced noticeable improvements in various aspects of our lives — from enhanced focus and performance & professional growth, and increase in finances.
+Minu’s recommendations have truly worked for us and has brought remarkable stability.`,
+    service: 'Astrology reading',
     location: 'Whitefield, Bangalore',
     featured: true,
   },
@@ -95,7 +96,8 @@ export const testimonials: Testimonial[] = [
     name: 'Anima Dayal',
     rating: 5,
     date: 'June 2026',
-    text: 'I had a wonderful experience with dear Meenu.She was extremely knowledgeable and explained everything clearly.Her insights were accurate and thoughtful.She listened patiently to all my concerns.I appreciated the full attention she gave throughout the consultation.She took ample time to answer every question in detail.Her guidance was practical, positive, and easy to understand.I felt comfortable and respected during the entire session.Her professionalism and expertise were truly impressive. I highly recommend her to anyone seeking genuine and helpful astrological advice.',
+    text: `I had a wonderful experience with dear Meenu.She was extremely knowledgeable and explained everything clearly.Her insights were accurate and thoughtful.She listened patiently to all my concerns.I appreciated the full attention she gave throughout the consultation.She took ample time to answer every question in detail.Her guidance was practical, positive, and easy to understand.I felt comfortable and respected during the entire session.Her professionalism and expertise were truly impressive.
+I highly recommend her to anyone seeking genuine and helpful astrological advice.`,
     service: 'Astrology reading',
     location: 'Aligarh, Uttar Pradesh',
     featured: true,
@@ -104,7 +106,8 @@ export const testimonials: Testimonial[] = [
     name: 'Preeti Avasthi',
     rating: 5,
     date: 'April 2026',
-    text: 'Recently got a consultation from Minu Malik.  She is extremely  professional and provides a comfort to have an open discussion about concerns/ Placements at home. It was really great to learn so many aspect of  my sweet home 🏠. Her deep analysis on my floor plan and few corrective suggestions are a key take aways.The amount of time and honest advice  that she has provided are truly reason we should consult her for a generic home review🏠 !!Thanks !',
+    text: `Recently got a consultation from Minu Malik. She is extremely professional and provides a comfort to have an open discussion about concerns/ Placements at home. It was really great to learn so many aspect of my sweet home 🏠.
+Her deep analysis on my floor plan and few corrective suggestions are a key take aways.The amount of time and honest advice that she has provided are truly reason we should consult her for a generic home review🏠 !!Thanks !`,
     service: 'Residential Vastu',
     location: 'Whitefield, Bangalore',
     featured: true,
@@ -113,7 +116,8 @@ export const testimonials: Testimonial[] = [
     name: 'Snigdhaa Ritesh',
     rating: 5,
     date: 'April 2026',
-    text: 'Acharya Minu Malik is very competent and have vast knowledge about the subject. Her consultation, guidance and personal touch is par excellence.',
+    text: `Acharya Minu Malik is very competent and have vast knowledge about the subject.
+Her consultation, guidance and personal touch is par excellence.`,
     service: 'Residential Vastu',
     location: 'Lucknow, Uttar Pradesh',
     featured: false,
@@ -122,7 +126,7 @@ export const testimonials: Testimonial[] = [
     name: 'Radha Goel',
     rating: 5,
     date: 'February 2026',
-    text: 'I highly recommend Minu Mam for home vastu. She has in depth knowledge of vastu. The way she explained and answered all the queries with patience is commendable.i connected with her related to home vastu and she really helped me in understanding the vastu details of a house. I am fully satisfied with her and the trust level has made.thank you  Minu Mam for the great job.🙏',
+    text: `I highly recommend Minu Mam for home vastu.She has in depth knowledge of vastu. The way she explained and answered all the queries with patience is commendable.i connected with her related to home vastu and she really helped me in understanding the vastu details of a house .I am fully satisfied with her and the trust level has made.thank you Minu Mam for the great job.🙏`,
     service: 'Residential Vastu',
     location: 'Whitefield, Bangalore',
     featured: true,
@@ -131,7 +135,9 @@ export const testimonials: Testimonial[] = [
     name: 'Akash Sehgal',
     rating: 5,
     date: 'January 2026',
-    text: 'We are truly grateful for the guidance and support extended by Minu Saini as our Vastu consultant. Her deep understanding of Vastu principles, combined with practical and effective remedies, has brought remarkable stability and positivity into our home.Since following the suggested changes, we have experienced noticeable improvements in various aspects of our lives — from enhanced focus and performance in education to professional growth, and increased financial stability. The shift in overall energy within the house has been genuinely uplifting. What sets Minu Saini apart from others is not just her knowledge but also her calm, solution-oriented approach and ability to explain things in a simple, actionable manner. Minu’s recommendations have truly worked for us and I value her support. We sincerely thank Minu for being an important part of our journey towards harmony, progress, and prosperity.',
+    text: `We are truly grateful for the guidance and support extended by Minu Saini as our Vastu consultant. Her deep understanding of Vastu principles, combined with practical and effective remedies, has brought remarkable stability and positivity into our home.Since following the suggested changes, we have experienced noticeable improvements in various aspects of our lives — from enhanced focus and performance in education to professional growth, and increased financial stability. The shift in overall energy within the house has been genuinely uplifting.
+What sets Minu Saini apart from others is not just her knowledge but also her calm, solution-oriented approach and ability to explain things in a simple, actionable manner. Minu’s recommendations have truly worked for us and I value her support.
+We sincerely thank Minu for being an important part of our journey towards harmony, progress, and prosperity.`,
     service: ['Astro-Vastu (Homes)', 'Astrology reading'],
     location: 'Whitefield, Bangalore',
     featured: true,
@@ -140,16 +146,20 @@ export const testimonials: Testimonial[] = [
     name: 'Renu Singh',
     rating: 5,
     date: 'November 2025',
-    text: `I had a truly wonderful experience with Minu and I’m so glad I chose her for Vastu consultation. Her deep knowledge and patient approach really stood out. She took the time to understand my needs, explained everything clearly, and provided practical, easy-to-implement suggestions without forcing any major changes. What I appreciated most was her balanced and thoughtful guidance. It wasn’t just about directions and placements—it felt like she genuinely cared about bringing peace and positive energy into our home. Since implementing her advice, I’ve noticed a shift in the overall atmosphere—more clarity and a general feeling of well-being. I highly recommend Minu to anyone seeking honest and effective Vastu guidance. A truly enriching experience!`,
+    text: `I had a truly wonderful experience with Minu and I’m so glad I chose her for Vastu consultation. Her deep knowledge and patient approach really stood out. She took the time to understand my needs, explained everything clearly, and provided practical, easy-to-implement suggestions without forcing any major changes.
+
+What I appreciated most was her balanced and thoughtful guidance. It wasn’t just about directions and placements—it felt like she genuinely cared about bringing peace and positive energy into our home.
+
+Since implementing her advice, I’ve noticed a shift in the overall atmosphere—more clarity and a general feeling of well-being. I highly recommend Minu to anyone seeking honest and effective Vastu guidance. A truly enriching experience!`,
     service: 'Residential Vastu',
     location: 'Whitefield, Bangalore',
-    featured: false,
+    featured: true,
   },
   {
     name: 'Kushagra Gupta',
     rating: 5,
     date: 'October 2025',
-    text: 'Great service!',
+    text: 'Great service!\n',
     service: ['IT Career Astrology', 'Residential Vastu'],
     location: 'Koramangala, Bangalore',
     featured: false,
@@ -158,7 +168,8 @@ export const testimonials: Testimonial[] = [
     name: 'Garima J. Saini',
     rating: 5,
     date: 'August 2025',
-    text: 'Awesome experience.. She researched and spend time on my questions to justify everything nicely and systematically.',
+    text: `Awesome experience..
+She researched and spend time on my questions to justify everything nicely and systematically.`,
     service: 'Residential Vastu',
     location: 'Noida, Uttar Pradesh',
     featured: false,
@@ -167,7 +178,10 @@ export const testimonials: Testimonial[] = [
     name: 'Banasree Das',
     rating: 5,
     date: 'August 2024',
-    text: 'Thank you so much,very useful and helpful tips.It helped me overcome many chalenges.She explained in very simple and detailed terms.I recomend to everyone else.',
+    text: `Thank you so much, very useful and helpful tips.
+It helped me overcome many chalenges.
+She explained in very simple and detailed terms.
+I recomend to everyone else.`,
     service: 'Residential Vastu',
     location: 'Whitefield, Bangalore',
     featured: false,
@@ -176,7 +190,9 @@ export const testimonials: Testimonial[] = [
     name: 'Priyanka Teotia',
     rating: 5,
     date: 'August 2024',
-    text: 'Minu ji is incredibly knowledgeable and insightful. Her guidance brought balance and positivity to my home and life. Professional, genuine, and deeply experienced — truly a trusted Vastu consultant.',
+    text: `Minu ji is incredibly knowledgeable and insightful.
+Her guidance brought balance and positivity to my home and life.
+Professional, genuine, and deeply experienced — truly a trusted Vastu consultant.`,
     service: 'Residential Vastu',
     location: 'Whitefield, Bangalore',
     featured: false,
@@ -185,7 +201,9 @@ export const testimonials: Testimonial[] = [
     name: 'Sonal Mohan',
     rating: 5,
     date: 'August 2024',
-    text: 'I got the astrology consultation from them. A job well done, very thorough and detailed! Thank you!',
+    text: `I got the astrology consultation from them.
+A job well done, very thorough and detailed!
+Thank you!`,
     service: 'Astrology',
     location: 'Noida, Uttar Pradesh',
     featured: false,
@@ -194,7 +212,8 @@ export const testimonials: Testimonial[] = [
     name: 'GAURI PUROHIT',
     rating: 5,
     date: 'August 2024',
-    text: 'With BhummiVastus guidance I could bring positive changes in my life and in my relationships. Thank you very much 🙏🙏',
+    text: `With BhummiVastus guidance I could bring positive changes in my life and in my relationships.
+Thank you very much 🙏🙏`,
     service: 'Residential Vastu',
     location: 'Whitefield, Bangalore',
     featured: false,
