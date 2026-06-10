@@ -5,6 +5,31 @@ import Button from '~/components/ui/Button.astro';
 const { inputs, textarea, disclaimer, button = 'Send Message', description = '' } = Astro.props;
 
 const WEB3FORMS_KEY = '64a9dcb4-ce93-4b2e-81f0-f8be97f245cd';
+
+const fieldConstraints: Record<
+  string,
+  {
+    pattern?: string;
+    title?: string;
+    inputmode?: HTMLInputElement['inputMode'];
+  }
+> = {
+  name: {
+    pattern: '^[A-Za-z\\s]{2,60}$',
+    title: 'Please use alphabets and spaces only.',
+    inputmode: 'text',
+  },
+  phone: {
+    pattern: '^[0-9+\\-\\s]{7,20}$',
+    title: 'Please use digits and symbols +, -, and spaces only.',
+    inputmode: 'tel',
+  },
+  email: {
+    pattern: '^[^\\s@]+@[^\\s@]+\\.com$',
+    title: 'Please enter a valid .com email address.',
+    inputmode: 'email',
+  },
+};
 ---
 
 <!-- Success state -->
@@ -36,7 +61,7 @@ const WEB3FORMS_KEY = '64a9dcb4-ce93-4b2e-81f0-f8be97f245cd';
   </p>
 </div>
 
-<form id="bhummivastu-contact-form" novalidate>
+<form id="bhummivastu-contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
   <!-- Web3Forms hidden fields -->
   <input type="hidden" name="access_key" value={WEB3FORMS_KEY} />
   <input type="hidden" name="subject" value="New Consultation Enquiry — BhummiVastu" />
@@ -46,8 +71,11 @@ const WEB3FORMS_KEY = '64a9dcb4-ce93-4b2e-81f0-f8be97f245cd';
 
   {
     inputs &&
-      inputs.map(({ type = 'text', name, label = '', autocomplete = 'on', placeholder = '' }) =>
-        name ? (
+      inputs.map((input) => {
+        const { type = 'text', name, label = '', autocomplete = 'on', placeholder = '' } = input;
+        if (!name) return null;
+        const constraint = fieldConstraints[name] ?? {};
+        return (
           <div class="mb-6">
             {label && (
               <label for={name} class="block text-sm font-medium mb-1">
@@ -61,13 +89,16 @@ const WEB3FORMS_KEY = '64a9dcb4-ce93-4b2e-81f0-f8be97f245cd';
               autocomplete={autocomplete}
               placeholder={placeholder}
               required
+              pattern={constraint.pattern}
+              title={constraint.title}
+              inputmode={constraint.inputmode}
               data-validate={name}
               class="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900 focus:ring-2 focus:ring-amber-400 focus:border-amber-400 outline-none transition"
             />
             <p class="hidden mt-1 text-xs text-red-600 dark:text-red-400" id={`error-${name}`} />
           </div>
-        ) : null
-      )
+        );
+      })
   }
 
   {
@@ -132,6 +163,7 @@ const WEB3FORMS_KEY = '64a9dcb4-ce93-4b2e-81f0-f8be97f245cd';
   const errorEl = document.getElementById('form-error');
   const errorMsgEl = document.getElementById('form-error-msg');
   const submitBtn = document.getElementById('submit-btn') as HTMLButtonElement | null;
+  const initialButtonText = submitBtn?.textContent?.trim() || 'Send Message';
 
   // ── Validation rules ──────────────────────────────────────────────
   const validators: Record<string, { pattern: RegExp; message: string }> = {
@@ -144,8 +176,8 @@ const WEB3FORMS_KEY = '64a9dcb4-ce93-4b2e-81f0-f8be97f245cd';
       message: 'Please enter a valid phone number (digits, +, -, spaces allowed).',
     },
     email: {
-      pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-      message: 'Please enter a valid email address (e.g. name@example.com).',
+        pattern: /^[^\s@]+@[^\s@]+\.com$/i,
+        message: 'Please enter a valid .com email address (e.g. name@example.com).',
     },
     message: {
       pattern: /^[\s\S]{10,}$/,
@@ -234,7 +266,7 @@ const WEB3FORMS_KEY = '64a9dcb4-ce93-4b2e-81f0-f8be97f245cd';
         errorEl?.classList.remove('hidden');
         if (submitBtn) {
           submitBtn.disabled = false;
-          submitBtn.textContent = 'Send Message';
+          submitBtn.textContent = initialButtonText;
         }
       }
     } catch {
@@ -244,7 +276,7 @@ const WEB3FORMS_KEY = '64a9dcb4-ce93-4b2e-81f0-f8be97f245cd';
       errorEl?.classList.remove('hidden');
       if (submitBtn) {
         submitBtn.disabled = false;
-        submitBtn.textContent = 'Send Message';
+        submitBtn.textContent = initialButtonText;
       }
     }
   });
