@@ -86,8 +86,7 @@ export const testimonials: Testimonial[] = [
     name: 'Nehha A Sehgal',
     rating: 5,
     date: 'June 2026',
-    text: 'We are truly grateful for the guidance and astrology remedies recommended by Minu Saini.Her deep understanding of Birth stars , energy principles, combined with practical and effective remedies, has brought remarkable stability and positivity into the challenges faced in past .Since following the suggested changes, we have experienced noticeable improvements in various aspects of our lives — from enhanced focus and performance & professional growth, and increase in finances.
-Minu’s recommendations have truly worked for us and has brought remarkable stability.',
+    text: 'We are truly grateful for the guidance and astrology remedies recommended by Minu Saini.Her deep understanding of Birth stars , energy principles, combined with practical and effective remedies, has brought remarkable stability and positivity into the challenges faced in past .Since following the suggested changes, we have experienced noticeable improvements in various aspects of our lives — from enhanced focus and performance & professional growth, and increase in finances. Minu’s recommendations have truly worked for us and has brought remarkable stability.',
     service: ['Astro-Vastu (Homes)', 'Astrology reading'],
     location: 'Whitefield, Bangalore',
     featured: true,
@@ -96,9 +95,8 @@ Minu’s recommendations have truly worked for us and has brought remarkable sta
     name: 'Anima Dayal',
     rating: 5,
     date: 'June 2026',
-    text: 'I had a wonderful experience with dear Meenu.She was extremely knowledgeable and explained everything clearly.Her insights were accurate and thoughtful.She listened patiently to all my concerns.I appreciated the full attention she gave throughout the consultation.She took ample time to answer every question in detail.Her guidance was practical, positive, and easy to understand.I felt comfortable and respected during the entire session.Her professionalism and expertise were truly impressive.
-I highly recommend her to anyone seeking genuine and helpful astrological advice.',
-    service: ['Astrology reading'],
+    text: 'I had a wonderful experience with dear Meenu.She was extremely knowledgeable and explained everything clearly.Her insights were accurate and thoughtful.She listened patiently to all my concerns.I appreciated the full attention she gave throughout the consultation.She took ample time to answer every question in detail.Her guidance was practical, positive, and easy to understand.I felt comfortable and respected during the entire session.Her professionalism and expertise were truly impressive. I highly recommend her to anyone seeking genuine and helpful astrological advice.',
+    service: 'Astrology reading',
     location: 'Aligarh, Uttar Pradesh',
     featured: true,
   },

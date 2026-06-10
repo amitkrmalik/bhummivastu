@@ -5,13 +5,14 @@ import Button from '~/components/ui/Button.astro';
 const { inputs, textarea, disclaimer, button = 'Send Message', description = '' } = Astro.props;
 
 const WEB3FORMS_KEY = '64a9dcb4-ce93-4b2e-81f0-f8be97f245cd';
+type InputModeAttr = 'none' | 'text' | 'decimal' | 'numeric' | 'tel' | 'search' | 'email' | 'url';
 
 const fieldConstraints: Record<
   string,
   {
     pattern?: string;
     title?: string;
-    inputmode?: HTMLInputElement['inputMode'];
+    inputmode?: InputModeAttr;
   }
 > = {
   name: {
@@ -176,8 +177,8 @@ const fieldConstraints: Record<
       message: 'Please enter a valid phone number (digits, +, -, spaces allowed).',
     },
     email: {
-        pattern: /^[^\s@]+@[^\s@]+\.com$/i,
-        message: 'Please enter a valid .com email address (e.g. name@example.com).',
+      pattern: /^[^\s@]+@[^\s@]+\.com$/i,
+      message: 'Please enter a valid .com email address (e.g. name@example.com).',
     },
     message: {
       pattern: /^[\s\S]{10,}$/,
