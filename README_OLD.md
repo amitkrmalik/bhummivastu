@@ -2,6 +2,8 @@
 
 Official website for **Vastu Acharya Minu Saini**, a certified Vastu Shastra and Vedic Astrology consultant based in Bangalore, India.
 
+🌐 **Soft launch:** [https://amitkrmalik.github.io/bhummivastu](https://amitkrmalik.github.io/bhummivastu)
+
 ---
 
 ## About the Project
@@ -30,6 +32,20 @@ BhummiVastu is a conversion-optimised consultancy website targeting clients acro
 
 All consultations include **30 days of follow-up Q&A support**.
 
+---
+
+## Tech Stack
+
+- **Framework:** [Astro 5](https://astro.build/) — static site generation
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **Icons:** [Tabler Icons](https://tabler-icons.io/) via astro-icon
+- **Analytics:** Google Analytics 4 (GA4 `G-CPTPG0B5LN`) via Partytown
+- **SEO:** Sitemap, Open Graph, LocalBusiness JSON-LD schema, robots.txt
+- **Hosting:** GitHub Pages → `https://amitkrmalik.github.io/bhummivastu`
+- **CI/CD:** GitHub Actions (auto-deploy on push to `main`)
+
+---
+
 ## Pages
 
 | Route                               | Description                               |
@@ -54,7 +70,44 @@ All consultations include **30 days of follow-up Q&A support**.
 | `/privacy`                          | Privacy Policy                            |
 
 ---
+
+## Local Development
+
+```bash
+# Install dependencies
+npm install
+
+# Start dev server — http://localhost:4321/bhummivastu
+npm run dev
+
+# Type check
+npm run check
+
+# Production build → dist/
+npm run build
+
+# Preview production build locally
+npm run preview
+```
+
 ---
+
+## Deployment
+
+The site auto-deploys to GitHub Pages on every push to `main` via `.github/workflows/deploy.yml`.
+
+**Manual trigger:** GitHub → Actions tab → "Deploy to GitHub Pages" → Run workflow
+
+### Going Live on www.bhummivastu.com
+
+When ready to switch from the soft launch to the production domain:
+
+1. In `astro.config.ts`: set `site: 'https://www.bhummivastu.com'`, remove the `base` line
+2. In `src/config.yaml`: set `site: 'https://www.bhummivastu.com'`, set `base: '/'`
+3. Create `public/CNAME` containing `www.bhummivastu.com`
+4. Run `npm run build`, commit, and push
+5. In GitHub → Settings → Pages → Custom domain: enter `www.bhummivastu.com`
+6. Point DNS: `CNAME www → amitkrmalik.github.io`
 
 ---
 
@@ -85,6 +138,33 @@ src/
 
 ---
 
+## AI Content Skill Stack
+
+This repo now includes a stackable skill framework for AI and manual content operations:
+
+- **Skill pack root:** `.github/skills/`
+- **Workflow orchestration:** `.github/skills/workflows/content-lifecycle.md`
+- **Machine-readable stack:** `.github/skills/stack.yml`
+- **Reusable templates:** `.github/skills/templates/`
+
+It enforces typed content (`astrology | numerology | vastu | spiritual | misc`) and a gated workflow:
+domain review → knowledge verification → humanization → social media gate → essence re-verification.
+
+---
+
+## Pending / Roadmap
+
+- [ ] Real consultant photo (replace placeholder hero image)
+- [ ] Client testimonials section on homepage
+- [ ] Certifications & awards data (page is ready, awaiting content)
+- [ ] YouTube channel URL
+- [ ] Additional Vastu/Astrology blog posts (SEO — targeting Bangalore searches)
+- [ ] Local SEO landing pages (Indiranagar, Whitefield, Koramangala)
+- [ ] Switch to production domain `www.bhummivastu.com`
+
+---
+
 ## License
 
 Site content and brand © 2025 Minu Saini / BhummiVastu. All rights reserved.
+Template based on [AstroWind](https://github.com/arthelokyo/astrowind) (MIT licence).
