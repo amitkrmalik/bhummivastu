@@ -5,7 +5,11 @@ const html = readFileSync(resolve('dist/index.html'), 'utf8');
 
 const failures = [];
 
-if (/(property="og:image"[^>]+content="[^"]*\/_astro\/default\.|content="[^"]*\/_astro\/default\.[^"]*"[^>]+property="og:image")/.test(html)) {
+if (
+  /(property="og:image"[^>]+content="[^"]*\/_astro\/default\.|content="[^"]*\/_astro\/default\.[^"]*"[^>]+property="og:image")/.test(
+    html
+  )
+) {
   failures.push('Homepage share image still points to the AstroWind default preview asset.');
 }
 
