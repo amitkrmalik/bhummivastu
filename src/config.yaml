@@ -16,24 +16,24 @@ metadata:
   title:
     default: BhummiVastu — Vastu & Astrology Consultant in Bangalore
     template: '%s | BhummiVastu'
-  description: 'BhummiVastu — Top Vastu & Astrology consultancy by Vastu Acharya Minu Saini. Online consultations across India. In-person in Bangalore, Karnataka. Non-demolition Vastu, Vedic Astrology, Astro-Vastu. Serving Indiranagar, Koramangala, Whitefield, Jayanagar and all of India.'
+  description: 'BhummiVastu — Trusted Vastu and Astrology guidance by Vastu Acharya Minu Saini. Non-demolition Vastu, Vedic Astrology, and Astro-Vastu consultations.'
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: Bhummi Vastu Bangalore
+    site_name: BhummiVastu
     images:
-      - url: '~/assets/images/default.png'
-        width: 1200
-        height: 628
+      - url: '~/assets/images/social-share-minu.jpeg'
+        width: 640
+        height: 800
     type: website
     locale: en_IN
-    description: 'BhummiVastu — Vastu & Astrology consultancy by Minu Saini. Online across India. In-person in Bangalore & Karnataka. Non-demolition Vastu, Vedic Astrology, Astro-Vastu.'
+    description: 'BhummiVastu — Trusted Vastu and Astrology guidance by Minu Saini. Non-demolition Vastu, Vedic Astrology, and Astro-Vastu consultations.'
   twitter:
     handle: '@bhummivastu'
     site: '@bhummivastu'
     cardType: summary_large_image
-    description: 'BhummiVastu — Top Vastu & Astrology consultant in Bangalore. Online consultations across India.'
+    description: 'BhummiVastu — Trusted Vastu and Astrology guidance by Minu Saini.'
 
 i18n:
   language: en
