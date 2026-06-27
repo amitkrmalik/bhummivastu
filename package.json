@@ -14,6 +14,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "test:share-metadata": "node scripts/check-share-metadata.mjs",
+    "test:pricing-copy": "node scripts/check-pricing-copy.mjs",
     "check": "npm run check:astro && npm run check:eslint && npm run check:prettier",
     "check:astro": "astro check",
     "check:eslint": "eslint .",
