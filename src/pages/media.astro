@@ -32,6 +32,8 @@ const platformIcons = {
 
 const embedShellClass = (type: string) =>
   type === 'Post' ? 'min-h-[430px]' : type === 'Reel' || type === 'Short' ? 'aspect-[9/16]' : 'aspect-video';
+
+const formatViews = (views?: number) => (views === undefined ? undefined : `${views.toLocaleString('en-IN')} views`);
 ---
 
 <Layout metadata={metadata}>
@@ -85,20 +87,18 @@ const embedShellClass = (type: string) =>
       <div
         class="grid lg:grid-cols-[1.05fr_0.95fr] gap-8 items-center rounded-[2rem] border border-amber-200/70 dark:border-amber-900/40 bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 p-6 md:p-8 shadow-lg"
       >
-        <a
-          href={mentorPhoto}
-          target="_blank"
-          rel="noopener"
+        <div
+          data-protected-media
           class="block overflow-hidden rounded-2xl border border-amber-200 dark:border-amber-900/40 bg-white dark:bg-slate-900 shadow-md"
-          title="View full photo"
         >
           <img
             src={mentorPhoto}
             alt="Vastu Acharya Minu Saini with Vastu Acharya Sri Khushdeep Bansal"
-            class="w-full h-full object-cover"
+            class="w-full h-full object-cover select-none"
             loading="lazy"
+            draggable="false"
           />
-        </a>
+        </div>
 
         <div>
           <p class="text-xs font-bold tracking-widest uppercase text-accent mb-3">Mentorship Milestone</p>
@@ -133,15 +133,6 @@ const embedShellClass = (type: string) =>
             >
               View Certifications
               <Icon name="tabler:arrow-right" class="w-4 h-4" />
-            </a>
-            <a
-              href={mentorPhoto}
-              target="_blank"
-              rel="noopener"
-              class="inline-flex items-center gap-2 rounded-lg border border-amber-300 dark:border-amber-800/50 px-5 py-2.5 text-sm font-semibold text-amber-900 dark:text-amber-300 hover:bg-white/70 dark:hover:bg-slate-800 transition-colors"
-            >
-              Open Full Photo
-              <Icon name="tabler:photo" class="w-4 h-4" />
             </a>
           </div>
         </div>
@@ -189,32 +180,21 @@ const embedShellClass = (type: string) =>
             >
               Visit Acharya Vikul Bansal
             </a>
-            <a
-              href={pinnaclePhoto}
-              target="_blank"
-              rel="noopener"
-              class="inline-flex items-center gap-2 rounded-lg border border-amber-300 dark:border-amber-800/50 px-5 py-2.5 text-sm font-semibold text-amber-900 dark:text-amber-300 hover:bg-white dark:hover:bg-slate-800 transition-colors"
-            >
-              Open Full Photo
-              <Icon name="tabler:photo" class="w-4 h-4" />
-            </a>
           </div>
         </div>
 
-        <a
-          href={pinnaclePhoto}
-          target="_blank"
-          rel="noopener"
+        <div
+          data-protected-media
           class="order-1 lg:order-2 block overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 shadow-sm"
-          title="View full photo"
         >
           <img
             src={pinnaclePhoto}
             alt="Vastu Acharya Minu Saini with Sri Acharya Vikul Bansal during an earlier educational program"
-            class="w-full h-full object-cover"
+            class="w-full h-full object-cover select-none"
             loading="lazy"
+            draggable="false"
           />
-        </a>
+        </div>
       </div>
     </div>
   </section>
@@ -256,7 +236,7 @@ const embedShellClass = (type: string) =>
                 >
                   {item.platform === 'YouTube' && getYouTubeId(item.url) ? (
                     <YouTube id={getYouTubeId(item.url)!} title={item.title} />
-                  ) : getEmbedUrl(item) ? (
+                  ) : getEmbedUrl(item) && item.platform !== 'Instagram' ? (
                     <iframe
                       src={getEmbedUrl(item)}
                       title={item.title}
@@ -267,7 +247,7 @@ const embedShellClass = (type: string) =>
                     />
                   ) : (
                     <div class="absolute inset-0 flex items-center justify-center p-6 text-center text-sm text-muted dark:text-slate-400">
-                      Preview unavailable for this item. Use the button below to open it on the original platform.
+                      This reel is hosted on Instagram. Use the button below to watch it on the original platform.
                     </div>
                   )}
                 </div>
@@ -278,11 +258,10 @@ const embedShellClass = (type: string) =>
                 <p class="text-sm text-muted dark:text-slate-400 leading-relaxed flex-1">{item.summary}</p>
 
                 <div class="mt-4 flex items-center justify-between gap-3">
-                  {item.published ? (
-                    <p class="text-xs text-muted dark:text-slate-500">{item.published}</p>
-                  ) : (
-                    <span class="text-xs text-muted dark:text-slate-500">Embedded preview</span>
-                  )}
+                  <div class="flex flex-wrap gap-x-3 gap-y-1 text-xs text-muted dark:text-slate-500">
+                    {item.published && <span>{item.published}</span>}
+                    {formatViews(item.views) && <span>{formatViews(item.views)}</span>}
+                  </div>
                   <a
                     href={item.url}
                     target="_blank"
@@ -307,7 +286,8 @@ const embedShellClass = (type: string) =>
         <p class="text-xs font-bold tracking-widest uppercase text-accent mb-2">All Media</p>
         <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">Explore the Full Library</h2>
         <p class="text-sm text-muted dark:text-slate-400 mt-2">
-          Edit titles, summaries, and links in <code>src/data/media.ts</code>.
+          Instagram reels are listed latest-first. Featured reels are ranked by the publicly visible view count captured
+          from the Instagram grid.
         </p>
       </div>
 
@@ -340,7 +320,7 @@ const embedShellClass = (type: string) =>
               >
                 {item.platform === 'YouTube' && getYouTubeId(item.url) ? (
                   <YouTube id={getYouTubeId(item.url)!} title={item.title} />
-                ) : getEmbedUrl(item) ? (
+                ) : getEmbedUrl(item) && item.platform !== 'Instagram' ? (
                   <iframe
                     src={getEmbedUrl(item)}
                     title={item.title}
@@ -351,7 +331,7 @@ const embedShellClass = (type: string) =>
                   />
                 ) : (
                   <div class="absolute inset-0 flex items-center justify-center p-6 text-center text-sm text-muted dark:text-slate-400">
-                    Preview unavailable for this item. Use the link below to open it on the original platform.
+                    This reel is hosted on Instagram. Use the link below to watch it on the original platform.
                   </div>
                 )}
               </div>
@@ -360,11 +340,10 @@ const embedShellClass = (type: string) =>
               <p class="text-sm text-muted dark:text-slate-400 leading-relaxed flex-1">{item.summary}</p>
 
               <div class="mt-4 pt-4 border-t border-gray-100 dark:border-slate-700 flex items-center justify-between gap-3">
-                {item.published ? (
-                  <span class="text-xs text-muted">{item.published}</span>
-                ) : (
-                  <span class="text-xs text-muted">Social media post</span>
-                )}
+                <div class="flex flex-wrap gap-x-3 gap-y-1 text-xs text-muted">
+                  {item.published && <span>{item.published}</span>}
+                  {formatViews(item.views) && <span>{formatViews(item.views)}</span>}
+                </div>
                 <a
                   href={item.url}
                   target="_blank"
@@ -400,3 +379,10 @@ const embedShellClass = (type: string) =>
     ]}
   />
 </Layout>
+
+<script is:inline>
+  document.querySelectorAll('[data-protected-media]').forEach((media) => {
+    media.addEventListener('contextmenu', (event) => event.preventDefault());
+    media.addEventListener('dragstart', (event) => event.preventDefault());
+  });
+</script>
