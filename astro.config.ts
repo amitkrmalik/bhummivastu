@@ -3,8 +3,10 @@ import { fileURLToPath } from 'url';
 
 import { defineConfig } from 'astro/config';
 
+import { unified } from '@astrojs/markdown-remark';
+
 import sitemap from '@astrojs/sitemap';
-import tailwind from '@astrojs/tailwind';
+import tailwindcss from '@tailwindcss/vite';
 import mdx from '@astrojs/mdx';
 import partytown from '@astrojs/partytown';
 import icon from 'astro-icon';
@@ -36,9 +38,6 @@ export default defineConfig({
   trailingSlash: 'never',
 
   integrations: [
-    tailwind({
-      applyBaseStyles: false,
-    }),
     sitemap(),
     mdx(),
     icon({
@@ -65,7 +64,8 @@ export default defineConfig({
     ),
 
     compress({
-      CSS: true,
+      // Tailwind v4 emits media-range syntax that csso does not understand.
+      CSS: { csso: false, lightningcss: { minify: true } },
       HTML: {
         'html-minifier-terser': {
           removeAttributeQuotes: false,
@@ -85,14 +85,18 @@ export default defineConfig({
   image: {
     // Allow remote images from these domains (used in blog posts & pages)
     domains: ['cdn.pixabay.com', 'images.unsplash.com'],
+    responsiveStyles: true,
   },
 
   markdown: {
-    remarkPlugins: [readingTimeRemarkPlugin],
-    rehypePlugins: [responsiveTablesRehypePlugin, lazyImagesRehypePlugin],
+    processor: unified({
+      remarkPlugins: [readingTimeRemarkPlugin],
+      rehypePlugins: [responsiveTablesRehypePlugin, lazyImagesRehypePlugin],
+    }),
   },
 
   vite: {
+    plugins: [tailwindcss()],
     resolve: {
       alias: {
         '~': path.resolve(__dirname, './src'),
