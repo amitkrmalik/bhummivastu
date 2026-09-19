@@ -65,8 +65,6 @@ Loose cables, cartons, spare parts, packaging, and unused devices often collect 
 
 In many Vastu practices, the South-East is associated with the fire element and is therefore reviewed first for electrical and heat-producing equipment. If the building plan and engineering requirements allow it, consider placing the primary server or lab load toward the South-East of the office or room.
 
-Do not move a live server rack without an IT, electrical, cooling, and fire-safety plan. Uptime and safety come first.
-
 ### Keep the North-East light and organised
 
 If relocation is not immediately possible, reduce the visual and physical load around the North-East. Remove unrelated storage, old cartons, unused devices, and unnecessary furniture. Keep access paths clear and use proper cable trays or sleeves.
