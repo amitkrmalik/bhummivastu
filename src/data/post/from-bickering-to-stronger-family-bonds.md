@@ -1,8 +1,8 @@
 ---
 publishDate: 2024-08-20T00:00:00Z
 author: Minu Saini
-title: From Bickering to Stronger Family Bonds — How Vastu Rebalances Your Home's Energy
-excerpt: Recurring arguments at home? Vastu teaches that specific zones govern harmony, trust, and joy. Learn the 5-step path to a calmer, more connected family life.
+title: 'Vastu for Family Harmony: 5 Steps to a Calmer Home'
+excerpt: Recurring arguments at home? Learn how Vastu zones can support harmony, trust, and joy with five practical steps for a calmer family life.
 image: https://images.unsplash.com/photo-1609220136736-443140cffec6?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
 category: Vastu Tips
 contentType: vastu

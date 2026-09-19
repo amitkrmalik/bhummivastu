@@ -8,6 +8,7 @@ import Pagination from '~/components/blog/Pagination.astro';
 // import PostTags from "~/components/blog/Tags.astro";
 
 import { blogListRobots, getStaticPathsBlogList } from '~/utils/blog';
+import { getPermalink } from '~/utils/permalinks';
 
 export const prerender = true;
 
@@ -24,7 +25,9 @@ const currentPage = page.currentPage ?? 1;
 // const allTags = await findTags();
 
 const metadata = {
-  title: `Blog${currentPage > 1 ? ` — Page ${currentPage}` : ''}`,
+  title: `Vastu & Astrology Blog${currentPage > 1 ? ` — Page ${currentPage}` : ''}`,
+  description:
+    'Practical Vastu, Vedic Astrology, and Astro-Vastu guidance from Minu Saini for homes, work, relationships, and life across Bangalore and India.',
   robots: {
     index: blogListRobots?.index && currentPage === 1,
     follow: blogListRobots?.follow,
@@ -38,9 +41,9 @@ const metadata = {
 <Layout metadata={metadata}>
   <section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
     <Headline
-      subtitle="A statically generated blog example with news, tutorials, resources and other interesting content related to AstroWind"
+      subtitle={`Practical guidance on <a href="${getPermalink('/services')}">Vastu and Astrology services</a>, Astro-Vastu, home harmony, finances, and study spaces from Minu Saini in Bangalore and across India.`}
     >
-      The Blog
+      Vastu &amp; Astrology Blog
     </Headline>
     <BlogList posts={page.data} />
     <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />

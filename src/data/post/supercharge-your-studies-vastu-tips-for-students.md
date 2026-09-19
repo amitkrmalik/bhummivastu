@@ -1,8 +1,8 @@
 ---
 publishDate: 2024-06-10T00:00:00Z
 author: Minu Saini
-title: Supercharge Your Studies — Vastu Tips to Boost Concentration and Academic Success
-excerpt: Feeling mentally scattered and struggling to focus? Ancient Vastu wisdom can transform your study environment into a powerhouse of concentration, learning, and academic achievement.
+title: 'Vastu Tips for Students: Improve Focus and Study'
+excerpt: Feeling scattered while studying? Use practical Vastu guidance to create a calmer study space that supports focus, learning, and consistency.
 image: https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1973&q=80
 category: Vastu Tips
 contentType: vastu

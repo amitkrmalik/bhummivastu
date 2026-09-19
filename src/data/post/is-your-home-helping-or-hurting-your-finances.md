@@ -1,8 +1,8 @@
 ---
 publishDate: 2024-07-15T00:00:00Z
 author: Minu Saini
-title: Is Your Home Helping or Hurting Your Finances? A Vastu Guide to Wealth Zones
-excerpt: Could your home or workplace be silently influencing your financial fate? Discover which Vastu zones govern wealth — and simple, non-demolition tips to activate them.
+title: 'Vastu for Wealth: Home and Office Zones That Matter'
+excerpt: Could your home or workplace influence your financial habits? Discover key Vastu wealth zones and simple, non-demolition tips to improve them.
 image: https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2071&q=80
 category: Vastu Tips
 contentType: vastu

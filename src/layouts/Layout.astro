@@ -37,7 +37,17 @@ const localBusinessSchema = {
   email: 'minusaini@bhummivastu.com',
   description:
     'Trusted Vastu and Vedic Astrology consultant offering Residential Vastu, Commercial Vastu, Industrial Vastu, and Astrology consultations.',
-  areaServed: [{ '@type': 'Country', name: 'India' }],
+  founder: {
+    '@type': 'Person',
+    name: 'Minu Saini',
+  },
+  serviceType: ['Vastu consultation', 'Vedic Astrology consultation', 'Astro-Vastu consultation'],
+  areaServed: [
+    { '@type': 'City', name: 'Bangalore' },
+    { '@type': 'State', name: 'Karnataka' },
+    { '@type': 'Country', name: 'India' },
+  ],
+  knowsAbout: ['Vastu Shastra', 'Vedic Astrology', 'Astro-Vastu'],
   sameAs: [
     'https://www.facebook.com/BhummiVastu',
     'https://www.instagram.com/bhummivastu',
