@@ -1,6 +1,6 @@
 ---
-publishDate: 2026-09-19T00:00:00Z
-draft: true
+publishDate: 2026-07-15T00:00:00Z
+draft: false
 author: Minu Saini
 title: 'Vastu for Mental Clarity: How to Balance the North-East Zone'
 excerpt: Feeling distracted or mentally tired? Learn how a clear, light, and well-maintained North-East zone can support a calmer home and a more focused routine.
@@ -8,12 +8,12 @@ image: https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?ixlib=rb-4.0
 category: Vastu Tips
 contentType: vastu
 contentWorkflow:
-  stage: draft
+  stage: approved
   domainSkill: skill-domain-classifier
   socialSkill: skill-social-media-gate
   finalSkill: skill-essence-reverify
   claimStatus: verifiable
-  humanized: false
+  humanized: true
   claimReferences:
     - Traditional Vastu guidance that treats the North-East (Ishanya) as a light, open, and spiritually significant zone
     - User-provided consultation example and non-demolition remedy framing

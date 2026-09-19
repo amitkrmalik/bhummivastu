@@ -1,6 +1,6 @@
 ---
-publishDate: 2026-09-19T00:00:00Z
-draft: true
+publishDate: 2026-07-22T00:00:00Z
+draft: false
 author: Minu Saini
 title: 'Office Vastu for Server Rooms: Why the North-East Zone Needs Care'
 excerpt: Is your office lab or server rack in the North-East? Explore a practical Vastu review and simple ways to create a lighter, more organised technology area.
@@ -8,12 +8,12 @@ image: https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-4.0
 category: Vastu Tips
 contentType: vastu
 contentWorkflow:
-  stage: draft
+  stage: approved
   domainSkill: skill-domain-classifier
   socialSkill: skill-social-media-gate
   finalSkill: skill-essence-reverify
   claimStatus: verifiable
-  humanized: false
+  humanized: true
   claimReferences:
     - Traditional Vastu guidance that treats the North-East (Ishanya) as a light and open zone
     - User-provided office consultation example and non-demolition remedy framing
