@@ -1,6 +1,6 @@
 ---
 publishDate: 2026-09-02T00:00:00Z
-draft: true
+draft: false
 author: Minu Saini
 title: 'Sleep Direction in Vastu: A Restful Bed Position for Tech Professionals'
 excerpt: Do you wake up tired even after a full night in bed? Explore the traditional Vastu guidance for sleeping with your head toward the South or East, along with practical bedroom habits.
@@ -8,12 +8,12 @@ image: https://images.unsplash.com/photo-1540518614846-7eded433c457?ixlib=rb-4.0
 category: Vastu Tips
 contentType: vastu
 contentWorkflow:
-  stage: draft
+  stage: approved
   domainSkill: skill-domain-classifier
   socialSkill: skill-social-media-gate
   finalSkill: skill-essence-reverify
   claimStatus: verifiable
-  humanized: false
+  humanized: true
   claimReferences:
     - Traditional Vastu guidance that commonly prefers sleeping with the head toward the South or East
     - Public sleep-hygiene guidance on regular routines, a comfortable bedroom, and limiting bedtime screens

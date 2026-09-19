@@ -1,6 +1,6 @@
 ---
 publishDate: 2026-08-05T00:00:00Z
-draft: true
+draft: false
 author: Minu Saini
 title: 'Bedroom Vastu Tips: Reduce Electronic Clutter for Better Rest'
 excerpt: Is your bedroom also a charging station, television room, and work desk? Use simple Vastu and sleep-friendly habits to create a calmer space for rest.
@@ -8,12 +8,12 @@ image: https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixlib=rb-4.0
 category: Vastu Tips
 contentType: vastu
 contentWorkflow:
-  stage: draft
+  stage: approved
   domainSkill: skill-domain-classifier
   socialSkill: skill-social-media-gate
   finalSkill: skill-essence-reverify
   claimStatus: verifiable
-  humanized: false
+  humanized: true
   claimReferences:
     - Traditional Vastu guidance that treats the bedroom as a quiet and balanced resting space
     - Public sleep-hygiene guidance on reducing evening device use, light, and noise

@@ -1,6 +1,6 @@
 ---
 publishDate: 2026-08-12T00:00:00Z
-draft: true
+draft: false
 author: Minu Saini
 title: 'North-East Vastu: How to Review Kitchen, Toilet, Storage, and Clutter'
 excerpt: Is your North-East zone occupied by a kitchen, bathroom, heavy storage, or daily clutter? Learn how to review the space calmly and choose practical, non-demolition steps.
@@ -8,12 +8,12 @@ image: https://images.unsplash.com/photo-1556912173-46c336c7fd55?ixlib=rb-4.0.3&
 category: Vastu Tips
 contentType: vastu
 contentWorkflow:
-  stage: draft
+  stage: approved
   domainSkill: skill-domain-classifier
   socialSkill: skill-social-media-gate
   finalSkill: skill-essence-reverify
   claimStatus: verifiable
-  humanized: false
+  humanized: true
   claimReferences:
     - Traditional Vastu guidance that treats the North-East (Ishanya) as a light and open zone
     - User-requested North-East kitchen, toilet, storage, and clutter topic

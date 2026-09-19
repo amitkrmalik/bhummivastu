@@ -1,6 +1,6 @@
 ---
 publishDate: 2026-08-26T00:00:00Z
-draft: true
+draft: false
 author: Minu Saini
 title: 'Bedroom Vastu for Couples: TV Placement and Restful Shared Spaces'
 excerpt: Does your bedroom feel more like a television room than a place to rest together? Explore simple Vastu and bedtime habits for a calmer shared space.
@@ -8,12 +8,12 @@ image: https://images.unsplash.com/photo-1560185008-b033106af5c3?ixlib=rb-4.0.3&
 category: Vastu Tips
 contentType: vastu
 contentWorkflow:
-  stage: draft
+  stage: approved
   domainSkill: skill-domain-classifier
   socialSkill: skill-social-media-gate
   finalSkill: skill-essence-reverify
   claimStatus: verifiable
-  humanized: false
+  humanized: true
   claimReferences:
     - Traditional Vastu guidance that treats the bedroom as a stable, quiet, and restful space
     - Public sleep-hygiene guidance on reducing evening screens, light, and noise

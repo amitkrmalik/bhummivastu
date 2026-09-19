@@ -1,6 +1,6 @@
 ---
 publishDate: 2026-08-19T00:00:00Z
-draft: true
+draft: false
 author: Minu Saini
 title: 'Vastu for Gaming PCs, Routers, and Home Servers: A Practical Setup Guide'
 excerpt: Where should a gaming PC, router, or home server go? Explore a practical Vastu review that balances direction, heat, cables, ventilation, and everyday use.
@@ -8,12 +8,12 @@ image: https://images.unsplash.com/photo-1593305841991-05c297ba4575?ixlib=rb-4.0
 category: Vastu Tips
 contentType: vastu
 contentWorkflow:
-  stage: draft
+  stage: approved
   domainSkill: skill-domain-classifier
   socialSkill: skill-social-media-gate
   finalSkill: skill-essence-reverify
   claimStatus: verifiable
-  humanized: false
+  humanized: true
   claimReferences:
     - Traditional Vastu guidance that reviews heat-producing electrical activity in relation to the South-East
     - User-requested home gaming PC, router, and server placement topic
