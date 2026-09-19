@@ -14,9 +14,9 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: BhummiVastu — Vastu & Astrology Consultant in Bangalore
+    default: Vastu & Astrology in Bangalore | Minu Saini
     template: '%s | BhummiVastu'
-  description: 'BhummiVastu — Trusted Vastu and Astrology guidance by Vastu Acharya Minu Saini. Non-demolition Vastu, Vedic Astrology, and Astro-Vastu consultations.'
+  description: 'BhummiVastu offers Vastu, Vedic Astrology, and Astro-Vastu consultations by Minu Saini in Bangalore and online across India.'
   robots:
     index: true
     follow: true
@@ -28,12 +28,12 @@ metadata:
         height: 800
     type: website
     locale: en_IN
-    description: 'BhummiVastu — Trusted Vastu and Astrology guidance by Minu Saini. Non-demolition Vastu, Vedic Astrology, and Astro-Vastu consultations.'
+    description: 'Vastu, Vedic Astrology, and Astro-Vastu consultations by Minu Saini in Bangalore and online across India.'
   twitter:
     handle: '@bhummivastu'
     site: '@bhummivastu'
     cardType: summary_large_image
-    description: 'BhummiVastu — Trusted Vastu and Astrology guidance by Minu Saini.'
+    description: 'Vastu, Astrology, and Astro-Vastu guidance by Minu Saini in Bangalore and across India.'
 
 i18n:
   language: en
