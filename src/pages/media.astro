@@ -3,7 +3,7 @@ import { Icon } from 'astro-icon/components';
 import { YouTube } from '@astro-community/astro-embed-youtube';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Layout from '~/layouts/PageLayout.astro';
-import { featuredMedia, getEmbedUrl, getYouTubeId, mediaItems } from '~/data/media';
+import { featuredMedia, getEmbedUrl, getThumbnailUrl, getYouTubeId, mediaItems } from '~/data/media';
 import { getPermalink } from '~/utils/permalinks';
 
 const metadata = {
@@ -245,9 +245,29 @@ const formatViews = (views?: number) => (views === undefined ? undefined : `${vi
                       allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
                       allowfullscreen
                     />
+                  ) : getThumbnailUrl(item) ? (
+                    <a
+                      href={item.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="absolute inset-0 block group/thumbnail"
+                      aria-label={`Watch ${item.title} on Instagram`}
+                    >
+                      <img
+                        src={getThumbnailUrl(item)!}
+                        alt={`Preview image for ${item.title}`}
+                        class="absolute inset-0 h-full w-full object-cover transition-transform duration-300 group-hover/thumbnail:scale-105"
+                        loading="lazy"
+                        referrerpolicy="no-referrer"
+                      />
+                      <span class="absolute inset-x-3 bottom-3 inline-flex items-center justify-center gap-2 rounded-lg bg-black/70 px-3 py-2 text-sm font-semibold text-white backdrop-blur-sm">
+                        Watch on Instagram
+                        <Icon name="tabler:brand-instagram" class="h-4 w-4" />
+                      </span>
+                    </a>
                   ) : (
                     <div class="absolute inset-0 flex items-center justify-center p-6 text-center text-sm text-muted dark:text-slate-400">
-                      This reel is hosted on Instagram. Use the button below to watch it on the original platform.
+                      Preview image unavailable. Use the button below to watch the original reel.
                     </div>
                   )}
                 </div>
@@ -329,9 +349,29 @@ const formatViews = (views?: number) => (views === undefined ? undefined : `${vi
                     allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
                     allowfullscreen
                   />
+                ) : getThumbnailUrl(item) ? (
+                  <a
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="absolute inset-0 block group/thumbnail"
+                    aria-label={`Watch ${item.title} on Instagram`}
+                  >
+                    <img
+                      src={getThumbnailUrl(item)!}
+                      alt={`Preview image for ${item.title}`}
+                      class="absolute inset-0 h-full w-full object-cover transition-transform duration-300 group-hover/thumbnail:scale-105"
+                      loading="lazy"
+                      referrerpolicy="no-referrer"
+                    />
+                    <span class="absolute inset-x-3 bottom-3 inline-flex items-center justify-center gap-2 rounded-lg bg-black/70 px-3 py-2 text-sm font-semibold text-white backdrop-blur-sm">
+                      Watch on Instagram
+                      <Icon name="tabler:brand-instagram" class="h-4 w-4" />
+                    </span>
+                  </a>
                 ) : (
                   <div class="absolute inset-0 flex items-center justify-center p-6 text-center text-sm text-muted dark:text-slate-400">
-                    This reel is hosted on Instagram. Use the link below to watch it on the original platform.
+                    Preview image unavailable. Use the link below to watch the original reel.
                   </div>
                 )}
               </div>
